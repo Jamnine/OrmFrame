@@ -66,6 +66,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
+      <Project>{39ca059c-ffc5-4d34-97d1-1b3f42085152}</Project>
+      <Name>Orm.Log4Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>

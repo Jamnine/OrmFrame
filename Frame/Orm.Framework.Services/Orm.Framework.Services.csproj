@@ -49,6 +49,12 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\..\客户端\His2\bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NLite">
+      <HintPath>..\..\Framework\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm">
+      <HintPath>..\Orm\bin\Debug\Orm.dll</HintPath>
+    </Reference>
     <Reference Include="RabbitMQ.Client, Version=3.5.7.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\RabbitMQ.Client.3.5.7\lib\net40\RabbitMQ.Client.dll</HintPath>
     </Reference>
@@ -168,13 +174,13 @@
     <Compile Include="Utility\XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
-      <Project>{A787A629-941C-43C0-B468-807713780E9C}</Project>
-      <Name>Orm.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
       <Project>{39ca059c-ffc5-4d34-97d1-1b3f42085152}</Project>
       <Name>Orm.Log4Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{A787A629-941C-43C0-B468-807713780E9C}</Project>
+      <Name>Orm.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orm.Redis\Orm.Redis.csproj">
       <Project>{c0e97a62-bd21-4482-8edd-a015844907df}</Project>

@@ -23,12 +23,12 @@ namespace OrmFrameClient
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new OrmFrameClientViewModel.OrmFrameClientViewModel();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Orm.Framework.Services.DBClientBase dBClientBase = new Orm.Framework.Services.DBClientBase();
-            var ss =Orm.Config.Service.DBClientService.GetAllList<Orm.Model.BsHospital>();
+            
         }
     }
 }

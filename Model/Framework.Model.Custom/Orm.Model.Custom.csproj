@@ -313,8 +313,6 @@
     <Compile Include="ViewModel\BillSearchConditionInfo .cs" />
     <Compile Include="ViewModel\ChattingPerson.cs" />
     <Compile Include="ViewModel\ChineseHerb.cs" />
-    <Compile Include="ViewModel\DataGridSummary.cs" />
-    <Compile Include="ViewModel\DiogRoom.cs" />
     <Compile Include="ViewModel\DisplayImportInfo.cs" />
     <Compile Include="ViewModel\DisplayModule.cs" />
     <Compile Include="ViewModel\Doctor.cs" />
@@ -345,6 +343,10 @@
     <None Include="Properties\DataSources\uspOuInvoiceInvItemGoupSumQryTwoPoints.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Orm.Toolkit\Orm.Toolkit.csproj">
+      <Project>{d0153a6e-0b11-462b-bd3f-0aad78cebb6d}</Project>
+      <Name>Orm.Toolkit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>

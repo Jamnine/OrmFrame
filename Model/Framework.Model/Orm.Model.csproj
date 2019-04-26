@@ -73,13 +73,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="XYHis.Framework.Services">
-      <HintPath>..\..\Framework\Client\XYHis.Framework.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="XYHis.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\x86\Debug\XYHis.Model.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
@@ -991,7 +984,12 @@
     <Compile Include="zidungyilei\CMSContentModel.cs" />
     <Compile Include="zidungyilei\ModelToEntity.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+      <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
+      <Name>Orm.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"

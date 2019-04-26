@@ -98,6 +98,10 @@
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\OrmFrameClientViewModel\OrmFrameClientViewModel.csproj">
+      <Project>{e82862f1-8e1b-482a-9020-920e3fd3555c}</Project>
+      <Name>OrmFrameClientViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

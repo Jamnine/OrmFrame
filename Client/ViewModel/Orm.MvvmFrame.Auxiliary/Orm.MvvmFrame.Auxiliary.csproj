@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E1A8706-D5A6-4E2E-9D18-E04B8AA9F862}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.MvvmFrame.Auxiliary</RootNamespace>
+    <AssemblyName>Orm.MvvmFrame.Auxiliary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AggregateMediator.cs" />
+    <Compile Include="AsyncListLoader.cs" />
+    <Compile Include="AsyncObservableCollection.cs" />
+    <Compile Include="ButtonEnabledModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CallerMemberNameAttribute.cs" />
+    <Compile Include="EventAggregator.cs" />
+    <Compile Include="EventInformation.cs" />
+    <Compile Include="EventToCommand.cs" />
+    <Compile Include="ICleanup.cs" />
+    <Compile Include="IEventAggregator.cs" />
+    <Compile Include="IEventArgsConverter.cs" />
+    <Compile Include="MapEventToCommand.cs" />
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RelayCommandGeneric.cs" />
+    <Compile Include="Threading\DispatcherHelper.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="ViewModelCommand.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+      <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
+      <Name>Orm.Model.Parameter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+      <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
+      <Name>Orm.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.HisFrameService.csproj">
+      <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
+      <Name>Orm.IServices.HisFrameService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frame\Orm.Config\Orm.Config.csproj">
+      <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
+      <Name>Orm.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Orm.Toolkit\Orm.Toolkit.csproj">
+      <Project>{d0153a6e-0b11-462b-bd3f-0aad78cebb6d}</Project>
+      <Name>Orm.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
