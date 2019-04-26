@@ -61,11 +61,11 @@
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
       <Name>Orm.IServices.HisFrameService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\WebBridgeContract\WebBridgeContract.csproj">
+    <ProjectReference Include="..\WebBridgeContract\WebBridgeContract.csproj">
       <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
       <Name>WebBridgeContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
+    <ProjectReference Include="..\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
       <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
       <Name>WebBridgeEndpoint</Name>
     </ProjectReference>

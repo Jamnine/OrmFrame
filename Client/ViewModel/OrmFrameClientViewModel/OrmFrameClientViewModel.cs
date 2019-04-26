@@ -30,9 +30,7 @@ namespace OrmFrameClientViewModel
         }
 
         private string _test;
-        /// <summary>
-        /// 是否在打印状态，即新增或修改状态
-        /// </summary>
+        
         public string Test { get { return _test; } set { this.SetProperty(ref _test, value); } }
 
         public ICommand TestCommand { get; private set; }
