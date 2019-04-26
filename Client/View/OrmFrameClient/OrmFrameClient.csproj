@@ -94,6 +94,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Frame\Orm\Orm.csproj">
+      <Project>{5ecbc1d5-aba9-4cac-8712-1abe11000b90}</Project>
+      <Name>Orm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Framework.MapContext\Orm.MapContext.csproj">
+      <Project>{c4a1ba2a-f2ec-49c9-a73b-a7e40e196a4a}</Project>
+      <Name>Orm.MapContext</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>

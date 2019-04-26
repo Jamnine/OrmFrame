@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Orm.Config;
 
 namespace OrmFrameClientViewModel
 {
@@ -25,7 +26,7 @@ namespace OrmFrameClientViewModel
 
         private void TestCommandExecute(object parameter)
         {
-            Orm.Config.Service.DBClientService.GetAllList<Orm.Model.BsHospital>();
+            var bsHospital = Orm.Config.Service.DBClientService.GetAllList<Orm.Model.BsHospital>();
         }
 
         private string _test;
