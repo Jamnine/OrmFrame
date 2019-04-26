@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4A1BA2A-F2EC-49C9-A73B-A7E40E196A4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.MapContext</RootNamespace>
+    <AssemblyName>Orm.MapContext</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Orm.MapContext.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ELinq, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\ELinq.dll</HintPath>
+    </Reference>
+    <Reference Include="NLite, Version=0.9.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Orm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maping\AdviceAuthDtlMapping.cs" />
+    <Compile Include="Maping\AF\AFAttendanceRecordMapping.cs" />
+    <Compile Include="Maping\AF\AFClinicalWasteRecordMapping.cs" />
+    <Compile Include="Maping\AS\AdminMapping.cs" />
+    <Compile Include="Maping\AS\ApplicantMapping.cs" />
+    <Compile Include="Maping\AS\Application0522Mapping.cs" />
+    <Compile Include="Maping\AS\AsBasicInformationMapping.cs" />
+    <Compile Include="Maping\AS\AsExpertGroupMapping.cs" />
+    <Compile Include="Maping\AS\AsGroupScoreRuleMapping.cs" />
+    <Compile Include="Maping\AS\AsHealthInformationMapping.cs" />
+    <Compile Include="Maping\AS\AsOldFoolMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleAdminMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleGroupMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleItemMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleItem_back2Mapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleItem_backMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitleMapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitle_back2Mapping.cs" />
+    <Compile Include="Maping\AS\AsScaleTitle_backMapping.cs" />
+    <Compile Include="Maping\AS\AsScale_back2Mapping.cs" />
+    <Compile Include="Maping\AS\AsScale_backMapping.cs" />
+    <Compile Include="Maping\AS\AssessHeaderInfoMapping.cs" />
+    <Compile Include="Maping\AS\AssessmentApplyMapping.cs" />
+    <Compile Include="Maping\AS\AssessmentHealthScaleMapping.cs" />
+    <Compile Include="Maping\AS\AssessmentHuLiMapping.cs" />
+    <Compile Include="Maping\AS\AssessmentTimeSpanMapping.cs" />
+    <Compile Include="Maping\AS\MenuMapping.cs" />
+    <Compile Include="Maping\AS\OrganizationMapping.cs" />
+    <Compile Include="Maping\AS\PatientMapping.cs" />
+    <Compile Include="Maping\AS\RoleMapping.cs" />
+    <Compile Include="Maping\AS\RoleMenuMapping.cs" />
+    <Compile Include="Maping\BaseTableRoleMapping.cs" />
+    <Compile Include="Maping\BcQcGroupMapping.cs" />
+    <Compile Include="Maping\BKStoreLogMapping.cs" />
+    <Compile Include="Maping\BsAddRatioMapping.cs" />
+    <Compile Include="Maping\BsAnaesMapping.cs" />
+    <Compile Include="Maping\BsAppealHistoryMapping.cs" />
+    <Compile Include="Maping\BsAreaCommitteeMapping.cs" />
+    <Compile Include="Maping\BsAreaMapping.cs" />
+    <Compile Include="Maping\BsAreaPoliceStationMapping.cs" />
+    <Compile Include="Maping\BsAreaProvinceMapping.cs" />
+    <Compile Include="Maping\BsAreaRegionMapping.cs" />
+    <Compile Include="Maping\BsBacteriaDrugMapping.cs" />
+    <Compile Include="Maping\BsBacteriaGramsMapping.cs" />
+    <Compile Include="Maping\BsBacteriaMapping.cs" />
+    <Compile Include="Maping\BsBacteriaShuMapping.cs" />
+    <Compile Include="Maping\BsBacteriaStandTypeMapping.cs" />
+    <Compile Include="Maping\BsBacteriaTypeMapping.cs" />
+    <Compile Include="Maping\BsBankcardIYWTMapping.cs" />
+    <Compile Include="Maping\BsBankMapping.cs" />
+    <Compile Include="Maping\BsBaseCheckMapping.cs" />
+    <Compile Include="Maping\BsBaseCureMapping.cs" />
+    <Compile Include="Maping\BsBaseDrugMapping.cs" />
+    <Compile Include="Maping\BsBaseNurseMapping.cs" />
+    <Compile Include="Maping\BsBedFloorMapping.cs" />
+    <Compile Include="Maping\BsBedMapping.cs" />
+    <Compile Include="Maping\BsBPCureDtlMapping.cs" />
+    <Compile Include="Maping\BsBPCureMapping.cs" />
+    <Compile Include="Maping\BsBPEvaluateMapping.cs" />
+    <Compile Include="Maping\BsBPEvaluateTestMapping.cs" />
+    <Compile Include="Maping\BsBPHISIllRelationMapping.cs" />
+    <Compile Include="Maping\BsBPIllListMapping.cs" />
+    <Compile Include="Maping\BsBPItemMapping.cs" />
+    <Compile Include="Maping\BsBPItemToYBItemMapping.cs" />
+    <Compile Include="Maping\BsBPPatientGroupMapping.cs" />
+    <Compile Include="Maping\BsBranchMapping.cs" />
+    <Compile Include="Maping\BsCareGroupMapping.cs" />
+    <Compile Include="Maping\BsCertificateMapping.cs" />
+    <Compile Include="Maping\BsColorImetricMapping.cs" />
+    <Compile Include="Maping\BsCompanyMapping.cs" />
+    <Compile Include="Maping\BsCountryMapping.cs" />
+    <Compile Include="Maping\BsDiagnoseDtlMapping.cs" />
+    <Compile Include="Maping\BsDiagnoseMapping.cs" />
+    <Compile Include="Maping\BsDiagRoomMapping.cs" />
+    <Compile Include="Maping\BsDiseaseHistoryMapping.cs" />
+    <Compile Include="Maping\BsDocLevelMapping.cs" />
+    <Compile Include="Maping\BsdocregtypeListMapping.cs" />
+    <Compile Include="Maping\BsDocRegTypeMapping.cs" />
+    <Compile Include="Maping\BsDoctorMapping.cs" />
+    <Compile Include="Maping\BsEducationIllMapping.cs" />
+    <Compile Include="Maping\BsEducationMapping.cs" />
+    <Compile Include="Maping\BsEduLevelMapping.cs" />
+    <Compile Include="Maping\BsEmergencyMapping.cs" />
+    <Compile Include="Maping\BsEmergencyTypeMapping.cs" />
+    <Compile Include="Maping\BsEqmaintainMapping.cs" />
+    <Compile Include="Maping\BsEqTypeMapping.cs" />
+    <Compile Include="Maping\BsExecLocationMapping.cs" />
+    <Compile Include="Maping\BsFamilyMapping.cs" />
+    <Compile Include="Maping\BsFileConfigMapping.cs" />
+    <Compile Include="Maping\BsFluidMapping.cs" />
+    <Compile Include="Maping\BsGlobalpartnersIYWTMapping.cs" />
+    <Compile Include="Maping\BsGroupSub2Mapping.cs" />
+    <Compile Include="Maping\BsHealthEduRecMapping.cs" />
+    <Compile Include="Maping\BsHospitalMapping.cs" />
+    <Compile Include="Maping\BsHsFeetyMapping.cs" />
+    <Compile Include="Maping\BsItemAttachMapping.cs" />
+    <Compile Include="Maping\BsItemDrugMapping.cs" />
+    <Compile Include="Maping\BsItemEquipmentMapping.cs" />
+    <Compile Include="Maping\BsItemFirstPageMapping.cs" />
+    <Compile Include="Maping\BsItemFrequencyMapping.cs" />
+    <Compile Include="Maping\BsItemItemMapping.cs" />
+    <Compile Include="Maping\BsItemListMapping.cs" />
+    <Compile Include="Maping\BsItemLocationMapping.cs" />
+    <Compile Include="Maping\BsItemPacsMapping.cs" />
+    <Compile Include="Maping\BsItemPatTypeMapping.cs" />
+    <Compile Include="Maping\BsItemUnitMapping.cs" />
+    <Compile Include="Maping\BsItemUsageMapping.cs" />
+    <Compile Include="Maping\BsItemYbMapping.cs" />
+    <Compile Include="Maping\BsLabSourceItemMapping.cs" />
+    <Compile Include="Maping\BsLabSourceMapping.cs" />
+    <Compile Include="Maping\BsLimitDocLevMapping.cs" />
+    <Compile Include="Maping\BsLimitGroupMapping.cs" />
+    <Compile Include="Maping\BsLocationMapping.cs" />
+    <Compile Include="Maping\BsLocationRoomWindowMapping.cs" />
+    <Compile Include="Maping\BsLocSystemMapping.cs" />
+    <Compile Include="Maping\BsLocSystemSub2Mapping.cs" />
+    <Compile Include="Maping\BsLocSystemSubMapping.cs" />
+    <Compile Include="Maping\BsManufacturerMapping.cs" />
+    <Compile Include="Maping\BsMedicinereCommendMapping.cs" />
+    <Compile Include="Maping\BsMessageTemplateMapping.cs" />
+    <Compile Include="Maping\BsModalityStationMapping.cs" />
+    <Compile Include="Maping\BsMzFeetyMapping.cs" />
+    <Compile Include="Maping\BsNationMapping.cs" />
+    <Compile Include="Maping\BsNewsMapping.cs" />
+    <Compile Include="Maping\BsOaGroupMapping.cs" />
+    <Compile Include="Maping\BsOaGroupSubMapping.cs" />
+    <Compile Include="Maping\BsOpsItemMapping.cs" />
+    <Compile Include="Maping\BsOPSMapping.cs" />
+    <Compile Include="Maping\BsOpsRoomMapping.cs" />
+    <Compile Include="Maping\BsOuMergeFeeMapping.cs" />
+    <Compile Include="Maping\BsPatDiseaseMapping.cs" />
+    <Compile Include="Maping\BsPatientImageMapping.cs" />
+    <Compile Include="Maping\BspatientLogin_IYWTMapping.cs" />
+    <Compile Include="Maping\BsPatientMapping.cs" />
+    <Compile Include="Maping\BsPatientPhotoMapping.cs" />
+    <Compile Include="Maping\BsPatTypeMapping.cs" />
+    <Compile Include="Maping\BsPatTypeYbIllMapping.cs" />
+    <Compile Include="Maping\BsPayWayMapping.cs" />
+    <Compile Include="Maping\BsPharmacyConfigMapping.cs" />
+    <Compile Include="Maping\BsQuestionMapping.cs" />
+    <Compile Include="Maping\BsRecipeLimitMapping.cs" />
+    <Compile Include="Maping\BsRedisTableMapping.cs" />
+    <Compile Include="Maping\BsRegPatAmountMapping.cs" />
+    <Compile Include="Maping\BsRegSpanSubMapping.cs" />
+    <Compile Include="Maping\BsRegTimeSpanMapping.cs" />
+    <Compile Include="Maping\BsRegTypeMapping.cs" />
+    <Compile Include="Maping\BsRelationMapping.cs" />
+    <Compile Include="Maping\Bsrelation_IYWTMapping.cs" />
+    <Compile Include="Maping\BsReportNurseItemMapping.cs" />
+    <Compile Include="Maping\BsReportTemplateMapping.cs" />
+    <Compile Include="Maping\BsRoomMapping.cs" />
+    <Compile Include="Maping\BsRoomWindowMapping.cs" />
+    <Compile Include="Maping\BsScoreMapping.cs" />
+    <Compile Include="Maping\BsSexMapping.cs" />
+    <Compile Include="Maping\BssigningDoctorIYWTMapping.cs" />
+    <Compile Include="Maping\BsSpecialistMapping.cs" />
+    <Compile Include="Maping\BsSpecialityMapping.cs" />
+    <Compile Include="Maping\BsSpecialtyRoomMapping.cs" />
+    <Compile Include="Maping\BsSubjectMapping.cs" />
+    <Compile Include="Maping\BsSummaryMapping.cs" />
+    <Compile Include="Maping\BsTallyGroupMapping.cs" />
+    <Compile Include="Maping\BsTallyTypeMapping.cs" />
+    <Compile Include="Maping\BsTestPaperMapping.cs" />
+    <Compile Include="Maping\BsTubeTypeMapping.cs" />
+    <Compile Include="Maping\BsUnitMapping.cs" />
+    <Compile Include="Maping\BsUnitRatioMapping.cs" />
+    <Compile Include="Maping\BsUsageItemMapping.cs" />
+    <Compile Include="Maping\BsUsageMapping.cs" />
+    <Compile Include="Maping\BsUserEmrTemplateMapping.cs" />
+    <Compile Include="Maping\BsUserHouseMapping.cs" />
+    <Compile Include="Maping\BsUserImageMapping.cs" />
+    <Compile Include="Maping\BsUserLocationMapping.cs" />
+    <Compile Include="Maping\BsUserMapping.cs" />
+    <Compile Include="Maping\BsUserMenuMapping.cs" />
+    <Compile Include="Maping\BsUserModuleMapping.cs" />
+    <Compile Include="Maping\BsUserPhotoMapping.cs" />
+    <Compile Include="Maping\BsUserRoleMapping.cs" />
+    <Compile Include="Maping\BsUserRoomMapping.cs" />
+    <Compile Include="Maping\BsUserWindowsMapping.cs" />
+    <Compile Include="Maping\BsUserWordMapping.cs" />
+    <Compile Include="Maping\BsVipLevelMapping.cs" />
+    <Compile Include="Maping\BsVipTypeMapping.cs" />
+    <Compile Include="Maping\BsWeChatMoneyMapping.cs" />
+    <Compile Include="Maping\BsWorkTypeMapping.cs" />
+    <Compile Include="Maping\BsXdGroupDtlMapping.cs" />
+    <Compile Include="Maping\BsXdGroupMapping.cs" />
+    <Compile Include="Maping\BsXdrpChineseRecipeMapping.cs" />
+    <Compile Include="Maping\BsXdRpDtlMapping.cs" />
+    <Compile Include="Maping\BsXdRpMapping.cs" />
+    <Compile Include="Maping\BsYbIllTypeMapping.cs" />
+    <Compile Include="Maping\BsZyFeetyMapping.cs" />
+    <Compile Include="Maping\BS\BsBusinessCityTypeMapping.cs" />
+    <Compile Include="Maping\BS\BsCheckTestListMapping.cs" />
+    <Compile Include="Maping\BS\BsFromHospitalMapping.cs" />
+    <Compile Include="Maping\BS\BSRefHospitalMapping.cs" />
+    <Compile Include="Maping\BS\BsRuleMapping.cs" />
+    <Compile Include="Maping\BS\BsGfxeMapping.cs" />
+    <Compile Include="Maping\BS\BsHerbalPrescriptionDtlMapping.cs" />
+    <Compile Include="Maping\BS\BsHerbalPrescriptionMapping.cs" />
+    <Compile Include="Maping\BS\BsDisclaimerMapping.cs" />
+    <Compile Include="Maping\BS\BsDisTreatmentSuggestMapping.cs" />
+    <Compile Include="Maping\BS\BsHomePageMapping.cs" />
+    <Compile Include="Maping\BsInfectionMapping.cs" />
+    <Compile Include="Maping\BS\BsInvInItemMapping.cs" />
+    <Compile Include="Maping\BS\BsLinkUpMapping.cs" />
+    <Compile Include="Maping\BS\BsLockMapping.cs" />
+    <Compile Include="Maping\BS\BsMedicineRecommendMapping.cs" />
+    <Compile Include="Maping\BS\AssessmentMapping.cs" />
+    <Compile Include="Maping\BS\BsDisMapping.cs" />
+    <Compile Include="Maping\BS\BsCommonNameMapping.cs" />
+    <Compile Include="Maping\BS\BsIllMapping.cs" />
+    <Compile Include="Maping\BS\BsDeptTypeMapping.cs" />
+    <Compile Include="Maping\BS\BsDrugFormMapping.cs" />
+    <Compile Include="Maping\BsFrequencyMapping.cs" />
+    <Compile Include="Maping\BsFrequencyTimeMapping.cs" />
+    <Compile Include="Maping\BsGroupMapping.cs" />
+    <Compile Include="Maping\BsGroupSubMapping.cs" />
+    <Compile Include="Maping\BsHospitalUnionMapping.cs" />
+    <Compile Include="Maping\BsHouseMapping.cs" />
+    <Compile Include="Maping\BsInformationTmpMapping.cs" />
+    <Compile Include="Maping\BsInvMzItemMapping.cs" />
+    <Compile Include="Maping\BsItemMapping.cs" />
+    <Compile Include="Maping\BS\BsJCGroupMapping.cs" />
+    <Compile Include="Maping\BsObjectiveMapping.cs" />
+    <Compile Include="Maping\BS\BsOrderTypeMapping.cs" />
+    <Compile Include="Maping\BS\BsRestorationMapping.cs" />
+    <Compile Include="Maping\BS\BsRestorationPriceMapping.cs" />
+    <Compile Include="Maping\BS\BsScaleDiscountMapping.cs" />
+    <Compile Include="Maping\BS\BsSelectedLocItemLogMapping.cs" />
+    <Compile Include="Maping\BS\BsSymptomMapping.cs" />
+    <Compile Include="Maping\BS\BsTjGroupMapping.cs" />
+    <Compile Include="Maping\BS\BsTjItemClassMapping.cs" />
+    <Compile Include="Maping\BS\BsTjItemMapping.cs" />
+    <Compile Include="Maping\BS\BsTjItemTypeMapping.cs" />
+    <Compile Include="Maping\BS\BsTjLocationItemMapping.cs" />
+    <Compile Include="Maping\BS\BsTjLocationMapping.cs" />
+    <Compile Include="Maping\BS\BsYBRouteMapping.cs" />
+    <Compile Include="Maping\BS\WorkSheetMapping.cs" />
+    <Compile Include="Maping\CkBandOfficeMapping.cs" />
+    <Compile Include="Maping\CkBdBankMapping.cs" />
+    <Compile Include="Maping\CkBldApplyBankMapping.cs" />
+    <Compile Include="Maping\CkBldApplyMapping.cs" />
+    <Compile Include="Maping\CkBldDonateMapping.cs" />
+    <Compile Include="Maping\CkBldFreeMapping.cs" />
+    <Compile Include="Maping\CkBldReactionMapping.cs" />
+    <Compile Include="Maping\CkBldReimbMapping.cs" />
+    <Compile Include="Maping\CkBldToStationMapping.cs" />
+    <Compile Include="Maping\CkBloodBackMapping.cs" />
+    <Compile Include="Maping\CkBloodSendMapping.cs" />
+    <Compile Include="Maping\CkBloodTypeMapping.cs" />
+    <Compile Include="Maping\CkCompanyCkeckMapping.cs" />
+    <Compile Include="Maping\CkCompanyGroupMapping.cs" />
+    <Compile Include="Maping\CkCompanyManMapping.cs" />
+    <Compile Include="Maping\CkCompanyMapping.cs" />
+    <Compile Include="Maping\CkCompGroupPsApplyMapping.cs" />
+    <Compile Include="Maping\CkFormulaMapping.cs" />
+    <Compile Include="Maping\CkGroupDepartMentMapping.cs" />
+    <Compile Include="Maping\CkGroupItemMapping.cs" />
+    <Compile Include="Maping\CkGroupMapping.cs" />
+    <Compile Include="Maping\CkIllAdviceMapping.cs" />
+    <Compile Include="Maping\CkInFeeMapping.cs" />
+    <Compile Include="Maping\CkItemMapping.cs" />
+    <Compile Include="Maping\CkItemMethodMapping.cs" />
+    <Compile Include="Maping\CkMachineResultDtlMapping.cs" />
+    <Compile Include="Maping\CkMachineSampleInfoMapping.cs" />
+    <Compile Include="Maping\CkMachineSampleMapping.cs" />
+    <Compile Include="Maping\CkMachineSettingMapping.cs" />
+    <Compile Include="Maping\CkMachineSplitMapping.cs" />
+    <Compile Include="Maping\CkMachineTestMapping.cs" />
+    <Compile Include="Maping\CkMainIllMapping.cs" />
+    <Compile Include="Maping\CkMainMapping.cs" />
+    <Compile Include="Maping\CkMainMemoReportMapping.cs" />
+    <Compile Include="Maping\CkProfileMapping.cs" />
+    <Compile Include="Maping\CkPsApplyMapping.cs" />
+    <Compile Include="Maping\CkQcControlMapping.cs" />
+    <Compile Include="Maping\CkQcLotMapping.cs" />
+    <Compile Include="Maping\CkQcResultMapping.cs" />
+    <Compile Include="Maping\CKReportDefineMapping.cs" />
+    <Compile Include="Maping\CkReportMapping.cs" />
+    <Compile Include="Maping\CkResultGroupMapping.cs" />
+    <Compile Include="Maping\CkResultMapping.cs" />
+    <Compile Include="Maping\CkTestGroupMapping.cs" />
+    <Compile Include="Maping\CkTestTypeMapping.cs" />
+    <Compile Include="Maping\CkTogetherMapping.cs" />
+    <Compile Include="Maping\CkItemQcMapping.cs" />
+    <Compile Include="Maping\CkItemRangeMapping.cs" />
+    <Compile Include="Maping\CkItemResultMapping.cs" />
+    <Compile Include="Maping\CkLabBankMapping.cs" />
+    <Compile Include="Maping\CkLabBoodMapping.cs" />
+    <Compile Include="Maping\CkLabDtlMapping.cs" />
+    <Compile Include="Maping\CkLabMapping.cs" />
+    <Compile Include="Maping\CkLabMicDtlMapping.cs" />
+    <Compile Include="Maping\CkLabMicMapping.cs" />
+    <Compile Include="Maping\CkLabResultMapping.cs" />
+    <Compile Include="Maping\CkMachineFluidMapping.cs" />
+    <Compile Include="Maping\CKMachineFormularMapping.cs" />
+    <Compile Include="Maping\CkMachineImageMapping.cs" />
+    <Compile Include="Maping\CkMachineMaxIDMapping.cs" />
+    <Compile Include="Maping\CkMachineNoPassageMapping.cs" />
+    <Compile Include="Maping\CkMachinePassageMapping.cs" />
+    <Compile Include="Maping\CkMachineqcLotMapping.cs" />
+    <Compile Include="Maping\CkMachineRawDataMapping.cs" />
+    <Compile Include="Maping\CkMachineResultMapping.cs" />
+    <Compile Include="Maping\CkPlanMapping.cs" />
+    <Compile Include="Maping\CkResultImageMapping.cs" />
+    <Compile Include="Maping\CkSuggestionMapping.cs" />
+    <Compile Include="Maping\CkSummaryMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_Admin_UserLoginLogMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_Admin_UserMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_AnswerMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_BespokeMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_BsAgentMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_BsDepartmentMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_BsDoctorMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_BsSchInfoMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_CMS_CategoryMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_CMS_ContentMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_ColumnMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_DoctorAccountMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_EnquireMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_N_BsDepartmentMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_N_BsDoctorMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_PcUserMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_QuestionMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_RegisterInfoMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_SettingMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_SiteLInkMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_SlideMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_TableMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeChatPayOrderMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_AppMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_MenuMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_MessagesTemplateMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_SyncLogMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_UserBindingMapping.cs" />
+    <Compile Include="Maping\CMS\CMS_WeiChat_UserMapping.cs" />
+    <Compile Include="Maping\CountUserDataMapping.cs" />
+    <Compile Include="Maping\CsAppDeptTypeMapping.cs" />
+    <Compile Include="Maping\CsLocServiceMapping.cs" />
+    <Compile Include="Maping\CsLogisticServeDetailMapping.cs" />
+    <Compile Include="Maping\CsLogisticServeMapping.cs" />
+    <Compile Include="Maping\DayInInvoiceChkMapping.cs" />
+    <Compile Include="Maping\DayInInvoiceDtlChkMapping.cs" />
+    <Compile Include="Maping\DayInInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\DayInInvoiceDtlRegMapping.cs" />
+    <Compile Include="Maping\DayInInvoiceMapping.cs" />
+    <Compile Include="Maping\DayInInvoicePayChkMapping.cs" />
+    <Compile Include="Maping\DayInInvoicePayMapping.cs" />
+    <Compile Include="Maping\DayOuGhRcMapping.cs" />
+    <Compile Include="Maping\DayOuInvoiceChkMapping.cs" />
+    <Compile Include="Maping\DayOuInvoiceDtlChkMapping.cs" />
+    <Compile Include="Maping\DayOuInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\DayOuInvoiceMapping.cs" />
+    <Compile Include="Maping\DayOuInvoicePayChkMapping.cs" />
+    <Compile Include="Maping\DayOuInvoicePayMapping.cs" />
+    <Compile Include="Maping\DayOulInvoiceRegChkMapping.cs" />
+    <Compile Include="Maping\DayOulInvoiceRegMapping.cs" />
+    <Compile Include="Maping\DayOuRecipeWorkloadMapping.cs" />
+    <Compile Include="Maping\DayOuRmDrugWorkloadMapping.cs" />
+    <Compile Include="Maping\DgDayGroupMapping.cs" />
+    <Compile Include="Maping\DgDayGroupPatMapping.cs" />
+    <Compile Include="Maping\DgIllCheckResultMapping.cs" />
+    <Compile Include="Maping\DgIllCompareMapping.cs" />
+    <Compile Include="Maping\DgIllCureMapping.cs" />
+    <Compile Include="Maping\DgIllEmrMapping.cs" />
+    <Compile Include="Maping\DgIllGroupMapping.cs" />
+    <Compile Include="Maping\DgIllSymptomMapping.cs" />
+    <Compile Include="Maping\DgIllXdrpMapping.cs" />
+    <Compile Include="Maping\DgRoadChinRicipeDtlMapping.cs" />
+    <Compile Include="Maping\DgRoadDtlMapping.cs" />
+    <Compile Include="Maping\DgRoadGroupMapping.cs" />
+    <Compile Include="Maping\DgRoadGroupPatMapping.cs" />
+    <Compile Include="Maping\DgRoadIllMapping.cs" />
+    <Compile Include="Maping\DgRoadLocMapping.cs" />
+    <Compile Include="Maping\DgRoadMapping.cs" />
+    <Compile Include="Maping\DgRoadPatDtlMapping.cs" />
+    <Compile Include="Maping\DgRoadPatMapping.cs" />
+    <Compile Include="Maping\DgRoadVariationMapping.cs" />
+    <Compile Include="Maping\dtpropertiesMapping.cs" />
+    <Compile Include="Maping\El\ElBaseFiledMapping.cs" />
+    <Compile Include="Maping\El\ElBaseTableDtlMapping.cs" />
+    <Compile Include="Maping\El\ElBaseTableMapping.cs" />
+    <Compile Include="Maping\El\ElPatFormMapping.cs" />
+    <Compile Include="Maping\El\ElPatFormValueMapping.cs" />
+    <Compile Include="Maping\El\ElPatRecordMapping.cs" />
+    <Compile Include="Maping\EmailFileMapping.cs" />
+    <Compile Include="Maping\EmrReCordsMapping.cs" />
+    <Compile Include="Maping\EmrTemplateMapping.cs" />
+    <Compile Include="Maping\EqAttachMapping.cs" />
+    <Compile Include="Maping\EqCheckMapping.cs" />
+    <Compile Include="Maping\EqRadEnvironmentMapping.cs" />
+    <Compile Include="Maping\EqRepairMapping.cs" />
+    <Compile Include="Maping\EqTransferMapping.cs" />
+    <Compile Include="Maping\EquipMentMapping.cs" />
+    <Compile Include="Maping\FollowPatientMapping.cs" />
+    <Compile Include="Maping\GblAutoUpdateMapping.cs" />
+    <Compile Include="Maping\GblAutoUpdateOldMapping.cs" />
+    <Compile Include="Maping\GblBaseTableItemMapping.cs" />
+    <Compile Include="Maping\GblCatalogExceptMapping.cs" />
+    <Compile Include="Maping\GblCatalogJoinMapping.cs" />
+    <Compile Include="Maping\GblCatalogKeyMapping.cs" />
+    <Compile Include="Maping\GblChinCharMapping.cs" />
+    <Compile Include="Maping\GblCurrentUserMapping.cs" />
+    <Compile Include="Maping\GB\GblAnalysisQuerySettingMapping.cs" />
+    <Compile Include="Maping\GB\GblAnalysisSettingMapping.cs" />
+    <Compile Include="Maping\GB\GblBackupRestoreMapping.cs" />
+    <Compile Include="Maping\GblElClassMapping.cs" />
+    <Compile Include="Maping\GblElGroupMapping.cs" />
+    <Compile Include="Maping\GblEmailMapping.cs" />
+    <Compile Include="Maping\GblEmailUserMapping.cs" />
+    <Compile Include="Maping\GblEmrAutoUpdateMapping.cs" />
+    <Compile Include="Maping\GblEMRBranchMapping.cs" />
+    <Compile Include="Maping\GblEMRCatalogMapping.cs" />
+    <Compile Include="Maping\GblEMRQcGroupMapping.cs" />
+    <Compile Include="Maping\GblEMRQcItemMapping.cs" />
+    <Compile Include="Maping\GblFieldDescMapping.cs" />
+    <Compile Include="Maping\GblFuctionMapping.cs" />
+    <Compile Include="Maping\GblFunTraceMapping.cs" />
+    <Compile Include="Maping\GblGetSequenceNumMapping.cs" />
+    <Compile Include="Maping\GblInvRegMapping.cs" />
+    <Compile Include="Maping\GblKeyLockSettingMapping.cs" />
+    <Compile Include="Maping\GblLatDayRunTimeMapping.cs" />
+    <Compile Include="Maping\GblMenuSetMapping.cs" />
+    <Compile Include="Maping\GblModuleMapping.cs" />
+    <Compile Include="Maping\GblMrkMapping.cs" />
+    <Compile Include="Maping\GblNavigationMapping.cs" />
+    <Compile Include="Maping\GblNavigationMenuMapping.cs" />
+    <Compile Include="Maping\GblNavigationRoleMapping.cs" />
+    <Compile Include="Maping\GblOnlinerMapping.cs" />
+    <Compile Include="Maping\GblOracleToSqlMapping.cs" />
+    <Compile Include="Maping\GblPatientMenuMapping.cs" />
+    <Compile Include="Maping\GblPhoneMsgMapping.cs" />
+    <Compile Include="Maping\GblPrinterMapping.cs" />
+    <Compile Include="Maping\GblQuestionMapping.cs" />
+    <Compile Include="Maping\GblReportDetailMapping.cs" />
+    <Compile Include="Maping\GblReportGroupMapping.cs" />
+    <Compile Include="Maping\GblReportMapping.cs" />
+    <Compile Include="Maping\GblRoleMapping.cs" />
+    <Compile Include="Maping\GblRoleModuleMapping.cs" />
+    <Compile Include="Maping\GblSettingMapping.cs" />
+    <Compile Include="Maping\GblSystemFunctionMapping.cs" />
+    <Compile Include="Maping\GblSystemMapping.cs" />
+    <Compile Include="Maping\GblSystemMenuMapping.cs" />
+    <Compile Include="Maping\GblTraceMapping.cs" />
+    <Compile Include="Maping\GblVersionMapping.cs" />
+    <Compile Include="Maping\HistAdviceAuthDtlMapping.cs" />
+    <Compile Include="Maping\GB\SysSequenceConfigMapping.cs" />
+    <Compile Include="Maping\HistInAdviceTempMapping.cs" />
+    <Compile Include="Maping\HistInDrugReqdtlMapping.cs" />
+    <Compile Include="Maping\HistInExecuteMapping.cs" />
+    <Compile Include="Maping\HistInInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\HistMoveHosInfoMapping.cs" />
+    <Compile Include="Maping\HistOuExecuteDtlMapping.cs" />
+    <Compile Include="Maping\HistOuInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\HistOuRecipeDtlMapping.cs" />
+    <Compile Include="Maping\HistOuRecipeTempMapping.cs" />
+    <Compile Include="Maping\HistTraceMapping.cs" />
+    <Compile Include="Maping\HistTrAdviceMapping.cs" />
+    <Compile Include="Maping\HuAdjustDtlMapping.cs" />
+    <Compile Include="Maping\HuAdjustMapping.cs" />
+    <Compile Include="Maping\HuAdjustPlanDtlMapping.cs" />
+    <Compile Include="Maping\HuAdjustPlanMapping.cs" />
+    <Compile Include="Maping\HuBackDtlMapping.cs" />
+    <Compile Include="Maping\HuBackMapping.cs" />
+    <Compile Include="Maping\HuCheckDtlMapping.cs" />
+    <Compile Include="Maping\HuCheckMapping.cs" />
+    <Compile Include="Maping\HuLoseDtlMapping.cs" />
+    <Compile Include="Maping\HuLoseMapping.cs" />
+    <Compile Include="Maping\HuOtherInDtlMapping.cs" />
+    <Compile Include="Maping\HuOtherInMapping.cs" />
+    <Compile Include="Maping\HuOtherOutDtlMapping.cs" />
+    <Compile Include="Maping\HuOtherOutMapping.cs" />
+    <Compile Include="Maping\HuOutDtlMapping.cs" />
+    <Compile Include="Maping\HuOutMapping.cs" />
+    <Compile Include="Maping\HuPkDtlMapping.cs" />
+    <Compile Include="Maping\HuPkMapping.cs" />
+    <Compile Include="Maping\HuPydtlMapping.cs" />
+    <Compile Include="Maping\HuPyMapping.cs" />
+    <Compile Include="Maping\HuStockDtlMapping.cs" />
+    <Compile Include="Maping\HuStockMapping.cs" />
+    <Compile Include="Maping\HuStockReqdtlMapping.cs" />
+    <Compile Include="Maping\HuStockReqMapping.cs" />
+    <Compile Include="Maping\HuStoreLogMapping.cs" />
+    <Compile Include="Maping\HustoresDaysMapping.cs" />
+    <Compile Include="Maping\HuStoresMapping.cs" />
+    <Compile Include="Maping\HuVoucherDtlMapping.cs" />
+    <Compile Include="Maping\HuVoucherMapping.cs" />
+    <Compile Include="Maping\InAdviceGroupMapping.cs" />
+    <Compile Include="Maping\InAdviceLongMapping.cs" />
+    <Compile Include="Maping\InAdviceNurseMapping.cs" />
+    <Compile Include="Maping\InAdviceTempMapping.cs" />
+    <Compile Include="Maping\InAdviceWeekDayMapping.cs" />
+    <Compile Include="Maping\InArrearAmountMapping.cs" />
+    <Compile Include="Maping\InBabyBodyHeatMapping.cs" />
+    <Compile Include="Maping\InBodyHeatMapping.cs" />
+    <Compile Include="Maping\InCallBackMapping.cs" />
+    <Compile Include="Maping\InChangeBedMapping.cs" />
+    <Compile Include="Maping\InChinRicipeDtlMapping.cs" />
+    <Compile Include="Maping\InChinRicipeMapping.cs" />
+    <Compile Include="Maping\InDayChargeMapping.cs" />
+    <Compile Include="Maping\InEMRMapping.cs" />
+    <Compile Include="Maping\InHosBedMapping.cs" />
+    <Compile Include="Maping\InHosInfoMapping.cs" />
+    <Compile Include="Maping\InHosMzIllMapping.cs" />
+    <Compile Include="Maping\InHosOpsMapping.cs" />
+    <Compile Include="Maping\InHosUsageItemMapping.cs" />
+    <Compile Include="Maping\InInvoiceDtlCancelMapping.cs" />
+    <Compile Include="Maping\InInvoiceDtlChkMapping.cs" />
+    <Compile Include="Maping\InInvoiceDtlDumpMapping.cs" />
+    <Compile Include="Maping\InInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\InInvoiceDtlTempMapping.cs" />
+    <Compile Include="Maping\InInvoiceFeetySumMapping.cs" />
+    <Compile Include="Maping\InInvoiceInvItemSumMapping.cs" />
+    <Compile Include="Maping\InInvoiceMapping.cs" />
+    <Compile Include="Maping\InInvoYBMapping.cs" />
+    <Compile Include="Maping\InLogInHospitalMapping.cs" />
+    <Compile Include="Maping\InLogInHospitalOldMapping.cs" />
+    <Compile Include="Maping\InLogOutHospitalMapping.cs" />
+    <Compile Include="Maping\InLogOutHospitalOldMapping.cs" />
+    <Compile Include="Maping\InLogOutLocationMapping.cs" />
+    <Compile Include="Maping\InLogOutLocationOldMapping.cs" />
+    <Compile Include="Maping\InLogStatusInOldMapping.cs" />
+    <Compile Include="Maping\InOutHospitalMapping.cs" />
+    <Compile Include="Maping\InOutLocationMapping.cs" />
+    <Compile Include="Maping\InPatFeesListMapping.cs" />
+    <Compile Include="Maping\InPatFeesList_jMapping.cs" />
+    <Compile Include="Maping\InPatLogBedMapping.cs" />
+    <Compile Include="Maping\InPatLogMapping.cs" />
+    <Compile Include="Maping\InPayMapping.cs" />
+    <Compile Include="Maping\InRecFirstPageMapping.cs" />
+    <Compile Include="Maping\InRmKsDtlMapping.cs" />
+    <Compile Include="Maping\IntegralLevelMapping.cs" />
+    <Compile Include="Maping\IntegralsTableMapping.cs" />
+    <Compile Include="Maping\InWorkLogMapping.cs" />
+    <Compile Include="Maping\InYBBalanceMapping.cs" />
+    <Compile Include="Maping\List_ExampleMapping.cs" />
+    <Compile Include="Maping\LoginLogMapping.cs" />
+    <Compile Include="Maping\MediCalhiStoryMapping.cs" />
+    <Compile Include="Maping\GB\Msg\TimingMessageMapping.cs" />
+    <Compile Include="Maping\GB\Msg\TimingSendTaskMapping.cs" />
+    <Compile Include="Maping\MyafFairsMapping.cs" />
+    <Compile Include="Maping\OaDocAuthMapping.cs" />
+    <Compile Include="Maping\OaDocFileMapping.cs" />
+    <Compile Include="Maping\OaDocKeyMapping.cs" />
+    <Compile Include="Maping\OaDocReaderMapping.cs" />
+    <Compile Include="Maping\OaDocumentMapping.cs" />
+    <Compile Include="Maping\OaScheduleMapping.cs" />
+    <Compile Include="Maping\OpsApplyMapping.cs" />
+    <Compile Include="Maping\OpsChargeMapping.cs" />
+    <Compile Include="Maping\OpsEventMapping.cs" />
+    <Compile Include="Maping\OpsManMapping.cs" />
+    <Compile Include="Maping\OuAdviserScheduleMapping.cs" />
+    <Compile Include="Maping\OuAntiHistoryMapping.cs" />
+    <Compile Include="Maping\OuClincDiagMapping.cs" />
+    <Compile Include="Maping\OuClinicFirstMapping.cs" />
+    <Compile Include="Maping\OuCommunicateLogMapping.cs" />
+    <Compile Include="Maping\OuDayReportMapping.cs" />
+    <Compile Include="Maping\OuDiagCallMapping.cs" />
+    <Compile Include="Maping\OuDiangNosisMapping.cs" />
+    <Compile Include="Maping\OuDocMyPatMapping.cs" />
+    <Compile Include="Maping\OuDocRegTypeMapping.cs" />
+    <Compile Include="Maping\OuDocSpanSubMapping.cs" />
+    <Compile Include="Maping\OuExecuteBackMapping.cs" />
+    <Compile Include="Maping\OuExecuteDtlMapping.cs" />
+    <Compile Include="Maping\OuExecuteMapping.cs" />
+    <Compile Include="Maping\OuFeeArrearsMapping.cs" />
+    <Compile Include="Maping\OuGetAllRegInfoMapping.cs" />
+    <Compile Include="Maping\OuGetRegInfoMapping.cs" />
+    <Compile Include="Maping\OuGetSchInfoMapping.cs" />
+    <Compile Include="Maping\OuHealthCheckBaseMapping.cs" />
+    <Compile Include="Maping\OuHealthCheckHitMapping.cs" />
+    <Compile Include="Maping\OuHealthCheckUseMapping.cs" />
+    <Compile Include="Maping\OuHosInfoMapping.cs" />
+    <Compile Include="Maping\OuInvoiceDtlMapping.cs" />
+    <Compile Include="Maping\OuInvoiceDtlTempMapping.cs" />
+    <Compile Include="Maping\OuInvoiceFeetySumMapping.cs" />
+    <Compile Include="Maping\OuInvoiceInvItemSumMapping.cs" />
+    <Compile Include="Maping\OuInvoiceMapping.cs" />
+    <Compile Include="Maping\OuInvoicePayMapping.cs" />
+    <Compile Include="Maping\OuInvoYbMapping.cs" />
+    <Compile Include="Maping\OuLeadRegMapping.cs" />
+    <Compile Include="Maping\OulInvoiceRegMapping.cs" />
+    <Compile Include="Maping\OulInvoiceRegPayMapping.cs" />
+    <Compile Include="Maping\OuRechargeMapping.cs" />
+    <Compile Include="Maping\OuRecipeBackMapping.cs" />
+    <Compile Include="Maping\OuRecipeChinMapping.cs" />
+    <Compile Include="Maping\OuRecipeDtlMapping.cs" />
+    <Compile Include="Maping\OuRecipeMapping.cs" />
+    <Compile Include="Maping\OuRecipeTempMapping.cs" />
+    <Compile Include="Maping\OuScheduleMapping.cs" />
+    <Compile Include="Maping\OutMedTableHisMapping.cs" />
+    <Compile Include="Maping\OuVitalSignsMapping.cs" />
+    <Compile Include="Maping\OU\AdEmrMapping.cs" />
+    <Compile Include="Maping\OU\AdEmrVisitsMapping.cs" />
+    <Compile Include="Maping\OU\ChildrenOralMapping.cs" />
+    <Compile Include="Maping\OU\CollectPatMapping.cs" />
+    <Compile Include="Maping\OU\InEMRXmlMapping.cs" />
+    <Compile Include="Maping\OU\OuAuxiliaryCheckMapping.cs" />
+    <Compile Include="Maping\OU\OuDayScheduleMapping.cs" />
+    <Compile Include="Maping\OU\OuEMRMapping.cs" />
+    <Compile Include="Maping\OU\OuHospitalizationMapping.cs" />
+    <Compile Include="Maping\OU\OuMedicalRecordMapping.cs" />
+    <Compile Include="Maping\OU\OuPatientGroupMapping.cs" />
+    <Compile Include="Maping\OU\OuDiagnosisMapping.cs" />
+    <Compile Include="Maping\OU\OuServiceDtlMapping.cs" />
+    <Compile Include="Maping\OU\OuServiceMapping.cs" />
+    <Compile Include="Maping\OU\OuTreatmentRecordMapping.cs" />
+    <Compile Include="Maping\OU\OuUseDrugMapping.cs" />
+    <Compile Include="Maping\OU\OuWebPreRegMapping.cs" />
+    <Compile Include="Maping\OU\UserEnterMemoryMapping.cs" />
+    <Compile Include="Maping\PSApplyItemMapping.cs" />
+    <Compile Include="Maping\PsApplyReportImageMapping.cs" />
+    <Compile Include="Maping\PsWinTypeMapping.cs" />
+    <Compile Include="Maping\QuerySystemMapping.cs" />
+    <Compile Include="Maping\OU\ToothCaseContentMapping.cs" />
+    <Compile Include="Maping\OU\ToothCaseContentTypeMapping.cs" />
+    <Compile Include="Maping\OU\ToothCaseHistoryMapping.cs" />
+    <Compile Include="Maping\OU\ToothCaseHistoryTypeMapping.cs" />
+    <Compile Include="Maping\OU\ToothCheckMapping.cs" />
+    <Compile Include="Maping\OU\ToothCouresMapping.cs" />
+    <Compile Include="Maping\OU\ToothDiagnoseMapping.cs" />
+    <Compile Include="Maping\OU\ToothImageMapping.cs" />
+    <Compile Include="Maping\OU\ToothTreatmentPlanMapping.cs" />
+    <Compile Include="Maping\OU\ToothXRayMapping.cs" />
+    <Compile Include="Maping\PatCardFeeMapping.cs" />
+    <Compile Include="Maping\PatPricereCordsMapping.cs" />
+    <Compile Include="Maping\PsApplyReportMapping.cs" />
+    <Compile Include="Maping\PsDiagDoctorsMapping.cs" />
+    <Compile Include="Maping\PsDiagMeetingMapping.cs" />
+    <Compile Include="Maping\PsDrugActionMapping.cs" />
+    <Compile Include="Maping\PsExecuteMapping.cs" />
+    <Compile Include="Maping\PsNearAreaFileMapping.cs" />
+    <Compile Include="Maping\RdBrainDeadMapping.cs" />
+    <Compile Include="Maping\RdFoodSourceMapping.cs" />
+    <Compile Include="Maping\RdInfectiousNewMapping.cs" />
+    <Compile Include="Maping\Referral\BsHospitalRelationMapping.cs" />
+    <Compile Include="Maping\Referral\BsillnessMapping.cs" />
+    <Compile Include="Maping\RmAppDrugDtlMapping.cs" />
+    <Compile Include="Maping\RmAppDrugMapping.cs" />
+    <Compile Include="Maping\RmApplbackDtlMapping.cs" />
+    <Compile Include="Maping\RmApplbackMapping.cs" />
+    <Compile Include="Maping\RmstoresMapping.cs" />
+    <Compile Include="Maping\RmUnderLineMapping.cs" />
+    <Compile Include="Maping\RmZyBackDtlMapping.cs" />
+    <Compile Include="Maping\RmZyOutDtlMapping.cs" />
+    <Compile Include="Maping\RmZyOutMapping.cs" />
+    <Compile Include="Maping\RpdgroadgroupMapping.cs" />
+    <Compile Include="Maping\RtrjkReportMapping.cs" />
+    <Compile Include="Maping\TJ\BcQcgroupMapping.cs" />
+    <Compile Include="Maping\QCReagentBatchesMapping.cs" />
+    <Compile Include="Maping\TJ\BsLabsourceMapping.cs" />
+    <Compile Include="Maping\TJ\BstubeTypeMapping.cs" />
+    <Compile Include="Maping\CKMachineMapping.cs" />
+    <Compile Include="Maping\TJ\CkChannelMapping.cs" />
+    <Compile Include="Maping\TJ\CKMachineSampleMapping.cs" />
+    <Compile Include="Maping\TJ\TjDiseaseMapping.cs" />
+    <Compile Include="Maping\TJ\TjItemInterfaceMapping.cs" />
+    <Compile Include="Maping\TJ\TjItemRecordMapping.cs" />
+    <Compile Include="Maping\TJ\TjItemResultTmpMapping.cs" />
+    <Compile Include="Maping\TJ\TjPackageDtlMapping.cs" />
+    <Compile Include="Maping\TJ\TjPackageMapping.cs" />
+    <Compile Include="Maping\TJ\TjPlanMapping.cs" />
+    <Compile Include="Maping\TJ\TjResultImageMapping.cs" />
+    <Compile Include="Maping\TJ\TjSuggestionMapping.cs" />
+    <Compile Include="Maping\TJ\TjSummaryMapping.cs" />
+    <Compile Include="Maping\RegisterMapContext.cs" />
+    <Compile Include="Maping\TmpEmrMapping.cs" />
+    <Compile Include="Maping\TmpOuEmrMapping.cs" />
+    <Compile Include="Maping\TmpRecipeEmrDtlMapping.cs" />
+    <Compile Include="Maping\TmpRecipeEmrMapping.cs" />
+    <Compile Include="Maping\TMP\ChineseRecipeDtlMapping.cs" />
+    <Compile Include="Maping\TMP\MedicineChineseRecipeMapping.cs" />
+    <Compile Include="Maping\ToothEmrMapping.cs" />
+    <Compile Include="Maping\TraceMapping.cs" />
+    <Compile Include="Maping\TrAdviceMapping.cs" />
+    <Compile Include="Maping\TrCkActionlogMapping.cs" />
+    <Compile Include="Maping\TrDoctorEmrMapping.cs" />
+    <Compile Include="Maping\TrHuActionlogMapping.cs" />
+    <Compile Include="Maping\TrInActionlogMapping.cs" />
+    <Compile Include="Maping\TrInHosInfoMapping.cs" />
+    <Compile Include="Maping\TrOuActionlogMapping.cs" />
+    <Compile Include="Maping\TrPractiseMapping.cs" />
+    <Compile Include="Maping\TrRmActionlogMapping.cs" />
+    <Compile Include="Maping\TrSchedulerMapping.cs" />
+    <Compile Include="Maping\TrScheLineMapping.cs" />
+    <Compile Include="Maping\Updater\BsVersionMapping.cs" />
+    <Compile Include="Maping\Updater\CustomClientMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Maping\Updater\CustomerMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Maping\Updater\DoctorTeamMapping.cs" />
+    <Compile Include="Maping\Updater\LogFieldChanged2Mapping.cs" />
+    <Compile Include="Maping\Updater\LogFieldChangedMapping.cs" />
+    <Compile Include="Maping\Updater\UpdateServiceLogMapping.cs" />
+    <Compile Include="Maping\Updater\UpdateVersionSqlScriptMapping.cs" />
+    <Compile Include="Maping\Updater\UpVersionMapping.cs" />
+    <Compile Include="Maping\Updater\VersionFileMapping.cs" />
+    <Compile Include="Maping\VipBindingMapping.cs" />
+    <Compile Include="Maping\VipCardDiscountMapping.cs" />
+    <Compile Include="Maping\VipCardLogMapping.cs" />
+    <Compile Include="Maping\VipCardMapping.cs" />
+    <Compile Include="Maping\VipChargeConfigMapping.cs" />
+    <Compile Include="Maping\VipChargeItemMapping.cs" />
+    <Compile Include="Maping\VipIntegralMapping.cs" />
+    <Compile Include="Maping\VipReChargeMapping.cs" />
+    <Compile Include="Maping\VipReckoningChargeMapping.cs" />
+    <Compile Include="Maping\VisitMessageLogMapping.cs" />
+    <Compile Include="Maping\VisitRecordMapping.cs" />
+    <Compile Include="Maping\VisitRecordUserMapping.cs" />
+    <Compile Include="Maping\VO\AuditstateMapping.cs" />
+    <Compile Include="Maping\VO\VolunteerFilesMapping.cs" />
+    <Compile Include="Maping\VO\VolunteerScheduleMapping.cs" />
+    <Compile Include="Maping\VO\VolunteerTimeMapping.cs" />
+    <Compile Include="Maping\VO\VolunteerTypeMapping.cs" />
+    <Compile Include="Maping\YbDtlDayUpMapping.cs" />
+    <Compile Include="Maping\YbPatSeqMapping.cs" />
+    <Compile Include="Maping\YL\OuOrderInfoMapping.cs" />
+    <Compile Include="Maping\YL\YlReferralRecordMapping.cs" />
+    <Compile Include="Maping\ZxybPatMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BillNoEntityMapping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Oracle.DataAccess.dll" />
+    <Content Include="bin\Debug\XYHis.MapContext.dll" />
+    <Content Include="bin\Debug\XYHis.MapContext.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"
+copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

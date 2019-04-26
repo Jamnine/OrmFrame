@@ -1,0 +1,204 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Orm.Toolkit">
+    
+
+    <Color x:Key="AccentColor">
+        #2D2D30
+    </Color>
+    <SolidColorBrush x:Key="AccentColorBrush" SolidColorBrush.Color="{StaticResource AccentColor}" />
+
+
+
+    <Style TargetType="{x:Type local:ProgressRing}">
+        <Setter Setter.Property="Control.Foreground" Setter.Value="{DynamicResource AccentColorBrush}" />
+        <Setter Setter.Property="UIElement.IsHitTestVisible" Setter.Value="False" />
+        <Setter Setter.Property="FrameworkElement.HorizontalAlignment" Setter.Value="Center" />
+        <Setter Setter.Property="FrameworkElement.VerticalAlignment" Setter.Value="Center" />
+        <Setter Setter.Property="FrameworkElement.MinHeight" Setter.Value="20" />
+        <Setter Setter.Property="FrameworkElement.MinWidth" Setter.Value="20" />
+        <Setter Setter.Property="FrameworkElement.Height" Setter.Value="60" />
+        <Setter Setter.Property="FrameworkElement.Width" Setter.Value="60" />
+        <Setter Setter.Property="Control.IsTabStop" Setter.Value="False" />
+        <Setter Setter.Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate ControlTemplate.TargetType="{x:Type local:ProgressRing}">
+                    <Border Border.Background="{TemplateBinding Control.Background}" Border.BorderThickness="{TemplateBinding Control.BorderThickness}" Border.BorderBrush="{TemplateBinding Control.BorderBrush}">
+                        <FrameworkElement.Resources>
+                            <ResourceDictionary>
+                                <Style x:Key="ProgressRingEllipseStyle" Style.TargetType="{x:Type Ellipse}">
+                                    <Setter Setter.Property="UIElement.Opacity" Setter.Value="0" />
+                                    <Setter Setter.Property="FrameworkElement.HorizontalAlignment" Setter.Value="Left" />
+                                    <Setter Setter.Property="FrameworkElement.VerticalAlignment" Setter.Value="Top" />
+                                </Style>
+                            </ResourceDictionary>
+                        </FrameworkElement.Resources>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="SizeStates">
+                                <VisualState x:Name="Large">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Timeline.Duration="0" Storyboard.TargetName="SixthCircle" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame ObjectKeyFrame.KeyTime="0">
+                                                <ObjectKeyFrame.Value>
+                                                    <Visibility>
+                                                        Visible
+                                                    </Visibility>
+                                                </ObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Small" />
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="ActiveStates">
+                                <VisualState x:Name="Inactive" />
+                                <VisualState x:Name="Active">
+                                    <Storyboard Timeline.RepeatBehavior="Forever">
+                                        <ObjectAnimationUsingKeyFrames Timeline.Duration="0" Storyboard.TargetName="Ring" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame ObjectKeyFrame.KeyTime="0">
+                                                <ObjectKeyFrame.Value>
+                                                    <Visibility>
+                                                        Visible
+                                                    </Visibility>
+                                                </ObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E1" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="0">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E2" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="00:00:00.167">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E3" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="00:00:00.334">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E4" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="00:00:00.501">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E5" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="00:00:00.668">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E6" Storyboard.TargetProperty="Opacity" Timeline.BeginTime="00:00:00.835">
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.21" DoubleKeyFrame.Value="1" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.22" DoubleKeyFrame.Value="0" />
+                                            <DiscreteDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.47" DoubleKeyFrame.Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E1R" Timeline.BeginTime="0" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-110" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="10" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="93" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="205" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="357" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="439" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="585" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E2R" Timeline.BeginTime="00:00:00.167" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-116" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="4" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="87" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="199" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="351" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="433" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="579" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E3R" Timeline.BeginTime="00:00:00.334" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-122" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="-2" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="81" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="193" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="345" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="427" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="573" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E4R" Timeline.BeginTime="00:00:00.501" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-128" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="-8" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="187" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="339" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="421" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="567" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E5R" Timeline.BeginTime="00:00:00.668" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-134" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="-14" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="69" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="181" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="331" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="415" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="561" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="E6R" Timeline.BeginTime="00:00:00.835" Storyboard.TargetProperty="Angle">
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0" DoubleKeyFrame.Value="-140" SplineDoubleKeyFrame.KeySpline="0.13,0.21,0.1,0.7" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:0.433" DoubleKeyFrame.Value="-20" SplineDoubleKeyFrame.KeySpline="0.02,0.33,0.38,0.77" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.2" DoubleKeyFrame.Value="63" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:1.617" DoubleKeyFrame.Value="175" SplineDoubleKeyFrame.KeySpline="0.57,0.17,0.95,0.75" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.017" DoubleKeyFrame.Value="325" SplineDoubleKeyFrame.KeySpline="0,0.19,0.07,0.72" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:2.783" DoubleKeyFrame.Value="409" />
+                                            <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="0:0:3.217" DoubleKeyFrame.Value="555" SplineDoubleKeyFrame.KeySpline="0,0,0.95,0.37" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid Grid.Name="Ring" FrameworkElement.Margin="{TemplateBinding Control.Padding}" UIElement.Visibility="Collapsed" UIElement.RenderTransformOrigin=".5,.5" FrameworkElement.FlowDirection="LeftToRight" FrameworkElement.MaxWidth="{Binding MaxSideLength,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.MaxHeight="{Binding MaxSideLength,RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                            <Canvas UIElement.RenderTransformOrigin=".5,.5">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E1R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E1" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                            <Canvas UIElement.RenderTransformOrigin=".5,.5">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E2R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E2" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                            <Canvas UIElement.RenderTransformOrigin=".5,.5">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E3R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E3" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                            <Canvas UIElement.RenderTransformOrigin=".5,.5">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E4R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E4" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                            <Canvas UIElement.RenderTransformOrigin=".5,.5">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E5R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E5" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                            <Canvas Canvas.Name="SixthCircle" UIElement.RenderTransformOrigin=".5,.5" UIElement.Visibility="Collapsed">
+                                <UIElement.RenderTransform>
+                                    <RotateTransform x:Name="E6R" />
+                                </UIElement.RenderTransform>
+                                <Ellipse Ellipse.Name="E6" FrameworkElement.Style="{StaticResource ProgressRingEllipseStyle}" Shape.Fill="{TemplateBinding Control.Foreground}" FrameworkElement.Width="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Height="{Binding EllipseDiameter,RelativeSource={RelativeSource Mode=TemplatedParent}}" FrameworkElement.Margin="{Binding EllipseOffset,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            </Canvas>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,342 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:telerik="clr-namespace:Orm.Toolkit.Telerik.Windows.Controls"
+    xmlns:telerikChromes="clr-namespace:Orm.Toolkit.Telerik.Windows.Controls.Chromes">
+	<!--<?BODY BEGIN?>-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Office/Blue/Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style TargetType="telerikChromes:ButtonChrome">
+		<Setter Property="IsTabStop" Value="False" />
+
+		<Setter Property="SnapsToDevicePixels" Value="True" />
+		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
+
+
+		<Setter Property="Background" Value="{StaticResource ControlBackground_Normal}" />
+		<Setter Property="BorderBrush" Value="{StaticResource ControlOuterBorder_Normal}" />
+		<Setter Property="BorderThickness" Value="1" />
+		
+		<Setter Property="CornerRadius" Value="{StaticResource SplitButton_SpanCornerRadius}" />
+
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="telerikChromes:ButtonChrome">
+                    <Grid>
+
+                        <Border x:Name="OuterBorder" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+                            <Border x:Name="InnerBorder" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderBrush="{StaticResource ControlInnerBorder_Normal}" />
+                        </Border>
+                        <Border x:Name="ActiveVisual" Opacity="0" Visibility="Collapsed" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" BorderBrush="{StaticResource ControlOuterBorder_Active}" Background="{StaticResource ControlBackground_Active}">
+                            <Border x:Name="ActiveInnerVisual" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderBrush="{StaticResource ControlInnerBorder_Active}" />
+                        </Border>
+                        <Border x:Name="MouseOverVisual" Opacity="0" Visibility="Collapsed" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" BorderBrush="{StaticResource ControlOuterBorder_MouseOver}" Background="{StaticResource ControlBackground_MouseOver}">
+                            <Border x:Name="MouseOverInnerVisual" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderBrush="{StaticResource ControlInnerBorder_MouseOver}" />
+                        </Border>
+                        <Border x:Name="PressedVisual" Opacity="0" Visibility="Collapsed" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" BorderBrush="{StaticResource ControlOuterBorder_Pressed}" Background="{StaticResource ControlBackground_Pressed}">
+                            <Border x:Name="PressedInnerVisual" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderBrush="{StaticResource ControlInnerBorder_Pressed}" />
+                        </Border>
+
+                        <Border x:Name="FocusVisual" Opacity="0" Visibility="Collapsed" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}" BorderBrush="{StaticResource ControlOuterBorder_Focused}" Background="{StaticResource ControlBackground_Focused}">
+                            <Border x:Name="FocusInnerVisual" BorderThickness="1" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderBrush="{StaticResource ControlInnerBorder_Focused}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Horizontal -->
+
+                        <Trigger Property="Orientation" Value="Vertical">
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_Normal}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_Normal}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackgroundVertical_Normal}" />
+
+                            <Setter TargetName="MouseOverVisual" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_MouseOver}" />
+                            <Setter TargetName="MouseOverInnerVisual" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_MouseOver}" />
+                            <Setter TargetName="MouseOverVisual" Property="Background" Value="{StaticResource ControlBackgroundVertical_MouseOver}" />
+
+                            <Setter TargetName="PressedVisual" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_Pressed}" />
+                            <Setter TargetName="PressedInnerVisual" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_Pressed}" />
+                            <Setter TargetName="PressedVisual" Property="Background" Value="{StaticResource ControlBackgroundVertical_Pressed}" />
+
+                            <Setter TargetName="FocusVisual" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_Focused}" />
+                            <Setter TargetName="FocusInnerVisual" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_Focused}" />
+                            <Setter TargetName="FocusVisual" Property="Background" Value="{StaticResource ControlBackgroundVertical_Focused}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="RenderEnabled" Value="False" />
+                                <Condition Property="RenderChecked" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_DisabledChecked}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_DisabledChecked}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_DisabledChecked}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="RenderEnabled" Value="False" />
+                                <Condition Property="RenderChecked" Value="False" />
+                                <Condition Property="RenderNormal" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_Disabled}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_Disabled}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_Disabled}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderPressed" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PressedVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PressedVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.050" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PressedVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00.115">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PressedVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.115" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="True" />
+                                <Condition Property="RenderMouseOver" Value="True" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_MouseOverChecked}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_MouseOverChecked}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_MouseOverChecked}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="False" />
+                                <Condition Property="RenderMouseOver" Value="True" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.115" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00.150">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="MouseOverVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.150" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="True" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_Checked}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_Checked}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_Checked}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderFocused" Value="True" />
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderPressed" Value="False" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.25" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00.115">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.115" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="False" />
+                                <Condition Property="RenderActive" Value="True" />
+                                <Condition Property="RenderHighlighted" Value="False" />
+                                <Condition Property="RenderSelected" Value="False" />
+                                <Condition Property="RenderPressed" Value="False" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ActiveVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ActiveVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.115" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.EnterActions>
+                            <MultiTrigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ActiveVisual" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00.150">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ActiveVisual" Storyboard.TargetProperty="Opacity">
+                                            <LinearDoubleKeyFrame KeyTime="00:00:00.150" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </MultiTrigger.ExitActions>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="False" />
+                                <Condition Property="RenderHighlighted" Value="True" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_Highlighted}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_Highlighted}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_Highlighted}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Horizontal" />
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderChecked" Value="False" />
+                                <Condition Property="RenderHighlighted" Value="False" />
+                                <Condition Property="RenderSelected" Value="True" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorder_Selected}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorder_Selected}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackground_Selected}" />
+                        </MultiTrigger>
+
+                        <!-- Vertical -->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="RenderEnabled" Value="False" />
+                                <Condition Property="RenderNormal" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_Disabled}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_Disabled}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackgroundVertical_Disabled}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Orientation" Value="Vertical" />
+                                <Condition Property="RenderEnabled" Value="True" />
+                                <Condition Property="RenderNormal" Value="True" />
+                                <Condition Property="RenderMouseOver" Value="False" />
+                                <Condition Property="RenderPressed" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource ControlOuterBorderVertical_Normal}" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource ControlInnerBorderVertical_Normal}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource ControlBackgroundVertical_Normal}" />
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="RenderNormal" Value="False" />
+                                <Condition Property="RenderHighlighted" Value="False" />
+                                <Condition Property="RenderSelected" Value="False" />
+                                <Condition Property="RenderChecked" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{x:Null}" />
+                            <Setter TargetName="OuterBorder" Property="Background" Value="Transparent" />
+                        </MultiTrigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!--<?BODY END?>-->
+</ResourceDictionary>

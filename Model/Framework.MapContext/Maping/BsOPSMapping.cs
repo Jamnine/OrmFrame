@@ -1,0 +1,61 @@
+﻿
+
+using ELinq.Mapping.Fluent;
+using Orm.Model;
+namespace Orm.MapContext
+{
+	/// <summary>
+	/// 手术类型 - 实体类
+	/// </summary>
+	public partial class BsOPSMapping: ClassMap<BsOPS>
+	{   
+		/// <summary>
+		/// 手术类型 - 实体类
+		/// </summary>
+		public BsOPSMapping()
+		{
+			this.TableName("BSOPS").Schema("orm");
+			  
+			this.Column(p =>p.GUID).ColumnName("GUID");
+			  
+			this.Column(p =>p.Code).ColumnName("CODE");
+			  
+			this.Column(p =>p.Name).ColumnName("NAME");
+			  
+			this.Column(p =>p.PyCode).ColumnName("PYCODE");
+			  
+			this.Column(p =>p.WbCode).ColumnName("WBCODE");
+			  
+			this.Column(p =>p.OrderBy).ColumnName("ORDERBY");
+			  
+			this.Column(p =>p.IsActive).ColumnName("ISACTIVE");
+			  
+			this.Column(p =>p.IconIndex).ColumnName("ICONINDEX");
+			  
+			this.Column(p =>p.LsClass).ColumnName("LSCLASS");
+			  
+			this.Column(p =>p.LsASA).ColumnName("LSASA");
+			  
+			this.Column(p =>p.IsEmergency).ColumnName("ISEMERGENCY");
+			  
+			this.Column(p =>p.AnaesId).ColumnName("ANAESID");
+			  
+			this.Column(p =>p.Minutes).ColumnName("MINUTES");
+			  
+			this.Column(p =>p.IsImplant).ColumnName("ISIMPLANT");
+			  
+			this.Column(p =>p.IsImglass).ColumnName("ISIMGLASS");
+			  
+			this.Column(p =>p.IsOPSDrug).ColumnName("ISOPSDRUG");
+			  
+			this.Column(p =>p.DangerPoint).ColumnName("DANGERPOINT");
+            this.Column(p => p.HospitalId).ColumnName("HospitalID");
+             
+			
+			
+            this.Id(t => t.GUID);  this.Ignore(p => p.IsModify); 
+		}      
+	}  
+}           
+ 
+

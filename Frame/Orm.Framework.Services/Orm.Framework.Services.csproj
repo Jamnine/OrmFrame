@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F06816B-BEDC-4C4D-BDB3-98BE6A2D937A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Framework.Services</RootNamespace>
+    <AssemblyName>Orm.Framework.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ELinq">
+      <HintPath>..\..\..\Framework\ELinq.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonSerializerProxy">
+      <HintPath>..\..\..\Framework\JsonSerializerProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\客户端\His2\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.5.7.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\RabbitMQ.Client.3.5.7\lib\net40\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Container\DbTypeMapRegister.cs" />
+    <Compile Include="Container\IRegisterDbTypeMap.cs" />
+    <Compile Include="Container\MapContainer.cs" />
+    <Compile Include="Container\MapContainer.part.cs" />
+    <Compile Include="Container\TypeMap.cs" />
+    <Compile Include="ServiceDBBase\DbClientBase.cs" />
+    <Compile Include="ServiceDBBase\DBClientBaseExtend.cs" />
+    <Compile Include="ServiceDBBase\ExpressParse.cs" />
+    <Compile Include="ServiceDBBase\IDBClientBase.cs" />
+    <Compile Include="ServiceDBBase\IDbLambdaBase.cs" />
+    <Compile Include="ServiceDBBase\DbServiceBase.cs" />
+    <Compile Include="ExtensionClass\Extension.cs" />
+    <Compile Include="ExtensionClass\LinqDynamic.cs" />
+    <Compile Include="ServiceDBBase\IDBServiceBase.cs" />
+    <Compile Include="LambdaExpression\ExpressionParser\ExpressionParserCore.cs" />
+    <Compile Include="LambdaExpression\ExpressionParser\ParserSyntaxErrorException.cs" />
+    <Compile Include="LambdaExpression\ExpressionParser\PriorityManager.cs" />
+    <Compile Include="LambdaExpression\ExpressionParser\ReadResult.cs" />
+    <Compile Include="LambdaExpression\ExpressionParser\TypeVariable.cs" />
+    <Compile Include="LambdaExpression\LambdaParser.cs" />
+    <Compile Include="LambdaExpression\StringParser\ParseException.cs" />
+    <Compile Include="LambdaExpression\StringParser\SymbolParser.cs" />
+    <Compile Include="LambdaExpression\StringParser\SymbolParseResult.cs" />
+    <Compile Include="LambdaExpression\StringParser\Token.cs" />
+    <Compile Include="LambdaExpression\StringParser\TokenId.cs" />
+    <Compile Include="LambdaExpression\TypeParser\ParseUnfindTypeException.cs" />
+    <Compile Include="LambdaExpression\TypeParser\TypeParser.cs" />
+    <Compile Include="LambdaExpression\Utilities\EqualComparer.cs" />
+    <Compile Include="Logger\AppLogger.cs" />
+    <Compile Include="ServiceDBBase\ISysParamService.cs" />
+    <Compile Include="ServiceDBBase\RefreshBaseModelCaches.cs" />
+    <Compile Include="ServiceDBBase\SysParamService.cs" />
+    <Compile Include="Services\CodeService\ICodeService.cs" />
+    <Compile Include="Services\CommonQuery\ICommonQuery.cs" />
+    <Compile Include="Services\CommonQuery\QueryArgs.cs" />
+    <Compile Include="Services\CommonQuery\WhereField.cs" />
+    <Compile Include="Services\EmitService\IEmitService.cs" />
+    <Compile Include="Services\Job\BaseJobContext.cs" />
+    <Compile Include="Services\Job\IJob.cs" />
+    <Compile Include="Services\Job\IJobLogger.cs" />
+    <Compile Include="Services\JsonSerializer\IJsonSerializer.cs" />
+    <Compile Include="Services\Lock\ILockService.cs" />
+    <Compile Include="Services\MQ\IMQService.cs" />
+    <Compile Include="Services\MQ\Message.cs" />
+    <Compile Include="Services\Notice\INoticeService.cs" />
+    <Compile Include="Services\ORM\IDataPersist.cs" />
+    <Compile Include="Services\ORM\ISqlHelper.cs" />
+    <Compile Include="Services\RemoteService\IRemoteEventCaster.cs" />
+    <Compile Include="Services\RemoteService\RemoteEventArgs.cs" />
+    <Compile Include="Services\SharedMemory\ICacheClient.cs" />
+    <Compile Include="Services\SharedMemory\ICacheLoader.cs" />
+    <Compile Include="Services\SharedMemory\ICacheServer.cs" />
+    <Compile Include="Services\SharedMemory\ISharedMemoryCache.cs" />
+    <Compile Include="Services\RemoteService\IRemoteProxyManager.cs" />
+    <Compile Include="Services\TempletEngine\ITempletEngine.cs" />
+    <Compile Include="Services\Zip\IZip.cs" />
+    <Compile Include="ServiceTaker.cs" />
+    <Compile Include="Setting\AppSettings.cs" />
+    <Compile Include="Setting\Environments.cs" />
+    <Compile Include="Services\Authentication\IAuthenticator.cs" />
+    <Compile Include="Services\Cache\ICache.cs" />
+    <Compile Include="Services\Config\IConfiger.cs" />
+    <Compile Include="Services\DFS\DfsFileInfo.cs" />
+    <Compile Include="Services\DFS\DfsGroupInfo.cs" />
+    <Compile Include="Services\DFS\DfsStorageInfo.cs" />
+    <Compile Include="Services\DFS\DfsTrackerInfo.cs" />
+    <Compile Include="Services\DFS\IDfsClinet.cs" />
+    <Compile Include="Services\Dict\IDictService.cs" />
+    <Compile Include="Services\Excel\DataExporterParameter.cs" />
+    <Compile Include="Services\Excel\DataExportResult.cs" />
+    <Compile Include="Services\Excel\IExcelReader.cs" />
+    <Compile Include="Services\Excel\IExcelWriter.cs" />
+    <Compile Include="Services\Log\ILogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Base64Helper.cs" />
+    <Compile Include="Utility\CacheHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\DbParameter.cs" />
+    <Compile Include="Utility\DESHelper.cs" />
+    <Compile Include="Utility\DocumentHelper.cs" />
+    <Compile Include="Utility\HttpRequestHelper.cs" />
+    <Compile Include="Utility\MD5Helper.cs" />
+    <Compile Include="Utility\Security.cs" />
+    <Compile Include="Utility\SerializeHelper.cs" />
+    <Compile Include="Utility\SGUID.cs" />
+    <Compile Include="Services\Permission\IPermission.cs" />
+    <Compile Include="Services\Permission\IUserService.cs" />
+    <Compile Include="Services\Pool\DefaultPool.cs" />
+    <Compile Include="Services\Pool\IObjectPool.cs" />
+    <Compile Include="Services\Pool\IPoolableObjectFactory.cs" />
+    <Compile Include="Services\PrimaryKey\IKeyCreater.cs" />
+    <Compile Include="Services\PrimaryKey\PrimaryKeyConfig.cs" />
+    <Compile Include="Services\WinService\ConfigElement.cs" />
+    <Compile Include="Services\WinService\ConfigSection.cs" />
+    <Compile Include="Services\WinService\BaseService.cs" />
+    <Compile Include="Services\WinService\RegisterHelper.cs" />
+    <Compile Include="Services\Worker\Worker.cs" />
+    <Compile Include="Utility\StringSerializeHelper.cs" />
+    <Compile Include="Utility\ThreadContext.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{A787A629-941C-43C0-B468-807713780E9C}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
+      <Project>{39ca059c-ffc5-4d34-97d1-1b3f42085152}</Project>
+      <Name>Orm.Log4Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orm.Redis\Orm.Redis.csproj">
+      <Project>{c0e97a62-bd21-4482-8edd-a015844907df}</Project>
+      <Name>Orm.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+      <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
+      <Name>Orm.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"
+copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

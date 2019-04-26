@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0153A6E-0B11-462B-BD3F-0AAD78CEBB6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Toolkit</RootNamespace>
+    <AssemblyName>Orm.Toolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyVersionInfo.cs" />
+    <Compile Include="Auto3D\Easing\EasingDoubleAnimation.cs" />
+    <Compile Include="Auto3D\Easing\EasingEquation.cs" />
+    <Compile Include="Auto3D\Easing\EasingEquations.cs" />
+    <Compile Include="Auto3D\Implementation\Controls\ContentControl3D.cs" />
+    <Compile Include="Auto3D\Implementation\Controls\Converters\ContentValueConverter.cs" />
+    <Compile Include="Auto3D\Implementation\Controls\RotationDirection.cs" />
+    <Compile Include="Auto3D\Implementation\Controls\RotationEasingMode.cs" />
+    <Compile Include="AutoBusyIndicator\Implementation\BusyIndicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoBusyIndicator\Implementation\VisualStates.BusyIndicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Common\CommonDependencyPropertyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Common\CustomCategoryAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Converters\DateConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Converters\DayBorderColorConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Implementation\WorkCalendar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Implementation\DateConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Implementation\Day.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCalendar\Implementation\WorkCalendarEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCircularProgressBar\Implementation\CircularProgressBar.cs" />
+    <Compile Include="AutoCircularProgressBar\Implementation\PiePiece.cs" />
+    <Compile Include="AutoDownloadsControl\Implementation\DownloadItem.cs" />
+    <Compile Include="AutoDownloadsControl\Implementation\DownloadsControl.cs" />
+    <Compile Include="AutoListBoxItem\Implementation\PathListBoxItem.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Accent.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Controls\FlyoutTheme.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Controls\Position.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Controls\SafeRaise.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Converters\MarkupConverter.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Converters\ToLowerConverter.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Converters\ToUpperConverter.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Flyout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoMetroControl\Implementation\FlyoutsControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoMetroControl\Implementation\MetroControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoMetroControl\Implementation\OnThemeChangedEventArgs.cs" />
+    <Compile Include="AutoMetroControl\Implementation\Theme.cs" />
+    <Compile Include="AutoMetroControl\Implementation\ThemeManager.cs" />
+    <Compile Include="AutoMetroControl\Implementation\TreeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoMetroProgressBar\Implementation\MetroProgressBar.cs" />
+    <Compile Include="AutoProgressRing\Implementation\ProgressRing.cs" />
+    <Compile Include="AutoSelectTextBox\AutoSelectBehavior.cs" />
+    <Compile Include="AutoSelectTextBox\AutoSelectTextBox.cs" />
+    <Compile Include="AutoSelectTextBox\QueryMoveFocusEventArgs.cs" />
+    <Compile Include="AutoSplitButton\Implementation\SplitButton.cs" />
+    <Compile Include="AutoTextBlock\EditableTextBlock.xaml.cs">
+      <DependentUpon>EditableTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AutoTextBox\Implementation\AmountTextBox.cs" />
+    <Compile Include="AutoTextBox\Implementation\NumberTextBox.cs" />
+    <Compile Include="AutoTextBox\Implementation\NumberTextBoxEx.cs" />
+    <Compile Include="AutoTreeView\CheckTreeViewItem.xaml.cs">
+      <DependentUpon>CheckTreeViewItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AutoWebBrowser\Implementation\DWebBrowserEvent2.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\HelperRegistery.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\ImproveWebBrowser.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\ReflectionService.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\TabbedWebBrowser.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\TabView.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\TabViewCollection.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\WebBrowserHelper.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\WebBrowserHelper.WebBrowserEvent.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\WebTabControl.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\WebTabControlMenuItem.cs" />
+    <Compile Include="AutoWebBrowser\Implementation\WebTabItem.cs" />
+    <Compile Include="BusyIndicators\Busy.cs" />
+    <Compile Include="BusyIndicators\BusyAdorner.cs" />
+    <Compile Include="BusyIndicators\AutoBusyIndicator.cs" />
+    <Compile Include="ButtonSpinner\Implementation\ButtonSpinner.cs" />
+    <Compile Include="Core\Converters\FileSizeConverter.cs" />
+    <Compile Include="Core\Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Core\Primitives\CachedTextInfo.cs" />
+    <Compile Include="Core\Primitives\ValueRangeTextBox.cs" />
+    <Compile Include="Core\QueryTextFromValueEventArgs.cs" />
+    <Compile Include="Core\QueryValueFromTextEventArgs.cs" />
+    <Compile Include="Core\Utilities\ChangeTypeHelper.cs" />
+    <Compile Include="Core\Utilities\Utils.cs" />
+    <Compile Include="Core\ViewModels\DelegateCommand.cs" />
+    <Compile Include="Core\ViewModels\ViewModel.cs" />
+    <Compile Include="Core\ViewModels\WeakEventListeners.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationDirection.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationGroup.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationManager.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationSelector.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\AnimationSelectorBase.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\BaseAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\FadeAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\OrientedAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\ScaleAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\SlideAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Animations\SlideAnimation.Obsolete.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\EasingMode.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\Easings.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\RadAnimation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Animation\SlideMode.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\BrowserButtonPopup.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\ButtonPopup.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\ButtonsPopupAdorner.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\DropDownButtonPosition.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\RadButton.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\RadDropDownButton.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\RadSplitButton.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Buttons\RadToggleButton.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\CancelRoutedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Chromes\ButtonChrome.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Chromes\ShadowChrome.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\ApplicationHelper.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\BindingExpressionHelper.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\DoubleUtil.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\FrameworkElementExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\HACKS.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\ILocalizable.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\ImageConverter.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\IMouseButtonEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\IMouseEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\ItemsControlExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\LayoutTransformControl.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\LocalizationManager.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\PickerTextBox.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\RadCategory.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\RadControl.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\SelectionChanger.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\StyleManager.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\System.Windows\DependencyPropertyExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\System.Windows\RadRoutedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\TestableMouseButtonEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\TestableMouseEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\Theme.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\UIElementExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\VisualTreeHelperExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Common\WeakReferenceList.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Design\SRCategory.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DialogWindow\IWindow.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DialogWindow\WindowCommands.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragArrow.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragDropAdorner.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragDropEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragDropOptions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragDropQueryEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragStatus.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\DragVisualCue.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\HideDuringLayoutChangeHelper.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\INotifyLayoutChange.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\DragDrop\RadDragAndDropManager.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Extensions\ControlExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Extensions\DependencyObjectExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\InvertedBooleanToOpacityConverter.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\InvertedBooleanToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Panels\PositionInfo.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Panels\RadUniformGrid.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Panels\RadWrapPanel.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Popup\PlacementHelper.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Popup\PlacementMode.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Popup\PoupExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\QuickStart\HeaderedContentControl.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\QuickStart\QuickStart.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\QuickStart\ThemeAwareBackgroundBehavior.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\RadRangeBase\RadRangeBase.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\RadRangeBase\RadRangeBaseValueChangedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\ScrollViewer\ScrollViewerExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\SR.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\SRLoader.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\TextSearch\FilteringMode.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\TextSearch\TextSearch.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\TextSearch\TextSearchMode.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\IThemable.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\Office_BlackTheme.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\Office_BlueTheme.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemableAttribute.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemeConverter.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemeLocation.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemeLocationAttribute.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemeManager.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemeResourceKey.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\ThemingExtensions.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\TransparentTheme.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Theming\Windows7Theme.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\WatermarkTextBox\RadWatermarkTextBox.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\WatermarkTextBox\SelectionOnFocus.cs" />
+    <Compile Include="ImitationTelerik\Controls_WPF\Wpf\SR.Silverlight.cs" />
+    <Compile Include="ImitationTelerik\ExceptionsStrings.Designer.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\BoleanToVisibilityConverterRevert.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarAnimation.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarButton.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarButtonContent.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarButtonType.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarDateChangedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarModeChangedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarPanel.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\CalendarView.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\DateSelectionMode.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\DisplayMode.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\RadCalendar.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\RequestBase.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\Calendar\TransitionPanel.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\ComboBox\RadComboBox.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\ComboBox\RadComboBoxAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\ComboBox\RadComboBoxItem.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\ComboBox\RadComboBoxItemAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\ComboBox\SelectAllTextEvents.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DatePicker\RadDatePicker.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DatePicker\RadDatePicker.Obsolete.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\ControlParts\DateTimePickerClock.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\DateTimePickerFormat.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\EventArgs\ParseDateTimeEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Extensions\DateTimePickerExtensions.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Extensions\TimeExtensions.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\InputMode.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\CompositeDateTimeParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\DateParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\DateParserBase.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\DateTimePickerParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\DayOfWeekParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\DesignatorParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\IDateTimeParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\SpecialNames.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\SpecialNamesParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\Parsers\TimeParser.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\DateTimePicker\RadDateTimePicker.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\NumericUpDown\RadNumericUpDown.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\NumericUpDown\RadNumericUpDownAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\NumericUpDown\RadUpDown.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\NumericUpDown\UpdateValueEvent.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\NumericUpDown\ValueFormat.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\TimePicker\RadClock\ClockItem.cs" />
+    <Compile Include="ImitationTelerik\Input_WPF\TimePicker\RadClock\RadClock.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\ContextMenu.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\ContextMenuAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\MenuBase.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\MenuItemRole.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\RadMenu.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\RadMenuAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\RadMenuItem.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\RadMenuItemAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Menu\RadRoutedPropertyChangedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\DialogParameters.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\DragInfo.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadAlert.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadConfirm.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadPrompt.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadWindow.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadWindowAutomationPeer.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadWindowManager.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\RadWindowStateManager.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\ResponseButton.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\SizeChangedEventManager.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\ThumbType.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowClosedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\BrowserWindowPopup.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopup.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopupAdornerFactory.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopupAdornerImpl.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopupFactory.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopupWindowFactory.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPopup\WindowPopupWindowImpl.cs" />
+    <Compile Include="ImitationTelerik\Navigation_WPF\Window\WindowPreviewClosedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Animation\SchedulerAnimation.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Animation\ViewTransitionMode.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentItemsControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentPanel.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentResizeMode.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentsControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentsControlsContainer.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentsControlsContainerItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\AppointmentSlotPresenter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\DragDrop\AppointmentResizeManager.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\DragDrop\DragVisualCue.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\GroupItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\ResourceGroup.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\TimeSlotItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\TimeSlotItemsControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\AppointmentControl\VirtualizedAppointmentPanel.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\AppointmentToTitleConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\AvailableViewModesToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeIsFromSelectedMonthConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeIsTodayConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeIsTodayToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeOffsetToDateTimeConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeToMonthNameConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateTimeToTimeSpanConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DateToWeekConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DimensionsToRectConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\DurationHelper.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\ImportanceToBooleanConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\ImportanceToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\InvertedBooleanConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\InvertedNullToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\InvertedVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\ISchedulerConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\NegatingConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\StringFormatConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\TimeSlotsToStartEndDateStringConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\TimeSlotToStringConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\TimeSlotToWeekConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\TimeToStringConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\TooltipConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Converters\XmlLanguageToTimeFormatStringConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\DateTimePicker.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\DurationPicker.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\IDateTimeControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\SchedulerTimePicker.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\StartEndDateControlBehavior.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\StartEndDatePicker.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\TimeRuler.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DateTimeControls\TimeRulerItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\DeferrableObservableCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentAddedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentAddingEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentCreatedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentCreatingEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentDeletedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentDeletingEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentEditedEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentEditingEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\EventArgs\AppointmentSavingEventArgs.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\CollectionExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\ItemsControlExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\ListBoxExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\OccurrenceExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\RectExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Extensions\VisualExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\MouseWheelGesture.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\RadScheduler.Commands.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\RadScheduler.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\RadScheduler.Events.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\RadSchedulerCommands.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\RadScheduller.IThemable.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\SchedulerPresenter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\SchedulerScrollBar.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\Appointment.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentBase.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentCollectionView.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentCollectionView.ExplicitInterfaces.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentEditAction.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentFactory.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentSlot.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\AppointmentSlotCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\BaseAppointmentCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\DefaultAppointmentCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\IAppointment.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\IAppointmentFactory.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\Occurrence.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\ReadOnlyAppointmentCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\ResourceGroupsCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Appointment\SelectedAppointmentCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\AttachedBehavior.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\CalendarHelper.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\ChromeControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateSpan\DateSpan.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateSpan\DateSpanExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateSpan\IDateSpan.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeInterval.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeInterval.Parser.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeInterval.Tokenizer.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeInterval.Tokens.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeIntervalConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\DateTimeInterval\DateTimeIntervalConverter.Wpf.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\NameValueItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\ExceptionAction.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\ExceptionOccurrence.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceDays.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceDaysExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceFrequency.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrencePattern.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceRangeType.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceRule.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceRuleChangedEventManager.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceState.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\RecurrenceType.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\WeekOfMonth.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Recurrence\WeekOfMonthExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\Categories.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\Category.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\CategoryCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\IResource.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\IResourceExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\Resource.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceHeaderControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceItem.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceItemCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourcesItemsControl.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourcesSeparatorConverter.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceStyleMapping.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceStyleMappingCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceType.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceTypeCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceTypeTemplateSelector.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceTypeViewModel.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\ResourceTypeViewModelCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\TimeMarker.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\TimeMarkerCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\Resources\TimeMarkers.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlot.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlotCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlotCollectionView.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlotCollectionViewGroupRoot.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlotGroup.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Scheduler\TimeSlot\TimeSlotObservableCollection.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\AvailableViewModes.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\DayViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\IScheduler.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\MonthViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\MultidayViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\SchedulerExtensions.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\SchedulerViewMode.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\SchedulerViewModel.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\SingleMonthWeekViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\TimelineViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\ViewDefinitionBase.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\View\WeekViewDefinition.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\AppointmentClosingDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\AppointmentDeleteDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\AppointmentDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\AppointmentViewMode.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\DialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\DialogWindowFactory.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\IAppointmentClosingDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\IAppointmentDeleteDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\IAppointmentDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\IDialogWindowFactory.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\IRecurrenceChoiceDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\RecurrenceChoiceDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\RecurrenceDialogViewModel.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\RecurrenceDialogWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\RecurrenceMode.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\SchedulerWindow.cs" />
+    <Compile Include="ImitationTelerik\Scheduler\Windows\WindowWrapper.cs" />
+    <Compile Include="ImitationTelerik\Strings1.Designer.cs" />
+    <Compile Include="MaskedTextBox\Implementation\AutoCompletingMaskEventArgs.cs" />
+    <Compile Include="MaskedTextBox\Implementation\InsertKeyModeEnum.cs" />
+    <Compile Include="MaskedTextBox\Implementation\MaskedTextBox.cs" />
+    <Compile Include="MaskedTextBox\Implementation\MaskFormatEnum.cs" />
+    <Compile Include="NumericUpDown\Implementation\ByteUpDown.cs" />
+    <Compile Include="ButtonSpinner\Implementation\SpinDirection.cs" />
+    <Compile Include="ButtonSpinner\Implementation\SpinEventArgs.cs" />
+    <Compile Include="ButtonSpinner\Implementation\Spinner.cs" />
+    <Compile Include="NumericUpDown\Implementation\DecimalUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\IntegerUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\LongUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\SByteUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\SingleUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\ULongUpDown.cs" />
+    <Compile Include="ButtonSpinner\Implementation\ValidSpinDirections.cs" />
+    <Compile Include="ChildWindow\Implementation\ChildWindow.cs" />
+    <Compile Include="ChildWindow\Implementation\WindowStartupLocation.cs" />
+    <Compile Include="ChildWindow\Implementation\WindowState.cs" />
+    <Compile Include="Chromes\ButtonChrome.cs" />
+    <Compile Include="Core\CancelRoutedEventArgs.cs" />
+    <Compile Include="Core\Converters\CenterTitleConverter.cs" />
+    <Compile Include="Core\Converters\ColorBlendConverter.cs" />
+    <Compile Include="Core\Converters\InverseBoolConverter.cs" />
+    <Compile Include="Core\Converters\TimeFormatToDateTimeFormatConverter.cs" />
+    <Compile Include="Core\Converters\WindowContentBorderMarginConverter.cs" />
+    <Compile Include="Core\Converters\WindowControlBackgroundConverter.cs" />
+    <Compile Include="Core\Input\InputValidationErrorEventHandler.cs" />
+    <Compile Include="Core\Input\IValidateInput.cs" />
+    <Compile Include="Core\Media\WindowColors.cs" />
+    <Compile Include="Core\Primitives\WindowContainer.cs" />
+    <Compile Include="Core\Primitives\WindowControl.cs" />
+    <Compile Include="Core\Utilities\KeyboardUtilities.cs" />
+    <Compile Include="Core\Utilities\SecurityHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\TreeHelper.cs" />
+    <Compile Include="Core\Utilities\WindowsBase\FriendAccessAllowedAttribute.cs" />
+    <Compile Include="Core\VersionResourceDictionary.cs" />
+    <Compile Include="DateTimeUpDown\DateTimeFormat.cs" />
+    <Compile Include="DateTimePicker\Implementation\DateTimePicker.cs" />
+    <Compile Include="DateTimeUpDown\DateTimeInfo.cs" />
+    <Compile Include="DateTimeUpDown\DateTimeParser.cs" />
+    <Compile Include="DateTimeUpDown\DateTimePart.cs" />
+    <Compile Include="DateTimeUpDown\DateTimeUpDown.cs" />
+    <Compile Include="AutoDropDownButton\Implementation\DropDownButton.cs" />
+    <Compile Include="HubTile\HubTile.cs" />
+    <Compile Include="HubTile\HubTileService.cs" />
+    <Compile Include="Core\Primitives\DateTimeUpDownBase.cs" />
+    <Compile Include="Core\Primitives\InputBase.cs" />
+    <Compile Include="Core\Primitives\LoopingSelector.cs" />
+    <Compile Include="Core\Primitives\MouseWheelActiveTrigger.cs" />
+    <Compile Include="Core\Primitives\UpDownBase.cs" />
+    <Compile Include="AutoMessageBox\Implementation\MessageBox.cs" />
+    <Compile Include="AutoMessageBox\Implementation\VisualStates.MessageBox.cs" />
+    <Compile Include="NumericUpDown\Implementation\AllowedSpecialValuesEnum.cs" />
+    <Compile Include="NumericUpDown\Implementation\CommonNumericUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\DoubleUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\NumericUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\ShortUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\UIntegerUpDown.cs" />
+    <Compile Include="NumericUpDown\Implementation\UShortUpDown.cs" />
+    <Compile Include="PasswordValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QcCanvas\BarItems.cs" />
+    <Compile Include="QcCanvas\ItemSource.cs" />
+    <Compile Include="SlideListBox\Implementation\SlideListBox.cs" />
+    <Compile Include="SlideListBox\Implementation\SlideListBoxItem.cs" />
+    <Compile Include="TabControl\Converters.cs" />
+    <Compile Include="TabControl\Helper.cs" />
+    <Compile Include="TabControl\TabControl.cs" />
+    <Compile Include="TabControl\TabEventArgs.cs" />
+    <Compile Include="TabControl\TabItem.cs" />
+    <Compile Include="TabControl\TabPanel.cs" />
+    <Compile Include="Themes\ResourceKeys.cs" />
+    <Compile Include="TimePicker\TimeFormat.cs" />
+    <Compile Include="TimePicker\TimeItem.cs" />
+    <Compile Include="TimePicker\TimePicker.cs" />
+    <Compile Include="WatermarkTextBox\WatermarkTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="ImitationTelerik\ExceptionsStrings.resx" />
+    <EmbeddedResource Include="ImitationTelerik\Strings.de.resx" />
+    <EmbeddedResource Include="ImitationTelerik\Strings.es.resx" />
+    <EmbeddedResource Include="ImitationTelerik\Strings.it.resx" />
+    <EmbeddedResource Include="ImitationTelerik\Strings.nl.resx" />
+    <EmbeddedResource Include="ImitationTelerik\Strings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImitationTelerik\Strings.tr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Page Include="AutoCircularProgressBar\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoDownloadsControl\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\ControlsButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Auto3D\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AutoBusyIndicator\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoCalendar\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoDropDownButton\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoListBoxItem\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMessageBox\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\FlyoutsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Accents\BaseDark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Accents\BaseLight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Accents\Red.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Flyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroControl\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoMetroProgressBar\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoProgressRing\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoSplitButton\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoTextBlock\EditableTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoTextBox\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AutoTreeView\CheckTreeViewItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindow\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\Themes\Generic\WindowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\ButtonChrome_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\Button_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\DragDrop_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\HeaderedContentControl_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\Office\Blue\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\Office\System.Windows.ScrollViewer_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\PickerTextBox_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Controls_WPF\Themes\Generic\WatermarkTextBox_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Input_WPF\Themes\Generic\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Input_WPF\Themes\Generic\ComboBox_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Input_WPF\Themes\Generic\DateTimePicker_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Input_WPF\Themes\Generic\NumericUpDown_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Navigation_WPF\Themes\Generic\Menu_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Navigation_WPF\Themes\Generic\Window_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Scheduler\Themes\Generic\DialogWindows_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Blue\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Scheduler\Themes\Generic\Scheduler_style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NumericUpDown\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SlideListBox\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabControl\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TimePicker\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusyIndicators\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButtonSpinner\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chromes\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DateTimePicker\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DateTimeUpDown\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Glyphs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WatermarkTextBox\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\Generic\Images\close_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_pressed.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_rounded_pressed.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_hover.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_inactive.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_normal.png" />
+    <Resource Include="Themes\Generic\Images\close_toolwindow_pressed.png" />
+    <Resource Include="Themes\Generic\Images\maximize_disabled.png" />
+    <Resource Include="Themes\Generic\Images\maximize_hover.png" />
+    <Resource Include="Themes\Generic\Images\maximize_inactive.png" />
+    <Resource Include="Themes\Generic\Images\maximize_normal.png" />
+    <Resource Include="Themes\Generic\Images\maximize_pressed.png" />
+    <Resource Include="Themes\Generic\Images\minimize_hover.png" />
+    <Resource Include="Themes\Generic\Images\minimize_inactive.png" />
+    <Resource Include="Themes\Generic\Images\minimize_normal.png" />
+    <Resource Include="Themes\Generic\Images\minimize_pressed.png" />
+    <Resource Include="Themes\Generic\Images\resize_grip.png" />
+    <Resource Include="Themes\Generic\Images\restore_disabled.png" />
+    <Resource Include="Themes\Generic\Images\restore_hover.png" />
+    <Resource Include="Themes\Generic\Images\restore_inactive.png" />
+    <Resource Include="Themes\Generic\Images\restore_normal.png" />
+    <Resource Include="Themes\Generic\Images\restore_pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AutoMessageBox\Icons\Error48.png" />
+    <Resource Include="AutoMessageBox\Icons\Information48.png" />
+    <Resource Include="AutoMessageBox\Icons\Question48.png" />
+    <Resource Include="AutoMessageBox\Icons\Warning48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImitationTelerik\Input_WPF\Themes\Generic\CalendarIcon-Blue.png" />
+    <Resource Include="ImitationTelerik\Input_WPF\Themes\Generic\ClockIcon-Blue.png" />
+    <Resource Include="ImitationTelerik\Input_WPF\Themes\Generic\RadClock.png" />
+    <Resource Include="ImitationTelerik\Input_WPF\Themes\Generic\RadDatepicker.png" />
+    <Resource Include="ImitationTelerik\Navigation_WPF\Themes\WindowConfirmIcon.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\att.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\att_big.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\cal.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\categorize.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\del_big.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\no_rec_black.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\recc.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\recc16x16.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\rec_black.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\stop.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\att.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\att_big.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\cal.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\del_big.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\no_rec_black.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\recc.png" />
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Windows7\Images\rec_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImitationTelerik\Scheduler\Themes\Generic\Office\Images\UpDown.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AutoMessageBox\Icons\Background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

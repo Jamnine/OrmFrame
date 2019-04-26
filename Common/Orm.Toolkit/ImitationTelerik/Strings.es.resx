@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Appointment" xml:space="preserve">
+    <value>Cita</value>
+  </data>
+  <data name="AppointmentRecurrence" xml:space="preserve">
+    <value>Frecuencia de la cita</value>
+  </data>
+  <data name="AppointmentTime" xml:space="preserve">
+    <value>Hora de la cita</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="CreateAppointment" xml:space="preserve">
+    <value>Crear cita</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Diaria</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>día(s)</value>
+  </data>
+  <data name="DeleteAppointment" xml:space="preserve">
+    <value>Eliminar cita</value>
+  </data>
+  <data name="DurationColon" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="EditAppointment" xml:space="preserve">
+    <value>Modificar cita</value>
+  </data>
+  <data name="EditRecurrenceRule" xml:space="preserve">
+    <value>Modificar  regla de la frecuencia</value>
+  </data>
+  <data name="EndAfter" xml:space="preserve">
+    <value>Finalizar después de</value>
+  </data>
+  <data name="EndBy" xml:space="preserve">
+    <value>Finalizar el</value>
+  </data>
+  <data name="EndColon" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Evento</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>Cada</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>día</value>
+  </data>
+  <data name="EveryWeekday" xml:space="preserve">
+    <value>Todos los días de la semana</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>primer</value>
+  </data>
+  <data name="Fourth" xml:space="preserve">
+    <value>cuarto</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>último</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Mensualmente</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>mese(s)</value>
+  </data>
+  <data name="NoEndDate" xml:space="preserve">
+    <value>Sin fecha fin</value>
+  </data>
+  <data name="Occurrences" xml:space="preserve">
+    <value>repeticiones</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="OfEvery" xml:space="preserve">
+    <value>de cada</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="RangeOfRecurrence" xml:space="preserve">
+    <value>Intervalo de repetición</value>
+  </data>
+  <data name="RecurrencePattern" xml:space="preserve">
+    <value>Frecuencia</value>
+  </data>
+  <data name="RemoveRecurrence" xml:space="preserve">
+    <value>Eliminar repetición</value>
+  </data>
+  <data name="RecurEvery" xml:space="preserve">
+    <value>Repetir cada</value>
+  </data>
+  <data name="SaveAppointment" xml:space="preserve">
+    <value>Guardar cita</value>
+  </data>
+  <data name="SaveRecurrence" xml:space="preserve">
+    <value>Guardar frecuencia de repetición</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>segundo</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Comienza:</value>
+  </data>
+  <data name="StartColon" xml:space="preserve">
+    <value>Comienza</value>
+  </data>
+  <data name="Third" xml:space="preserve">
+    <value>tercer</value>
+  </data>
+  <data name="The" xml:space="preserve">
+    <value>El</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>sin título</value>
+  </data>
+  <data name="WeekDays" xml:space="preserve">
+    <value>día de la semana</value>
+  </data>
+  <data name="WeekendDays" xml:space="preserve">
+    <value>días fin de semana</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Semanalmente</value>
+  </data>
+  <data name="WeeksOn" xml:space="preserve">
+    <value>cada semana(s):</value>
+  </data>
+  <data name="Yearly" xml:space="preserve">
+    <value>Anualmente</value>
+  </data>
+  <data name="AllDayEvent" xml:space="preserve">
+    <value>Todo el día</value>
+  </data>
+  <data name="EditRecurrence" xml:space="preserve">
+    <value>Modificar frecuencia</value>
+  </data>
+  <data name="EditRecurrenceCommandText" xml:space="preserve">
+    <value>Modificar frecuencia</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Hora fin</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>Guardar y Cerrar</value>
+  </data>
+  <data name="SaveAndCloseCommandText" xml:space="preserve">
+    <value>Guardar y Cerrar</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Hora comienzo</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Asunto</value>
+  </data>
+  <data name="OpenRecurringItem" xml:space="preserve">
+    <value>Abrir repetición actual</value>
+  </data>
+  <data name="OpenOccurrence" xml:space="preserve">
+    <value>Abrir cita actual</value>
+  </data>
+  <data name="OpenSeries" xml:space="preserve">
+    <value>Abrir toda la serie</value>
+  </data>
+  <data name="OpenRecurringItemQuestion" xml:space="preserve">
+    <value>"{0}" es una cita periódica. ¿Quiere abrir solo la cita actual o toda la serie?</value>
+  </data>
+  <data name="EditParentAppointment" xml:space="preserve">
+    <value>Modificar cita principal</value>
+  </data>
+  <data name="Body" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="SetDayViewMode" xml:space="preserve">
+    <value>Mostrar vista diaria</value>
+  </data>
+  <data name="SetMonthViewMode" xml:space="preserve">
+    <value>Mostrar vista mensual</value>
+  </data>
+  <data name="SetWeekViewMode" xml:space="preserve">
+    <value>Mostrar vista semanal</value>
+  </data>
+  <data name="EndDateBeforeStart" xml:space="preserve">
+    <value>La fecha final que ha introducido ocurre antes de la fecha de inicio</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="InvalidRecurrenceRuleMessage" xml:space="preserve">
+    <value>La frecuencia de la repetición no es válida</value>
+  </data>
+  <data name="InvalidRecurrenceRuleTitle" xml:space="preserve">
+    <value>frecuencia no válida</value>
+  </data>
+  <data name="DeleteOccurrence" xml:space="preserve">
+    <value>Eliminar solo cita actual</value>
+  </data>
+  <data name="DeleteSeries" xml:space="preserve">
+    <value>Eliminar toda la serie</value>
+  </data>
+  <data name="DeleteRecurringItem" xml:space="preserve">
+    <value>Eliminar repetición actual</value>
+  </data>
+  <data name="DeleteRecurringItemQuestion" xml:space="preserve">
+    <value> "{0}" es una cita periódica. ¿Desea eliminar solo la cita actual o toda la serie?</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Eliminar cita</value>
+  </data>
+  <data name="DeleteItemQuestion" xml:space="preserve">
+    <value>¿Desea eliminar la cita?</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>restore</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Línea de tiempo</value>
+  </data>
+  <data name="Categorize" xml:space="preserve">
+    <value>Categorizar</value>
+  </data>
+  <data name="ShowAs" xml:space="preserve">
+    <value>Mostrar en</value>
+  </data>
+  <data name="Auto_hide" xml:space="preserve">
+    <value>Ocultar automáticamente</value>
+  </data>
+  <data name="Dockable" xml:space="preserve">
+    <value>Acoplable</value>
+  </data>
+  <data name="Floating" xml:space="preserve">
+    <value>Flotante</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Ocultar</value>
+  </data>
+  <data name="Tabbed_document" xml:space="preserve">
+    <value>Por fichas</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Ocupado</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Libre</value>
+  </data>
+  <data name="OutOfOffice" xml:space="preserve">
+    <value>Fuera de la oficina</value>
+  </data>
+  <data name="Tentative" xml:space="preserve">
+    <value>Tentativa</value>
+  </data>
+  <data name="RadDataPagerEllipsisString" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="HighImportance" xml:space="preserve">
+    <value>Alta importancia</value>
+  </data>
+  <data name="LowImportance" xml:space="preserve">
+    <value>Baja importancia</value>
+  </data>
+  <data name="ResourceEditingMessage" xml:space="preserve">
+    <value>Sólo puede cambiar los recursos mediante la apertura de la serie de</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Despejar</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Borrar todos</value>
+  </data>
+  <data name="DurationDay" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="DurationDays" xml:space="preserve">
+    <value>Días</value>
+  </data>
+  <data name="DurationHour" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="DurationHours" xml:space="preserve">
+    <value>Horas</value>
+  </data>
+  <data name="DurationMinute" xml:space="preserve">
+    <value>Minuto</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>Minutos</value>
+  </data>
+  <data name="DurationWeek" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="DurationWeeks" xml:space="preserve">
+    <value>Semanas</value>
+  </data>
+  <data name="GridViewClearFilter" xml:space="preserve">
+    <value>Vaciar el filtro</value>
+  </data>
+  <data name="GridViewFilter" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="GridViewFilterAnd" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="GridViewFilterContains" xml:space="preserve">
+    <value>Contiene</value>
+  </data>
+  <data name="GridViewFilterEndsWith" xml:space="preserve">
+    <value>Termina con</value>
+  </data>
+  <data name="GridViewFilterIsContainedIn" xml:space="preserve">
+    <value>Figura en</value>
+  </data>
+  <data name="GridViewFilterIsEqualTo" xml:space="preserve">
+    <value>Es igual a</value>
+  </data>
+  <data name="GridViewFilterIsGreaterThan" xml:space="preserve">
+    <value>Es mayor que</value>
+  </data>
+  <data name="GridViewFilterIsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Es mayor que o igual a</value>
+  </data>
+  <data name="GridViewFilterIsLessThan" xml:space="preserve">
+    <value>Es menos que</value>
+  </data>
+  <data name="GridViewFilterIsLessThanOrEqualTo" xml:space="preserve">
+    <value>Es menos que o igual a</value>
+  </data>
+  <data name="GridViewFilterIsNotEqualTo" xml:space="preserve">
+    <value>No es igual a</value>
+  </data>
+  <data name="GridViewFilterMatchCase" xml:space="preserve">
+    <value>Coincidir mayúsculas y minúsculas</value>
+  </data>
+  <data name="GridViewFilterSelectAll" xml:space="preserve">
+    <value>Selectionar todos</value>
+  </data>
+  <data name="GridViewFilterShowRowsWithValueThat" xml:space="preserve">
+    <value>Mostrar  filas con valor que</value>
+  </data>
+  <data name="GridViewFilterStartsWith" xml:space="preserve">
+    <value>Comienza con</value>
+  </data>
+  <data name="GridViewGroupPanelText" xml:space="preserve">
+    <value>Arrastre el encabezado de grupo y lo suelte 
+aquí para agrupar por este valor</value>
+  </data>
+  <data name="GridViewGroupPanelTopText" xml:space="preserve">
+    <value>Encabezado de grupo</value>
+  </data>
+  <data name="GridViewGroupPanelTopTextGrouped" xml:space="preserve">
+    <value>Agrupados por:</value>
+  </data>
+  <data name="FilterAnd" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="FilterContains" xml:space="preserve">
+    <value>Contiene</value>
+  </data>
+  <data name="FilterEndsWith" xml:space="preserve">
+    <value>Termina con</value>
+  </data>
+  <data name="FilterIsContainedIn" xml:space="preserve">
+    <value>Figura en</value>
+  </data>
+  <data name="FilterIsEqualTo" xml:space="preserve">
+    <value>Es igual a</value>
+  </data>
+  <data name="FilterIsGreaterThan" xml:space="preserve">
+    <value>Es mayor que</value>
+  </data>
+  <data name="FilterIsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Es mayor que o igual a</value>
+  </data>
+  <data name="FilterIsLessThan" xml:space="preserve">
+    <value>Es menos que</value>
+  </data>
+  <data name="FilterIsLessThanOrEqualTo" xml:space="preserve">
+    <value>Es menos que o igual a</value>
+  </data>
+  <data name="FilterIsNotEqualTo" xml:space="preserve">
+    <value>No es igual a</value>
+  </data>
+  <data name="FilterMatchCase" xml:space="preserve">
+    <value>Coincidir mayúsculas y minúsculas</value>
+  </data>
+  <data name="FilterOr" xml:space="preserve">
+    <value>o</value>
+  </data>
+  <data name="FilterStartsWith" xml:space="preserve">
+    <value>Comienza con</value>
+  </data>
+</root>

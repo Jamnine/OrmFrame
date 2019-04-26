@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Appointment" xml:space="preserve">
+    <value>Takvim</value>
+  </data>
+  <data name="AppointmentRecurrence" xml:space="preserve">
+    <value>Takvim Yinelenmesi</value>
+  </data>
+  <data name="AppointmentTime" xml:space="preserve">
+    <value>Yinelenme Zamanı</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Vazgeç</value>
+  </data>
+  <data name="CreateAppointment" xml:space="preserve">
+    <value>Takvim Oluştur</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>_Günlük</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>günde bir</value>
+  </data>
+  <data name="DeleteAppointment" xml:space="preserve">
+    <value>Takvimi Sil</value>
+  </data>
+  <data name="DurationColon" xml:space="preserve">
+    <value>Sü_re</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>_Gün</value>
+  </data>
+  <data name="EditAppointment" xml:space="preserve">
+    <value>Takvimi Düzenle</value>
+  </data>
+  <data name="EditRecurrenceRule" xml:space="preserve">
+    <value>Yinelenme Kuralı Düzenle</value>
+  </data>
+  <data name="EndAfter" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndBy" xml:space="preserve">
+    <value>Bi_tiş</value>
+  </data>
+  <data name="EndColon" xml:space="preserve">
+    <value>Bi_tiş</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>H_er</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>gün</value>
+  </data>
+  <data name="EveryWeekday" xml:space="preserve">
+    <value>Haftaiçi</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>ilk</value>
+  </data>
+  <data name="Fourth" xml:space="preserve">
+    <value>dördüncü</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>son</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>_Aylık</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>ayın</value>
+  </data>
+  <data name="NoEndDate" xml:space="preserve">
+    <value>Sürekli _Tekrarla</value>
+  </data>
+  <data name="Occurrences" xml:space="preserve">
+    <value>kez tekrarla</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OfEvery" xml:space="preserve">
+    <value>her</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="RangeOfRecurrence" xml:space="preserve">
+    <value>Yinelenme Düzeni</value>
+  </data>
+  <data name="RecurrencePattern" xml:space="preserve">
+    <value>Yinelenme Planı</value>
+  </data>
+  <data name="RemoveRecurrence" xml:space="preserve">
+    <value>Yinelenme _Sil</value>
+  </data>
+  <data name="RecurEvery" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SaveAppointment" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="SaveRecurrence" xml:space="preserve">
+    <value>Yinelenme Kaydet</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>ikinci</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Başlangıç:</value>
+  </data>
+  <data name="StartColon" xml:space="preserve">
+    <value>_Başlangıç</value>
+  </data>
+  <data name="Third" xml:space="preserve">
+    <value>üçüncü</value>
+  </data>
+  <data name="The" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>İsimsiz</value>
+  </data>
+  <data name="WeekDays" xml:space="preserve">
+    <value>haftaiçi</value>
+  </data>
+  <data name="WeekendDays" xml:space="preserve">
+    <value>haftasonu</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>_Haftalık</value>
+  </data>
+  <data name="WeeksOn" xml:space="preserve">
+    <value>hafta aşağıdaki günlerde yinele:</value>
+  </data>
+  <data name="Yearly" xml:space="preserve">
+    <value>_Yıllık</value>
+  </data>
+  <data name="AllDayEvent" xml:space="preserve">
+    <value>Tüm _Gün</value>
+  </data>
+  <data name="EditRecurrence" xml:space="preserve">
+    <value>Yinelenme Düzenle</value>
+  </data>
+  <data name="EditRecurrenceCommandText" xml:space="preserve">
+    <value>Yinelenme _Düzenle</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Bitiş Zamanı</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>Kaydet ve Kapat</value>
+  </data>
+  <data name="SaveAndCloseCommandText" xml:space="preserve">
+    <value>_Kaydet &amp; Kapat</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Başlangıç Zamanı</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Takvim _Adı</value>
+  </data>
+  <data name="OpenRecurringItem" xml:space="preserve">
+    <value>Yinelenmeyi Gör</value>
+  </data>
+  <data name="OpenOccurrence" xml:space="preserve">
+    <value>Bu _Girdiyi Gör</value>
+  </data>
+  <data name="OpenSeries" xml:space="preserve">
+    <value>Aralığı Gör.</value>
+  </data>
+  <data name="OpenRecurringItemQuestion" xml:space="preserve">
+    <value>"{0}" yinelenen bir takvim. Sadece bu girdiyi mi yoksa yinelenen tüm zaman aralığını mı görmek istiyorsunuz?</value>
+  </data>
+  <data name="EditParentAppointment" xml:space="preserve">
+    <value>Kapsayan Takvimi Düzenle</value>
+  </data>
+  <data name="Body" xml:space="preserve">
+    <value>Notlar</value>
+  </data>
+  <data name="SetDayViewMode" xml:space="preserve">
+    <value>Çizelge görüntüsünü güne göre ayarla</value>
+  </data>
+  <data name="SetMonthViewMode" xml:space="preserve">
+    <value>Çizelge görüntüsünü aya göre ayarla</value>
+  </data>
+  <data name="SetWeekViewMode" xml:space="preserve">
+    <value>Çizelge görüntüsünü haftaya göre ayarla</value>
+  </data>
+  <data name="EndDateBeforeStart" xml:space="preserve">
+    <value>Girdiğiniz başlangıç zamanı bitiş zamanından daha önce</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>_Ay</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>_Hafta</value>
+  </data>
+  <data name="InvalidRecurrenceRuleMessage" xml:space="preserve">
+    <value>Yinelenme planı geçerli değil.</value>
+  </data>
+  <data name="InvalidRecurrenceRuleTitle" xml:space="preserve">
+    <value>Geçersiz plan</value>
+  </data>
+  <data name="DeleteOccurrence" xml:space="preserve">
+    <value>Bu _Girdiyi Sil.</value>
+  </data>
+  <data name="DeleteSeries" xml:space="preserve">
+    <value>Tü_münü Sil.</value>
+  </data>
+  <data name="DeleteRecurringItem" xml:space="preserve">
+    <value>Yinelenen Öğeyi Sil</value>
+  </data>
+  <data name="DeleteRecurringItemQuestion" xml:space="preserve">
+    <value>"{0}" yinelenen bir takvim. Sadece bu girdiyi mi yoksa yinelenen tüm zaman aralığını mı silmek istiyorsunuz?</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Öğeyi Sil</value>
+  </data>
+  <data name="DeleteItemQuestion" xml:space="preserve">
+    <value>Bu randevuyu silmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>restore</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Zaman çizelgesi</value>
+  </data>
+  <data name="Categorize" xml:space="preserve">
+    <value>Kategorize</value>
+  </data>
+  <data name="ShowAs" xml:space="preserve">
+    <value>Gösterisi olarak</value>
+  </data>
+  <data name="Auto_hide" xml:space="preserve">
+    <value>Otomatik gizleme</value>
+  </data>
+  <data name="Dockable" xml:space="preserve">
+    <value>Dockable</value>
+  </data>
+  <data name="Floating" xml:space="preserve">
+    <value>Yüzen</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Gizlemek</value>
+  </data>
+  <data name="Tabbed_document" xml:space="preserve">
+    <value>Sekmeli Belge</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Meşgul</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Bağımsız</value>
+  </data>
+  <data name="OutOfOffice" xml:space="preserve">
+    <value>Dışarı</value>
+  </data>
+  <data name="Tentative" xml:space="preserve">
+    <value>öneri niteliğinde</value>
+  </data>
+  <data name="RadDataPagerEllipsisString" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="HighImportance" xml:space="preserve">
+    <value>yüksek önem</value>
+  </data>
+  <data name="LowImportance" xml:space="preserve">
+    <value>düşük önem</value>
+  </data>
+  <data name="ResourceEditingMessage" xml:space="preserve">
+    <value>Sadece dizi açarak kaynakları değiştirebilirsiniz</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Temizlemek</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Tüm</value>
+  </data>
+</root>

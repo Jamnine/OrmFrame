@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:toolkit="clr-namespace:Orm.Toolkit">
+    <ResourceDictionary.MergedDictionaries>
+
+
+        <ResourceDictionary Source="/Orm.Toolkit;Component/AutoMetroControl/Themes/Flyout.xaml" />
+        <ResourceDictionary Source="/Orm.Toolkit;Component/AutoMetroControl/Themes/FlyoutsControl.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <ControlTemplate x:Key="CleanWindowTemplate" ControlTemplate.TargetType="{x:Type toolkit:MetroControl}">
+        <FrameworkTemplate.Resources>
+            <ResourceDictionary>
+                <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+                <Storyboard x:Key="OverlayFastSemiFadeIn" Timeline.BeginTime="0:0:0" Timeline.AccelerationRatio=".97" Storyboard.TargetProperty="Opacity" Timeline.SpeedRatio="2.7">
+                    <DoubleAnimation DoubleAnimation.To=".7" />
+                </Storyboard>
+                <Storyboard x:Key="OverlayFastSemiFadeOut" Timeline.BeginTime="0:0:0" Timeline.AccelerationRatio=".97" Storyboard.TargetProperty="Opacity" Timeline.SpeedRatio="2.7">
+                    <DoubleAnimation DoubleAnimation.To="0." />
+                </Storyboard>
+            </ResourceDictionary>
+        </FrameworkTemplate.Resources>
+        <Grid Background="{TemplateBinding Background}">
+            <!--<VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="LayoutStates">
+                    <VisualState x:Name="AfterLoaded">
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Timeline.BeginTime="00:00:00" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PART_Border">
+                                <SplineDoubleKeyFrame DoubleKeyFrame.KeyTime="00:00:00" DoubleKeyFrame.Value="0" />
+                                <EasingDoubleKeyFrame DoubleKeyFrame.KeyTime="00:00:00.600" DoubleKeyFrame.Value="1">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <CubicEase EasingFunctionBase.EasingMode="EaseIn" />
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="BeforeLoaded" />
+                    <VisualState x:Name="BeforeUnloaded" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>-->
+            <AdornerDecorator>
+                  <Grid Panel.Background="{DynamicResource WhiteBrush}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition RowDefinition.Height="Auto" />
+                            <RowDefinition RowDefinition.Height="*" />
+                        </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ColumnDefinition.Width="*" />
+                        <ColumnDefinition ColumnDefinition.Width="Auto" />
+                        <ColumnDefinition ColumnDefinition.Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--<ContentPresenter ContentPresenter.Name="PART_WindowCommands" Panel.ZIndex="1" Grid.Column="1" Grid.RowSpan="2" FrameworkElement.VerticalAlignment="Top" TextElement.Foreground="{DynamicResource BlackColorBrush}" ContentPresenter.Content="{Binding WindowCommands,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Controls:MetroWindow}}}" FrameworkElement.Height="{Binding TitlebarHeight,Mode=OneWay,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Controls:MetroWindow}}}" UIElement.Visibility="{TemplateBinding ShowTitleBar,Converter={StaticResource BooleanToVisibilityConverter}}" />-->      
+                     
+                      <ContentPresenter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+                      
+                      <Rectangle FrameworkElement.Name="PART_FlyoutModal" Grid.RowSpan="2" Grid.ColumnSpan="3" Shape.Fill="{DynamicResource BlackColorBrush}" UIElement.Opacity="0.5" UIElement.Visibility="Hidden" />
+                        <ContentControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" Panel.ZIndex="2" KeyboardNavigation.TabNavigation="None" FrameworkElement.VerticalAlignment="Stretch" ContentControl.Content="{Binding Flyouts,Mode=OneWay,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type toolkit:MetroControl}}}" />
+                        <Grid Grid.Name="PART_OverlayBox" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="3" Grid.Column="0" Grid.ColumnSpan="3" Panel.Background="{DynamicResource BlackColorBrush}" UIElement.Opacity=".7" UIElement.Visibility="Hidden" />
+                       
+                      <!--<Grid Grid.Name="PART_MetroDialogContainer" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="4" Grid.Column="0" Grid.ColumnSpan="3" />-->
+                    </Grid>
+            </AdornerDecorator>
+            <!--<Border Border.Name="PART_Border" UIElement.Opacity="0" Border.BorderBrush="{TemplateBinding Control.BorderBrush}" Border.BorderThickness="{TemplateBinding Control.BorderThickness}" FrameworkElement.HorizontalAlignment="Stretch" FrameworkElement.VerticalAlignment="Stretch" />-->
+            <ResizeGrip ResizeGrip.Name="WindowResizeGrip" FrameworkElement.HorizontalAlignment="Right" Control.IsTabStop="False" UIElement.Visibility="Collapsed" FrameworkElement.VerticalAlignment="Bottom" />
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="{x:Type toolkit:MetroControl}" Style.TargetType="{x:Type toolkit:MetroControl}">
+
+        <Setter Setter.Property="Control.Template" Setter.Value="{StaticResource CleanWindowTemplate}" />
+    
+    </Style>
+
+
+</ResourceDictionary>

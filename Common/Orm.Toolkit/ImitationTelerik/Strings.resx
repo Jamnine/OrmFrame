@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivateRow" xml:space="preserve">
+    <value>活动行</value>
+  </data>
+  <data name="AllDayEvent" xml:space="preserve">
+    <value>All da_y event</value>
+  </data>
+  <data name="AppearanceCategory" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="Appointment" xml:space="preserve">
+    <value>Appointment</value>
+  </data>
+  <data name="AppointmentRecurrence" xml:space="preserve">
+    <value>Appointment Recurrence</value>
+  </data>
+  <data name="AppointmentTime" xml:space="preserve">
+    <value>Appointment time</value>
+  </data>
+  <data name="Auto_hide" xml:space="preserve">
+    <value>Auto hide</value>
+  </data>
+  <data name="BeginEdit" xml:space="preserve">
+    <value>Begin Edit</value>
+  </data>
+  <data name="BeginInsert" xml:space="preserve">
+    <value>Begin Insert</value>
+  </data>
+  <data name="BehaviourCategory" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="Body" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="BrushesCategory" xml:space="preserve">
+    <value>Brushes</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Busy</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CancelCellEdit" xml:space="preserve">
+    <value>Cancel Cell Edit</value>
+  </data>
+  <data name="CancelRowEdit" xml:space="preserve">
+    <value>Cancel Row Edit</value>
+  </data>
+  <data name="CannotBringToFrontDifferentTypes" xml:space="preserve">
+    <value>Cannot bring to front popup with different type.</value>
+  </data>
+  <data name="CannotChangeStartingIndex" xml:space="preserve">
+    <value>Cannot change starting ZIndex when there are open Popup.</value>
+  </data>
+  <data name="CannotUseItemsSource" xml:space="preserve">
+    <value>Items collection must be empty before using ItemsSource.</value>
+  </data>
+  <data name="Categorize" xml:space="preserve">
+    <value>Categorize</value>
+  </data>
+  <data name="ChartAxisLabelDateTimeFormat" xml:space="preserve">
+    <value>dddd, dd MMMM yyyy</value>
+  </data>
+  <data name="ChartAxisLabelFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartChartLegendHeader" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="ChartChartLegendLinearSeriesFormat" xml:space="preserve">
+    <value>Series {0}</value>
+  </data>
+  <data name="ChartChartLegendRadialSeriesFormat" xml:space="preserve">
+    <value>Item {0}</value>
+  </data>
+  <data name="ChartChartTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartHorizontalAxisTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartItemLabelFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartItemToolTipFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChartNoDataMessage" xml:space="preserve">
+    <value>No Data Series.</value>
+  </data>
+  <data name="ChartRangeItemToolTipFormat" xml:space="preserve">
+    <value>High: {0}{2}Low: {1}</value>
+  </data>
+  <data name="ChartStickItemToolTipFormat" xml:space="preserve">
+    <value>High: {0}{4}Low: {1}{4}Open: {2}{4}Close: {3}</value>
+  </data>
+  <data name="ChartVerticalAxisTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseItem" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseItemQuestion" xml:space="preserve">
+    <value>Are you sure you want to close this dialog without saving the changes?</value>
+  </data>
+  <data name="CollapseHierarchyItem" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="ColorPickerAutomatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="ColorPickerStandardColors" xml:space="preserve">
+    <value>Standard colors</value>
+  </data>
+  <data name="ColorPickerThemeColors" xml:space="preserve">
+    <value>Theme colors</value>
+  </data>
+  <data name="CommitEdit" xml:space="preserve">
+    <value>Commit Edit</value>
+  </data>
+  <data name="CommonCategory" xml:space="preserve">
+    <value>Common Properties</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ContentCategory" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ControlCornerRadius" xml:space="preserve">
+    <value>Gets or sets a value that represents the degree (in pixels) to which the corners of a Border are rounded. This is a dependency property.</value>
+  </data>
+  <data name="ControlIsHighlighted" xml:space="preserve">
+    <value>Gets or sets whether the control is highlighted (like in mouse-over case). This is a dependency property.</value>
+  </data>
+  <data name="ControlIsMouseOver" xml:space="preserve">
+    <value>Gets or sets whether the mouse is over. This is a dependency property.</value>
+  </data>
+  <data name="ControlIsPressed" xml:space="preserve">
+    <value>Gets or sets whether the state is pressed. This is a dependency property.</value>
+  </data>
+  <data name="CreateAppointment" xml:space="preserve">
+    <value>Create appointment</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>_Daily</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>day(s)</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteAppointment" xml:space="preserve">
+    <value>Delete appointment</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>Delete item</value>
+  </data>
+  <data name="DeleteItemQuestion" xml:space="preserve">
+    <value>Are you sure you want to delete this appointment?</value>
+  </data>
+  <data name="DeleteOccurrence" xml:space="preserve">
+    <value>Delete this _occurrence.</value>
+  </data>
+  <data name="DeleteRecurringItem" xml:space="preserve">
+    <value>Delete Recurring Item</value>
+  </data>
+  <data name="DeleteRecurringItemQuestion" xml:space="preserve">
+    <value>"{0}" is a recurring appointment. Do you want to delete only this occurrence or the series?</value>
+  </data>
+  <data name="DeleteSeries" xml:space="preserve">
+    <value>Delete the _series.</value>
+  </data>
+  <data name="Dockable" xml:space="preserve">
+    <value>Dockable</value>
+  </data>
+  <data name="DragDropMissingAdornerLayer" xml:space="preserve">
+    <value>Root AdornerLayer Not Found. Please make sure that your root visual is Window or other element that has an adorner layer. Alternatively, wrap your root panel in an &lt;AdornerDecorator&gt; element.</value>
+  </data>
+  <data name="DurationColon" xml:space="preserve">
+    <value>D_uration</value>
+  </data>
+  <data name="DurationDay" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="DurationDays" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="DurationHour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="DurationHours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="DurationMinute" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="DurationWeek" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="DurationWeeks" xml:space="preserve">
+    <value>weeks</value>
+  </data>
+  <data name="EditAppointment" xml:space="preserve">
+    <value>Edit Appointment</value>
+  </data>
+  <data name="EditParentAppointment" xml:space="preserve">
+    <value>Edit Parent Appointment</value>
+  </data>
+  <data name="EditRecurrence" xml:space="preserve">
+    <value>Edit Recurrence</value>
+  </data>
+  <data name="EditRecurrenceCommandText" xml:space="preserve">
+    <value>Edit _Recurrence</value>
+  </data>
+  <data name="EditRecurrenceRule" xml:space="preserve">
+    <value>Edit recurrence rule</value>
+  </data>
+  <data name="EndAfter" xml:space="preserve">
+    <value>End a_fter</value>
+  </data>
+  <data name="EndBy" xml:space="preserve">
+    <value>End _by</value>
+  </data>
+  <data name="EndColon" xml:space="preserve">
+    <value>E_nd</value>
+  </data>
+  <data name="EndDateBeforeStart" xml:space="preserve">
+    <value>The end date you entered occurs before the start date</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>E_very</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="EveryWeekday" xml:space="preserve">
+    <value>Every wee_kday</value>
+  </data>
+  <data name="ExpanderClickMode" xml:space="preserve">
+    <value>Use this property to read and initialize when expander will expand. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderDecoratorTemplate" xml:space="preserve">
+    <value>Gets or sets a ControlTemplate used to customize the Expander-decorator item. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderExpandDirection" xml:space="preserve">
+    <value>This property determines the expand direction of the control. There are four options: Down, Up, Right and Left. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderHeaderControlTemplate" xml:space="preserve">
+    <value>Gets or sets a ControlTemplate used to customize the whole Header part of the Expander. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderHorizontalHeaderAlignment" xml:space="preserve">
+    <value>HorizontalHeaderAlignment determines the horizontal alignment of the Header. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderIsAnimated" xml:space="preserve">
+    <value>Use this property to permit the animation of the expander's content. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderIsExpanded" xml:space="preserve">
+    <value>Use this property to read and initialize expand and collapse states of the Expander. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderTemplateDown" xml:space="preserve">
+    <value>Expander will use the template from this property if it is initialized. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderTemplateLeft" xml:space="preserve">
+    <value>Expander will use the template from this property if it is initialized. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderTemplateRight" xml:space="preserve">
+    <value>Expander will use the template from this property if it is initialized. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderTemplateUp" xml:space="preserve">
+    <value>Expander will use the template from this property if it is initialized. This is a dependency property.</value>
+  </data>
+  <data name="ExpanderVerticalHeaderAlignment" xml:space="preserve">
+    <value>VerticalHeaderAlignment determines the vertical alignment of the Header. This is a dependency property.</value>
+  </data>
+  <data name="ExpandHierarchyItem" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="ExtendSelectionToCurrentUnit" xml:space="preserve">
+    <value>Extends selection to current unit</value>
+  </data>
+  <data name="FilterAnd" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="FilterContains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="FilterDoesNotContain" xml:space="preserve">
+    <value>Does not contain</value>
+  </data>
+  <data name="FilterEndsWith" xml:space="preserve">
+    <value>Ends with</value>
+  </data>
+  <data name="FilterIsContainedIn" xml:space="preserve">
+    <value>Is contained in</value>
+  </data>
+  <data name="FilterIsEqualTo" xml:space="preserve">
+    <value>Is equal to</value>
+  </data>
+  <data name="FilterIsGreaterThan" xml:space="preserve">
+    <value>Is greater than</value>
+  </data>
+  <data name="FilterIsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Is greater than or equal to</value>
+  </data>
+  <data name="FilterIsLessThan" xml:space="preserve">
+    <value>Is less than</value>
+  </data>
+  <data name="FilterIsLessThanOrEqualTo" xml:space="preserve">
+    <value>Is less than or equal to</value>
+  </data>
+  <data name="FilterIsNotEqualTo" xml:space="preserve">
+    <value>Is not equal to</value>
+  </data>
+  <data name="FilterMatchCase" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="FilterOr" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="FilterStartsWith" xml:space="preserve">
+    <value>Starts with</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>first</value>
+  </data>
+  <data name="Floating" xml:space="preserve">
+    <value>Floating</value>
+  </data>
+  <data name="Fourth" xml:space="preserve">
+    <value>fourth</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="GridViewAlwaysVisibleNewRow" xml:space="preserve">
+    <value>Click here to add new item</value>
+  </data>
+  <data name="GridViewClearFilter" xml:space="preserve">
+    <value>Clear Filter</value>
+  </data>
+  <data name="GridViewFilter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="GridViewFilterAnd" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="GridViewFilterContains" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="GridViewFilterDoesNotContain" xml:space="preserve">
+    <value>Does not contain</value>
+  </data>
+  <data name="GridViewFilterEndsWith" xml:space="preserve">
+    <value>Ends with</value>
+  </data>
+  <data name="GridViewFilterIsContainedIn" xml:space="preserve">
+    <value>Is contained in</value>
+  </data>
+  <data name="GridViewFilterIsEqualTo" xml:space="preserve">
+    <value>Is equal to</value>
+  </data>
+  <data name="GridViewFilterIsGreaterThan" xml:space="preserve">
+    <value>Is greater than</value>
+  </data>
+  <data name="GridViewFilterIsGreaterThanOrEqualTo" xml:space="preserve">
+    <value>Is greater than or equal to</value>
+  </data>
+  <data name="GridViewFilterIsLessThan" xml:space="preserve">
+    <value>Is less than</value>
+  </data>
+  <data name="GridViewFilterIsLessThanOrEqualTo" xml:space="preserve">
+    <value>Is less than or equal to</value>
+  </data>
+  <data name="GridViewFilterIsNotEqualTo" xml:space="preserve">
+    <value>Is not equal to</value>
+  </data>
+  <data name="GridViewFilterMatchCase" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="GridViewFilterOr" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="GridViewFilterSelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="GridViewFilterShowRowsWithValueThat" xml:space="preserve">
+    <value>Show rows with value that</value>
+  </data>
+  <data name="GridViewFilterStartsWith" xml:space="preserve">
+    <value>Starts with</value>
+  </data>
+  <data name="GridViewGroupPanelText" xml:space="preserve">
+    <value>Drag a column header and drop it here to group by that column</value>
+  </data>
+  <data name="GridViewGroupPanelTopText" xml:space="preserve">
+    <value>Group Header</value>
+  </data>
+  <data name="GridViewGroupPanelTopTextGrouped" xml:space="preserve">
+    <value>Grouped by:</value>
+  </data>
+  <data name="HeaderContentControl_Header_Description" xml:space="preserve">
+    <value>Gets or sets the header of the control.</value>
+  </data>
+  <data name="HeaderedContentControl_HeaderTemplate_Description" xml:space="preserve">
+    <value>Gets or sets the data template for the header.</value>
+  </data>
+  <data name="HeaderedContnetControl_OnHasHeaderChanged" xml:space="preserve">
+    <value>HasHeader is a read-only dependency property.</value>
+  </data>
+  <data name="HeaderedItemsControlHeaderDescription" xml:space="preserve">
+    <value>Gets or sets the item that labels the control. This is a dependency property.</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="HighImportance" xml:space="preserve">
+    <value>High Importance</value>
+  </data>
+  <data name="InvalidRecurrenceRuleMessage" xml:space="preserve">
+    <value>The Recurrence pattern is not valid.</value>
+  </data>
+  <data name="InvalidRecurrenceRuleTitle" xml:space="preserve">
+    <value>Invalid pattern</value>
+  </data>
+  <data name="ItemsControlIsTextSearchEnabled" xml:space="preserve">
+    <value>Gets or sets a value indicating whether TextSearch is enabled on the ItemsControl instance.</value>
+  </data>
+  <data name="ItemsControlItemContainerStyleDescription" xml:space="preserve">
+    <value>Gets or sets the style for the item containers of the control. This is a dependency property.</value>
+  </data>
+  <data name="ItemsControlTextAlignmentDescription" xml:space="preserve">
+    <value>Gets or sets the alignment of text in the control. This is a dependency property.</value>
+  </data>
+  <data name="ItemsControlTextDecorationsDescription" xml:space="preserve">
+    <value>Gets or sets the decorations of the text for the items control. This is a dependency property.</value>
+  </data>
+  <data name="ItemsControlTextWrappingDescription" xml:space="preserve">
+    <value>Gets or sets the text wrapping behaviour for the control. This is a dependency property.</value>
+  </data>
+  <data name="ItemsSourceInUse" xml:space="preserve">
+    <value>Operation is not valid while ItemsSource is in use. Access and modify elements with ItemsControl.ItemsSource instead.</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>last</value>
+  </data>
+  <data name="LayoutCategory" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="LowImportance" xml:space="preserve">
+    <value>Low Importance</value>
+  </data>
+  <data name="MapAerialCommand" xml:space="preserve">
+    <value>Aerial View</value>
+  </data>
+  <data name="MapBirdseyeCommand" xml:space="preserve">
+    <value>Bird's Eye View</value>
+  </data>
+  <data name="MapEastChar" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="MapLabelsVisibleCommand" xml:space="preserve">
+    <value>Show Labels</value>
+  </data>
+  <data name="MapMapScaleKilometerFormat" xml:space="preserve">
+    <value>{0} km</value>
+  </data>
+  <data name="MapMapScaleMeterFormat" xml:space="preserve">
+    <value>{0} m</value>
+  </data>
+  <data name="MapMapScaleMileFormat" xml:space="preserve">
+    <value>{0} ml</value>
+  </data>
+  <data name="MapNorthChar" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="MapPresetZoomLevelCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="MapPresetZoomLevelNeighborhood" xml:space="preserve">
+    <value>Neighborhood</value>
+  </data>
+  <data name="MapPresetZoomLevelRegion" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="MapPresetZoomLevelState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="MapPresetZoomLevelWorld" xml:space="preserve">
+    <value>World</value>
+  </data>
+  <data name="MapRoadCommand" xml:space="preserve">
+    <value>Road View</value>
+  </data>
+  <data name="MapSouthChar" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="MapWestChar" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="Maximize" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="MediaPlayerTimeStatusSeparator" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="MediaPlayerTooltipMute" xml:space="preserve">
+    <value>Mute</value>
+  </data>
+  <data name="MediaPlayerTooltipNextChapter" xml:space="preserve">
+    <value>Next Chapter</value>
+  </data>
+  <data name="MediaPlayerTooltipPlay" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="MediaPlayerTooltipPlaylist" xml:space="preserve">
+    <value>Toggle Play list</value>
+  </data>
+  <data name="MediaPlayerTooltipPreviousChapter" xml:space="preserve">
+    <value>Previous Chapter</value>
+  </data>
+  <data name="MediaPlayerTooltipStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="MediaPlayerTooltipTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="MediaPlayerTooltipVolume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="MiscCategory" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>_Monthly</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>month(s)</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="MoveLeft" xml:space="preserve">
+    <value>Move Left</value>
+  </data>
+  <data name="MoveNext" xml:space="preserve">
+    <value>Move Next</value>
+  </data>
+  <data name="MovePrevious" xml:space="preserve">
+    <value>Move Previous</value>
+  </data>
+  <data name="MoveRight" xml:space="preserve">
+    <value>Move Right</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="NoEndDate" xml:space="preserve">
+    <value>N_o end date</value>
+  </data>
+  <data name="NotAllowedEditorSettings" xml:space="preserve">
+    <value>Editor settings type should be a type of class which implements the IEditorSettings interface.</value>
+  </data>
+  <data name="Occurrences" xml:space="preserve">
+    <value>occurrences</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="OfEvery" xml:space="preserve">
+    <value>of every</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenOccurrence" xml:space="preserve">
+    <value>Open this _occurrence. </value>
+  </data>
+  <data name="OpenRecurringItem" xml:space="preserve">
+    <value>Open Recurring Item</value>
+  </data>
+  <data name="OpenRecurringItemQuestion" xml:space="preserve">
+    <value>"{0}" is a recurring appointment. Do you want to open only this occurrence or the series?</value>
+  </data>
+  <data name="OpenSeries" xml:space="preserve">
+    <value>Open the _series.</value>
+  </data>
+  <data name="OutlookBarConfigureButtons" xml:space="preserve">
+    <value>Configure buttons</value>
+  </data>
+  <data name="OutlookBarHorizontalSplitter" xml:space="preserve">
+    <value>Start dragging in order to change items' position</value>
+  </data>
+  <data name="OutOfOffice" xml:space="preserve">
+    <value>Out Of Office</value>
+  </data>
+  <data name="PanelBarExpandModePropertyDescription" xml:space="preserve">
+    <value>Identifies the ExpandMode dependency property.</value>
+  </data>
+  <data name="PanelBarIsSelectedPropertyDescription" xml:space="preserve">
+    <value>Specifies whether an item is selected or not.</value>
+  </data>
+  <data name="PanelBarItemOnApplyTemplateInvalidOperation" xml:space="preserve">
+    <value>RadPanelBarItem objects should have a parent of type RadPanelBar!</value>
+  </data>
+  <data name="PanelBarItemOnApplyTemplateInvalidOperation1" xml:space="preserve">
+    <value>RadPanelBarItem objects should have a parent of type RadPanelBar!</value>
+  </data>
+  <data name="PanelBarSecondLevelTemplatePropertyDescription" xml:space="preserve">
+    <value>Specifies the control template for second-level items.</value>
+  </data>
+  <data name="PanelBarSelectedValuePathPropertyDescription" xml:space="preserve">
+    <value>Identifies the SelectedValuePath dependency property.</value>
+  </data>
+  <data name="PanelBarTopLevelTemplatePropertyDescription" xml:space="preserve">
+    <value>Specifies the control template for top-level items.</value>
+  </data>
+  <data name="PopupIndexOutOfRange" xml:space="preserve">
+    <value>Popup index must be between {0} and {1}.</value>
+  </data>
+  <data name="RadDataPagerEllipsisString" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="RadDataPagerOf" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="RadDataPagerPage" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="RangeOfRecurrence" xml:space="preserve">
+    <value>Range of recurrence</value>
+  </data>
+  <data name="RecurEvery" xml:space="preserve">
+    <value>Re_cur every</value>
+  </data>
+  <data name="RecurrencePattern" xml:space="preserve">
+    <value>Recurrence pattern</value>
+  </data>
+  <data name="RemoveRecurrence" xml:space="preserve">
+    <value>Remove Recurrence</value>
+  </data>
+  <data name="ResourceEditingMessage" xml:space="preserve">
+    <value>You can only change the resources by opening the series</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="RibbonBarGalleryButtonMore" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="RibbonBarGalleryButtonUpDown" xml:space="preserve">
+    <value>Row </value>
+  </data>
+  <data name="RibbonBarQATCustomize" xml:space="preserve">
+    <value>Customize Quick Access Tool bar</value>
+  </data>
+  <data name="RibbonBarQATMinimize" xml:space="preserve">
+    <value>Minimize the Ribbon</value>
+  </data>
+  <data name="RibbonBarQATShowAbove" xml:space="preserve">
+    <value>Show above the Ribbon</value>
+  </data>
+  <data name="RibbonBarQATShowBelow" xml:space="preserve">
+    <value>Show below the Ribbon</value>
+  </data>
+  <data name="RibbonBarWindowTitleDivider" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>Save and Close</value>
+  </data>
+  <data name="SaveAndCloseCommandText" xml:space="preserve">
+    <value>_Save &amp; Close</value>
+  </data>
+  <data name="SaveAppointment" xml:space="preserve">
+    <value>Save Appointment</value>
+  </data>
+  <data name="SaveRecurrence" xml:space="preserve">
+    <value>Save Recurrence Rule</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>second</value>
+  </data>
+  <data name="SelectCurrentItem" xml:space="preserve">
+    <value>Select Current Item</value>
+  </data>
+  <data name="SelectCurrentUnit" xml:space="preserve">
+    <value>Select the current unit</value>
+  </data>
+  <data name="SetDayViewMode" xml:space="preserve">
+    <value>Sets the scheduler's view mode to day</value>
+  </data>
+  <data name="SetMonthViewMode" xml:space="preserve">
+    <value>Sets the scheduler's view mode to month</value>
+  </data>
+  <data name="SetTimelineViewMode" xml:space="preserve">
+    <value>Sets the scheduler's view mode to timeline</value>
+  </data>
+  <data name="SetWeekViewMode" xml:space="preserve">
+    <value>Sets the scheduler's view mode to week</value>
+  </data>
+  <data name="ShowAs" xml:space="preserve">
+    <value>Show As</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="StartColon" xml:space="preserve">
+    <value>S_tart</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Invalid value for WindowClose enum.</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Sub_ject</value>
+  </data>
+  <data name="Tabbed_document" xml:space="preserve">
+    <value>Tabbed document</value>
+  </data>
+  <data name="TabControlBottomTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabControl when the TabStripPlacement is set to Bottom. This is a dependency property.</value>
+  </data>
+  <data name="TabControlLeftTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabControl when the TabStripPlacement is set to LeftThis is a dependency property.</value>
+  </data>
+  <data name="TabControlRightTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabControl when the TabStripPlacement is set to RightThis is a dependency property.</value>
+  </data>
+  <data name="TabControlTopTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabControl when the TabStripPlacement is set to Top. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_Align_Description" xml:space="preserve">
+    <value>Gets or sets the align of the TabItems - Left, Right, Center, Justify. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_AllTabsEqualHeight_Description" xml:space="preserve">
+    <value>Gets or sets whether all the present tabs have equal height. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_BackgroundOpacity_Description" xml:space="preserve">
+    <value>Gets or sets the opacity of the Background of the TabControl.</value>
+  </data>
+  <data name="TabControl_ContentTemplate_Description" xml:space="preserve">
+    <value>Gets the content template to use for displaying the content of the items.</value>
+  </data>
+  <data name="TabControl_OnSelectedContentChanged_InvalidOperation" xml:space="preserve">
+    <value>SelectedContent is a read-only dependency property.</value>
+  </data>
+  <data name="TabControl_OnSelectedContentTemplateChanged_InvalidOperation" xml:space="preserve">
+    <value>SelectedContentTemplate is a read-only dependency property.</value>
+  </data>
+  <data name="TabControl_Orientation_Description" xml:space="preserve">
+    <value>Gets or sets the orientation of the TabItems in the TabStrip. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_Position_Description" xml:space="preserve">
+    <value>Gets or sets the Position of the TabStrip with regard to the content. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_ReorderTabRows_Description" xml:space="preserve">
+    <value>Gets or sets whether the TabItem rows should be reordered when selected. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_SelectedIndex_Description" xml:space="preserve">
+    <value>"Gets or sets the index of the selected item. The default value is -1 which means that no item is selected. This is a dependency property.</value>
+  </data>
+  <data name="TabControl_SelectedTab_Description" xml:space="preserve">
+    <value>Gets or sets the currently selected tab. This is a dependency property.</value>
+  </data>
+  <data name="TabItemBottomTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabItem when the TabStripPlacement is set to Bottom. This is a dependency property.</value>
+  </data>
+  <data name="TabItemLeftTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabItem when the TabStripPlacement is set to Left. This is a dependency property.</value>
+  </data>
+  <data name="TabItemRightTemplateDescription3" xml:space="preserve">
+    <value>Gets or sets the template of the TabItem when the TabStripPlacement is set to Right. This is a dependency property.</value>
+  </data>
+  <data name="TabItemTopTemplateDescription" xml:space="preserve">
+    <value>Gets or sets the template of the TabItem when the TabStripPlacement is set to Top. This is a dependency property.</value>
+  </data>
+  <data name="TabItem_OnIndexChanged_InvalidOperation" xml:space="preserve">
+    <value>Index is a read-only dependency property.</value>
+  </data>
+  <data name="TabItem_OnIsMouseOverChanged_InvalidOperation" xml:space="preserve">
+    <value>IsMouseOver is a read-only dependency property.</value>
+  </data>
+  <data name="TabItem_OnIsSelectedChanged_InvalidOperation" xml:space="preserve">
+    <value>IsSelected is a read-only dependency property.</value>
+  </data>
+  <data name="Tentative" xml:space="preserve">
+    <value>Tentative</value>
+  </data>
+  <data name="TextCategory" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="The" xml:space="preserve">
+    <value>Th_e</value>
+  </data>
+  <data name="Third" xml:space="preserve">
+    <value>third</value>
+  </data>
+  <data name="TileViewItemMaximizeText" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="TileViewItemMinimizeText" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>时间轴</value>
+  </data>
+  <data name="TransformCategory" xml:space="preserve">
+    <value>Transform</value>
+  </data>
+  <data name="TreeViewDropAfter" xml:space="preserve">
+    <value>Drop after </value>
+  </data>
+  <data name="TreeViewDropBefore" xml:space="preserve">
+    <value>Drop before </value>
+  </data>
+  <data name="TreeViewDropIn" xml:space="preserve">
+    <value>Drop in </value>
+  </data>
+  <data name="TreeViewDropRoot" xml:space="preserve">
+    <value>Drop as root</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="UploadAcceptableDropEntities" xml:space="preserve">
+    <value>Only Files and Folders are accepted as Drop-data.</value>
+  </data>
+  <data name="UploadBrowse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="UploadBrowseAppend" xml:space="preserve">
+    <value>Add more files</value>
+  </data>
+  <data name="UploadBufferSizeSoBig" xml:space="preserve">
+    <value>BufferSize too big. Please set it to a smaller value.</value>
+  </data>
+  <data name="UploadCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="UploadCaptionSelect" xml:space="preserve">
+    <value>Select files to upload</value>
+  </data>
+  <data name="UploadCaptionSelected" xml:space="preserve">
+    <value>Selected Files:</value>
+  </data>
+  <data name="UploadCaptionUploaded" xml:space="preserve">
+    <value>Upload Done</value>
+  </data>
+  <data name="UploadCaptionUploading" xml:space="preserve">
+    <value>Uploading...</value>
+  </data>
+  <data name="UploadForbiddenDropEntities" xml:space="preserve">
+    <value>Can not upload an entity of type </value>
+  </data>
+  <data name="UploadHandlerNotFoundOrFailed" xml:space="preserve">
+    <value>Handler not found or execution of the handler failed!</value>
+  </data>
+  <data name="UploadItemDismissed" xml:space="preserve">
+    <value>Item dismissed.</value>
+  </data>
+  <data name="UploadPause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="UploadRestriction" xml:space="preserve">
+    <value>Some of selected files are restricted by:</value>
+  </data>
+  <data name="UploadRestrictionCount" xml:space="preserve">
+    <value>Max number of uploaded files;</value>
+  </data>
+  <data name="UploadRestrictionSize" xml:space="preserve">
+    <value>Max file size;</value>
+  </data>
+  <data name="UploadRestrictionTotalSize" xml:space="preserve">
+    <value>Total size of all uploaded files;</value>
+  </data>
+  <data name="UploadResume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="UploadTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UploadUnknownError" xml:space="preserve">
+    <value>Unknown error!</value>
+  </data>
+  <data name="UploadUpload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UploadUploadServiceUrlInvalidPropertyValue" xml:space="preserve">
+    <value>Invalid upload url. Please make sure the url is absolute!</value>
+  </data>
+  <data name="UploadUploadServiceUrlSetProperty" xml:space="preserve">
+    <value>Property UploadServiceUrl not set</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="WeekDays" xml:space="preserve">
+    <value>weekday</value>
+  </data>
+  <data name="WeekendDays" xml:space="preserve">
+    <value>weekend day</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>_Weekly</value>
+  </data>
+  <data name="WeeksOn" xml:space="preserve">
+    <value>week(s) on:</value>
+  </data>
+  <data name="Yearly" xml:space="preserve">
+    <value>_Yearly</value>
+  </data>
+</root>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{921E75CE-5639-4350-8213-89BE0479C3AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Config</RootNamespace>
+    <AssemblyName>Orm.Config</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\Framework\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="BMJ.BPOffline.ParaComponents.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\BMJ.BPOffline.ParaComponents.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ESBasic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ba1538489f75683e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Telemedicinedll\ESBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="JustLib">
+      <HintPath>..\..\Framework\Telemedicinedll\JustLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\Framework\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\Framework\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLite">
+      <HintPath>..\..\Framework\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telemedicine.Core">
+      <HintPath>..\..\Framework\Telemedicinedll\Telemedicine.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing">
+      <HintPath>..\..\Framework\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\..\Framework\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigTypes.cs" />
+    <Compile Include="DBClientBaseInRedis.cs" />
+    <Compile Include="DBClientOuInRedis.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionHelper.cs" />
+    <Compile Include="RoleModuleTreeHelper.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="SocketClient.cs" />
+    <Compile Include="UserProfiles.cs" />
+    <Compile Include="UtilsLocCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
+      <Project>{39CA059C-FFC5-4D34-97D1-1B3F42085152}</Project>
+      <Name>Orm.Log4Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+      <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
+      <Name>Orm.Model.Parameter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orm.Framework.Services\Orm.Framework.Services.csproj">
+      <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
+      <Name>Orm.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orm.Redis\Orm.Redis.csproj">
+      <Project>{c0e97a62-bd21-4482-8edd-a015844907df}</Project>
+      <Name>Orm.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Orm.Toolkit\Orm.Toolkit.csproj">
+      <Project>{d0153a6e-0b11-462b-bd3f-0aad78cebb6d}</Project>
+      <Name>Orm.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+      <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
+      <Name>Orm.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

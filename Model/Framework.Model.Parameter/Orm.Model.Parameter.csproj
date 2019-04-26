@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E279036F-A84E-42FA-B900-281DB8922C0E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Model.Parameter</RootNamespace>
+    <AssemblyName>Orm.Model.Parameter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>bin\Debug\Orm.Model.Parameter.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZhongXin.API.Models">
+      <HintPath>..\..\Framework\ZhongXinApi\ZhongXin.API.Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LockInfo.cs" />
+    <Compile Include="AppModel.cs" />
+    <Compile Include="FileSystemTempate.cs" />
+    <Compile Include="IdToothCaseHistory.cs" />
+    <Compile Include="PMAddPatient.cs" />
+    <Compile Include="PMArrearageInvoice.cs" />
+    <Compile Include="PMCancelCharge.cs" />
+    <Compile Include="PMDocumentQuery.cs" />
+    <Compile Include="PMFileReturnValue.cs" />
+    <Compile Include="PMFindInvoiceByInvoNo.cs" />
+    <Compile Include="PMHealthCheckPlan.cs" />
+    <Compile Include="PMInitBsItemComboBox.cs" />
+    <Compile Include="PMMedicalRecord.cs" />
+    <Compile Include="PMOuDocRegType.cs" />
+    <Compile Include="PMPatientQuery.cs" />
+    <Compile Include="PMSaveBalanceInfo.cs" />
+    <Compile Include="PMSaveRecordInfo.cs" />
+    <Compile Include="PMStockAlarm.cs" />
+    <Compile Include="PMTjItemRecords.cs" />
+    <Compile Include="PMTransmit.cs" />
+    <Compile Include="PMVIPConsumingRecords.cs" />
+    <Compile Include="ReturnDownloadResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PMKeyLockInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnUserIntf.cs" />
+    <Compile Include="ReturnValue.cs" />
+    <Compile Include="PMTreatmentPlan.cs" />
+    <Compile Include="ValidationHelper.cs" />
+    <Compile Include="WeChatParameter\PMDoctorInfo.cs" />
+    <Compile Include="WeChatParameter\PMInspectionReport.cs" />
+    <Compile Include="WeChatParameter\PMOuHosInfoQry.cs" />
+    <Compile Include="WeChatParameter\PMOuInvoiceQry.cs" />
+    <Compile Include="WeChatParameter\PMSaveRegistration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="函数的参数实体.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"
+copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

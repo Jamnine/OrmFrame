@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4D9D3E1-E15D-4CBA-9680-2AC31BCA6DD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Model.Custom</RootNamespace>
+    <AssemblyName>Orm.Model.Custom</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>bin\Debug\Orm.Model.Custom.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESBasic">
+      <HintPath>..\..\Framework\RefDLL\ESBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="NLite">
+      <HintPath>..\..\Framework\NLite.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BsCmmonData.cs" />
+    <Compile Include="ModelCache\UspAdviceauthdtlCache.cs" />
+    <Compile Include="ModelCache\UspHisOuHosInfoCache.cs" />
+    <Compile Include="ModelCache\UspInadvicelongCache.cs" />
+    <Compile Include="ModelCache\UspInadvicetempCache.cs" />
+    <Compile Include="ModelCache\UspInDrugReqBackCache.cs" />
+    <Compile Include="ModelCache\UspinexecuteCache.cs" />
+    <Compile Include="ModelCache\UspInhosinfoCache.cs" />
+    <Compile Include="ModelCache\UspIninvoicedtlCache.cs" />
+    <Compile Include="ModelCache\UspOuBusicCacheList.cs" />
+    <Compile Include="ModelCache\UspOuClincDiagCache.cs" />
+    <Compile Include="ModelCache\UspOuClinicFirstCache.cs" />
+    <Compile Include="ModelCache\UspOuHosInfoCache.cs" />
+    <Compile Include="ModelCache\UspOuInvoiceCache.cs" />
+    <Compile Include="ModelCache\UspOuInvoiceDtlCache.cs" />
+    <Compile Include="ModelCache\UspOuRecipeCache.cs" />
+    <Compile Include="ModelCache\UspOuRecipeDtlCache.cs" />
+    <Compile Include="ModelCache\UspRmOutCache.cs" />
+    <Compile Include="ModelCache\UspRmOutDtlCache.cs" />
+    <Compile Include="ModelCache\UspRmOutOthCache.cs" />
+    <Compile Include="ModelCache\UspRmOutOthDtlCache.cs" />
+    <Compile Include="UspModel\AccountingWithOuInvoiceRelation.cs" />
+    <Compile Include="UspModel\AccountingWithSumOuInvoiceAmount.cs" />
+    <Compile Include="UspModel\AF\uspAttendanceRecordQry.cs" />
+    <Compile Include="UspModel\AssistantSearchConditions.cs" />
+    <Compile Include="UspModel\Bs\BsPatientCache.cs" />
+    <Compile Include="UspModel\Bs\PublicBsItemRelation.cs" />
+    <Compile Include="UspModel\Bs\RptToothPosition.cs" />
+    <Compile Include="UspModel\Bs\RptWorkSheet.cs" />
+    <Compile Include="UspModel\Bs\uspBsDocRegTypeQry.cs" />
+    <Compile Include="UspModel\Bs\uspBsHospitalQry.cs" />
+    <Compile Include="UspModel\Bs\uspBsItemDtlStockQry.cs" />
+    <Compile Include="UspModel\Bs\uspBsItemMiniQry.cs" />
+    <Compile Include="UspModel\Bs\uspBsItemSelectQry.cs" />
+    <Compile Include="UspModel\Bs\uspBsPatient.cs" />
+    <Compile Include="UspModel\Bs\uspBsPatientQry.cs" />
+    <Compile Include="UspModel\Bs\UspFollowPatientQry.cs" />
+    <Compile Include="UspModel\Bs\uspGetDocRegType.cs" />
+    <Compile Include="UspModel\Bs\UspPreRegInfoQry.cs" />
+    <Compile Include="UspModel\Bs\uspRoleModuleQry.cs" />
+    <Compile Include="UspModel\Bs\uspWindowOperFunctionQry.cs" />
+    <Compile Include="UspModel\DataAnalysisQuery.cs" />
+    <Compile Include="UspModel\DrugDistributeAll.cs" />
+    <Compile Include="UspModel\FollowPatientQuery.cs" />
+    <Compile Include="UspModel\Gb\uspGblRoleModule.cs" />
+    <Compile Include="UspModel\Gb\uspTemplateNodes.cs" />
+    <Compile Include="UspModel\Hu\BillInfoBase.cs" />
+    <Compile Include="UspModel\Hu\BillSearchDetailInfo.cs" />
+    <Compile Include="UspModel\Hu\BSBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\CKBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\HuDrugOutByBillNoQry.cs" />
+    <Compile Include="UspModel\Hu\HuOUTStoresInfoQry.cs" />
+    <Compile Include="UspModel\Hu\KKBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\OTBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\QSBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RKBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptBSBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptCKBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptHuInventoriesDeatilQry.cs" />
+    <Compile Include="UspModel\Hu\RptOTBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptQSBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptRKBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptSLBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptTHBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\RptTjBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\SLBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\THBillInfoQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuInAndOutQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuInventoriesDeatilQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuStoreExpireDateWarningQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuStoreLogBatchActtypeSumQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuStoreLogQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuStoresDtailDtlQry.cs" />
+    <Compile Include="UspModel\Hu\uspHustoresDtailQry.cs" />
+    <Compile Include="UspModel\Hu\uspHustoresTotal.cs" />
+    <Compile Include="UspModel\Hu\uspHustoresTotalQry.cs" />
+    <Compile Include="UspModel\Hu\uspHuStoreUnderLineQry.cs" />
+    <Compile Include="UspModel\Hu\uspInOutDtl.cs" />
+    <Compile Include="UspModel\Hu\uspSelectHuNotAuthorizeQry.cs" />
+    <Compile Include="UspModel\In\HisInPatientQry.cs" />
+    <Compile Include="UspModel\In\InitPatientData.cs" />
+    <Compile Include="UspModel\In\uspInBalanceDtlQry.cs" />
+    <Compile Include="UspModel\In\uspInHosInfoQry.cs" />
+    <Compile Include="UspModel\Ou\OuHosInfoCache.cs" />
+    <Compile Include="UspModel\Ou\ToothCheck.cs" />
+    <Compile Include="UspModel\Ou\ToothCoures.cs" />
+    <Compile Include="UspModel\Ou\ToothDiagnose.cs" />
+    <Compile Include="UspModel\Ou\ToothTreatmentPlan.cs" />
+    <Compile Include="UspModel\Ou\ToothXRay.cs" />
+    <Compile Include="UspModel\Ou\UspDistributeMedicine.cs" />
+    <Compile Include="UspModel\Ou\uspHisOuPatientQry.cs" />
+    <Compile Include="UspModel\Ou\UspMachineSampleDtl.cs" />
+    <Compile Include="UspModel\Ou\uspMedicalRecord.cs" />
+    <Compile Include="UspModel\Ou\uspOuCashierInfo.cs" />
+    <Compile Include="UspModel\Ou\uspOuCashierTaoDa1.cs" />
+    <Compile Include="UspModel\Ou\uspOuCashierTaoDa2.cs" />
+    <Compile Include="UspModel\Ou\uspOuCashierTaoDa4.cs" />
+    <Compile Include="UspModel\Ou\uspOuDoctorQry.cs" />
+    <Compile Include="UspModel\Ou\UspOuExecute.cs" />
+    <Compile Include="UspModel\Ou\uspOuHosInfoEx.cs" />
+    <Compile Include="UspModel\Ou\UspOuHosInfoQry.cs" />
+    <Compile Include="UspModel\Ou\uspOuInvoiceDtlQry.cs" />
+    <Compile Include="UspModel\Ou\UspOuInvoiceInfo.cs" />
+    <Compile Include="UspModel\Ou\uspOuInvoiceInvItemGoupSumQry.cs" />
+    <Compile Include="UspModel\Ou\uspOuInvoiceInvItemGoupSumQryTwoPoints.cs" />
+    <Compile Include="UspModel\Ou\uspOuInvoiceQry.cs" />
+    <Compile Include="UspModel\Ou\uspOuRechargeQry.cs" />
+    <Compile Include="UspModel\Ou\UspPatBookDtlQry.cs" />
+    <Compile Include="UspModel\Ou\UspPatientQry.cs" />
+    <Compile Include="UspModel\Ou\UspPatInvoiceInfo.cs" />
+    <Compile Include="UspModel\Ou\uspPayWayQry.cs" />
+    <Compile Include="UspModel\Ou\uspReadInInvoiceResultQry.cs" />
+    <Compile Include="UspModel\Ou\uspReadInPatientQry.cs" />
+    <Compile Include="UspModel\Ou\uspReadOuPatientQry.cs" />
+    <Compile Include="UspModel\Ou\uspSettlementBill.cs" />
+    <Compile Include="UspModel\Ou\UspTheSpecimenDtl.cs" />
+    <Compile Include="UspModel\Ou\UspTjItemAndTjGroup.cs" />
+    <Compile Include="UspModel\Ou\uspTjRecord.cs" />
+    <Compile Include="UspModel\Ou\UspToothChargeRecipeDtl.cs" />
+    <Compile Include="UspModel\Ou\vIEWMATCHQry.cs" />
+    <Compile Include="UspModel\Print\PrintGuideTips.cs" />
+    <Compile Include="UspModel\Print\PrintOuRecharge.cs" />
+    <Compile Include="UspModel\Print\ReceptionReport.cs" />
+    <Compile Include="UspModel\Print\uspSampleAlert.cs" />
+    <Compile Include="UspModel\Print\uspSCChargeByNurse.cs" />
+    <Compile Include="UspModel\Rd\uspHuStoreUnderLineWarningQry.cs" />
+    <Compile Include="UspModel\Referral\UspMedicalRecords.cs" />
+    <Compile Include="UspModel\Referral\UspOuRecipeDtl.cs" />
+    <Compile Include="UspModel\Rm\FQBillInfoQry.cs" />
+    <Compile Include="UspModel\Rm\RptFQBillInfoQry.cs" />
+    <Compile Include="UspModel\Rm\UspRmAppDrugDtl.cs" />
+    <Compile Include="UspModel\Rm\UspRmOutOthDtl.cs" />
+    <Compile Include="UspModel\RT\RtApplyPerson.cs" />
+    <Compile Include="UspModel\RT\RtCourseQry.cs" />
+    <Compile Include="UspModel\RT\RtUserDetailInfo.cs" />
+    <Compile Include="UspModel\UspBed.cs" />
+    <Compile Include="UspModel\uspBookedInfoQry.cs" />
+    <Compile Include="UspModel\UspBsItemBpId.cs" />
+    <Compile Include="UspModel\UspBsItemBpIdAndBsBpItemByBpName.cs" />
+    <Compile Include="UspModel\UspBsItemByBp.cs" />
+    <Compile Include="UspModel\UspBsUserLocation.cs" />
+    <Compile Include="UspModel\UspBsUserLocationLogin.cs" />
+    <Compile Include="UspModel\UspBsUserRole.cs" />
+    <Compile Include="UspModel\uspCemberBalance.cs" />
+    <Compile Include="UspModel\uspCemberOuCharge.cs" />
+    <Compile Include="UspModel\uspCemberSpeReport.cs" />
+    <Compile Include="UspModel\uspChargeFeezyAmount.cs" />
+    <Compile Include="UspModel\uspChargeStatistics.cs" />
+    <Compile Include="UspModel\uspChargeSummary.cs" />
+    <Compile Include="UspModel\UspChargingTtemTypeDetail.cs" />
+    <Compile Include="UspModel\UspCkBldReimb.cs" />
+    <Compile Include="UspModel\UspCkBloodBack.cs" />
+    <Compile Include="UspModel\UspCkLabByOpertimeAndLsStatus2.cs" />
+    <Compile Include="UspModel\UspCkPatientInfo.cs" />
+    <Compile Include="UspModel\uspCNewReturnPat.cs" />
+    <Compile Include="UspModel\uspDoctorAssistant.cs" />
+    <Compile Include="UspModel\uspOuDocSpanSubSum.cs" />
+    <Compile Include="UspModel\uspDoctorRule.cs" />
+    <Compile Include="UspModel\uspFinancialStatement.cs" />
+    <Compile Include="UspModel\UspFirstPageFee.cs" />
+    <Compile Include="UspModel\uspFollowPatient.cs" />
+    <Compile Include="UspModel\UspFrmBloodStoreWarning.cs" />
+    <Compile Include="UspModel\UspGblEmailEvent.cs" />
+    <Compile Include="UspModel\UspGetBlood.cs" />
+    <Compile Include="UspModel\UspGetCkBldDonate.cs" />
+    <Compile Include="UspModel\UspGetCkBldFree.cs" />
+    <Compile Include="UspModel\UspGetCkBldToStation.cs" />
+    <Compile Include="UspModel\uspHouseItemInfo.cs" />
+    <Compile Include="UspModel\UspInAdviceNurseList.cs" />
+    <Compile Include="UspModel\UspInAdviceReqBack.cs" />
+    <Compile Include="UspModel\UspInArrearAmount.cs" />
+    <Compile Include="UspModel\UspInBalanceDtlByInvoId.cs" />
+    <Compile Include="UspModel\UspInHosInfoById.cs" />
+    <Compile Include="UspModel\UspInInvoiceDtl.cs" />
+    <Compile Include="UspModel\UspInInvoiceDtlAuth.cs" />
+    <Compile Include="UspModel\UspInInvoiceDtlChkByHospId.cs" />
+    <Compile Include="UspModel\UspInInvoiceInvItemGoupSum.cs" />
+    <Compile Include="UspModel\UspInNotChargedAdvice.cs" />
+    <Compile Include="UspModel\UspInvoiceFeetyGoupSum.cs" />
+    <Compile Include="UspModel\uspMedicalAnaly.cs" />
+    <Compile Include="UspModel\uspNursesScheduleQry.cs" />
+    <Compile Include="UspModel\uspOuDayScheduleDtlQry.cs" />
+    <Compile Include="UspModel\uspOuDayScheduleQry.cs" />
+    <Compile Include="UspModel\UspOuHosinfo.cs" />
+    <Compile Include="UspModel\UspOuInvoiceDtl.cs" />
+    <Compile Include="UspModel\UspOuRecipeDtlForOuInvoiceDtl.cs" />
+    <Compile Include="UspModel\UspPatCardFee.cs" />
+    <Compile Include="UspModel\uspPatCategory.cs" />
+    <Compile Include="UspModel\uspPatVisitRecord.cs" />
+    <Compile Include="UspModel\uspPhysicalTestQuery.cs" />
+    <Compile Include="UspModel\uspPrepaidCardStatistics.cs" />
+    <Compile Include="UspModel\uspQCDetection.cs" />
+    <Compile Include="UspModel\uspQCount.cs" />
+    <Compile Include="UspModel\uspQCRunaway.cs" />
+    <Compile Include="UspModel\uspQueueSystem.cs" />
+    <Compile Include="UspModel\UspRecycleItem.cs" />
+    <Compile Include="UspModel\uspReferralRdlc.cs" />
+    <Compile Include="UspModel\UspSalesStatistics.cs" />
+    <Compile Include="UspModel\uspTjItemRecord.cs" />
+    <Compile Include="UspModel\uspTjItemRecordResult.cs" />
+    <Compile Include="UspModel\UspTjItemRecords.cs" />
+    <Compile Include="UspModel\uspTjTotalSummary.cs" />
+    <Compile Include="UspModel\UspToothMediaRecords.cs" />
+    <Compile Include="UspModel\uspTreePropertyNodeItem.cs" />
+    <Compile Include="UspModel\UspUserLocation.cs" />
+    <Compile Include="UspModel\UspUserLocationDoctorId.cs" />
+    <Compile Include="UspModel\UspWorkLoadkz.cs" />
+    <Compile Include="UspModel\uspWorkSheetQry.cs" />
+    <Compile Include="UspModel\Usp\IdentityInformation.cs" />
+    <Compile Include="UspModel\Usp\PatientTempate.cs" />
+    <Compile Include="UspModel\Usp\PMHIS.cs" />
+    <Compile Include="UspModel\Usp\UserProfilesService.cs" />
+    <Compile Include="UspModel\Usp\uspBsLocation.cs" />
+    <Compile Include="UspModel\Usp\uspBsUser.cs" />
+    <Compile Include="UspModel\Usp\uspChangedLogSearchCondition.cs" />
+    <Compile Include="UspModel\Usp\UspCheckBaseTableFieldNameIsRequired.cs" />
+    <Compile Include="UspModel\Usp\UspCkLabByOpertimeAndLsStatus4.cs" />
+    <Compile Include="UspModel\Usp\uspDaySchedule.cs" />
+    <Compile Include="UspModel\Usp\UspEquipExpireDateWarning.cs" />
+    <Compile Include="UspModel\Usp\UspFrmEquipMentList.cs" />
+    <Compile Include="UspModel\Usp\UspGetDocRegType.cs" />
+    <Compile Include="UspModel\Usp\UspGetTipsToNurse.cs" />
+    <Compile Include="UspModel\Usp\UspInAdviceLongList.cs" />
+    <Compile Include="UspModel\Usp\UspInPatInvoiceDtlDto.cs" />
+    <Compile Include="UspModel\Usp\UspInSendDrugOut.cs" />
+    <Compile Include="UspModel\Usp\UspOther.cs" />
+    <Compile Include="UspModel\Usp\UspOuDaySchedule.cs" />
+    <Compile Include="UspModel\Usp\uspOuWebPreReg.cs" />
+    <Compile Include="UspModel\Usp\uspPatientQry.cs" />
+    <Compile Include="UspModel\Usp\UspSchedule.cs" />
+    <Compile Include="UspModel\Usp\UspUserHouse.cs" />
+    <Compile Include="UspModel\Usp\UspUserRoom.cs" />
+    <Compile Include="UspModel\VIP\UspOuHosVisitRecord.cs" />
+    <Compile Include="UspModel\VIP\UspVipBinding.cs" />
+    <Compile Include="UspModel\VIP\UspVIPCardQry.cs" />
+    <Compile Include="UspModel\VIP\UspVipReckoningCharge.cs" />
+    <Compile Include="UspModel\VIP\UspVisitPatientDtl.cs" />
+    <Compile Include="UspModel\VIP\UspVisitRecordPatient.cs" />
+    <Compile Include="UspModel\VIP\UspVisitRecordUserByUserId.cs" />
+    <Compile Include="UspModel\VIP\VisitOuHosInfo.cs" />
+    <Compile Include="UspModel\VIP\VisitWithGetListVisitOuHosInfo.cs" />
+    <Compile Include="UspModel\VIP\VisitWithGetListVisitRecordOuHosInfo.cs" />
+    <Compile Include="UspModel\With\AccountingWithOuInvoice.cs" />
+    <Compile Include="UspModel\With\BloodTransfusionWithHistory.cs" />
+    <Compile Include="UspModel\With\BsDoctorWithCheckLocationIdCellValueChanging.cs" />
+    <Compile Include="UspModel\With\BsIllnessWithCheckBsIlByIdandByName.cs" />
+    <Compile Include="UspModel\With\BsItemDrugWithShowInfoByItemId.cs" />
+    <Compile Include="UspModel\With\BsItemWithShowInfoByItemId.cs" />
+    <Compile Include="UspModel\With\CkLabBankServiceWithCheckPatientno.cs" />
+    <Compile Include="UspModel\With\EquipmentManageWithRelation.cs" />
+    <Compile Include="UspModel\With\ItemWithBsItemCure.cs" />
+    <Compile Include="UspModel\With\ItemWithPriceAdjust.cs" />
+    <Compile Include="UspModel\With\LoginWithLocation.cs" />
+    <Compile Include="UspModel\With\LoginWithUserLocation.cs" />
+    <Compile Include="UspModel\With\PatientWithInhosInfo.cs" />
+    <Compile Include="UspModel\YL\UspReferralHistoryInquiry.cs" />
+    <Compile Include="UspWorksheetStatistics.cs" />
+    <Compile Include="ViewModel\BillSearchConditionInfo .cs" />
+    <Compile Include="ViewModel\ChattingPerson.cs" />
+    <Compile Include="ViewModel\ChineseHerb.cs" />
+    <Compile Include="ViewModel\DataGridSummary.cs" />
+    <Compile Include="ViewModel\DiogRoom.cs" />
+    <Compile Include="ViewModel\DisplayImportInfo.cs" />
+    <Compile Include="ViewModel\DisplayModule.cs" />
+    <Compile Include="ViewModel\Doctor.cs" />
+    <Compile Include="ViewModel\FileTempate.cs" />
+    <Compile Include="ViewModel\ItemsTreeNodeTempate.cs" />
+    <Compile Include="ViewModel\LogSearchConditionInfo .cs" />
+    <Compile Include="ViewModel\PatMedicalRecord.cs" />
+    <Compile Include="ViewModel\PatVisitRecord.cs" />
+    <Compile Include="ViewModel\PropertyNodeItem.cs" />
+    <Compile Include="ViewModel\PropertyNodeItem2.cs" />
+    <Compile Include="ViewModel\SkinDisplayModule.cs" />
+    <Compile Include="ViewModel\StockSearchConditionInfo.cs" />
+    <Compile Include="ViewModel\TjItemRecordCollection.cs" />
+    <Compile Include="ViewModel\TjItemRecordEx.cs" />
+    <Compile Include="ViewModel\TJRecordsInfo.cs" />
+    <Compile Include="ViewModel\TreeClass.cs" />
+    <Compile Include="ViewModel\TreeNodeItem.cs" />
+    <Compile Include="ViewModel\UserInfo.cs" />
+    <Compile Include="ViewModel\UspOuExecuteQry.cs" />
+    <Compile Include="ViewModel\ViewName.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ViewUpdateVersionInfo.cs" />
+    <Compile Include="ViewModel\VwOuHosInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\PrintOuRecharge.datasource" />
+    <None Include="Properties\DataSources\uspDoctorRule.datasource" />
+    <None Include="Properties\DataSources\uspOuInvoiceInvItemGoupSumQryTwoPoints.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UspModel\本目录对应旧系统的存储过程返回的实体.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"
+copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
