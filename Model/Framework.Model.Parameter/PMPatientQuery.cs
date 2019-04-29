@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -31,7 +28,7 @@ namespace Orm.Model.Parameter
             get { return _name; }
             set { _name = value; }
         }
-        
+
         private string _AgeString = string.Empty;
         /// <summary>
         /// 年龄
@@ -83,9 +80,9 @@ namespace Orm.Model.Parameter
         }
 
         private string _tjLocationId;
-       /// <summary>
-       /// 诊所ID
-       /// </summary>
+        /// <summary>
+        /// 诊所ID
+        /// </summary>
         public string TjLocationId
         {
             get { return _tjLocationId; }
@@ -122,11 +119,11 @@ namespace Orm.Model.Parameter
             set { _endAge = value; }
         }
 
-        private DateTime _startBirthDate= DateTime.MinValue;
+        private DateTime _startBirthDate = DateTime.MinValue;
         /// <summary>
         /// 出生日期
         /// </summary>
-        public DateTime StartBirthDate 
+        public DateTime StartBirthDate
         {
             get
             {
@@ -143,24 +140,24 @@ namespace Orm.Model.Parameter
         /// <summary>
         /// 结束日期
         /// </summary>
-        public DateTime EndBirthDate 
-        { 
+        public DateTime EndBirthDate
+        {
             get
             {
                 if (StartAge >= 0)
                     _endBirthDate = DateTime.Now.AddYears(-StartAge).Date;
-                if(StartAge < 0)
+                if (StartAge < 0)
                     _endBirthDate = DateTime.Now.Date;
                 return _endBirthDate;
             }
             set { _endBirthDate = value; }
         }
 
-        private string  _locationId;
+        private string _locationId;
         /// <summary>
         /// 所属科室
         /// </summary>
-        public string  LocationId
+        public string LocationId
         {
             get { return _locationId; }
             set { _locationId = value; }

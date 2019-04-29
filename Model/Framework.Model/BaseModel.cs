@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Orm.Model.EnumDefine;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Orm.Model.EnumDefine;
 
 namespace Orm.Model
 {
@@ -19,15 +19,15 @@ namespace Orm.Model
         /// <summary>
         /// 是否修改
         /// </summary>
-        public bool IsModify { get ; set; }
+        public bool IsModify { get; set; }
         /// <summary>
         /// ID
         /// </summary>
-        public virtual int ID {get; set; }
+        public virtual int ID { get; set; }
         /// <summary>
         /// GUID
         /// </summary>
-        public virtual string GUID {get; set; }
+        public virtual string GUID { get; set; }
 
         /// <summary>
         /// 医院ID
@@ -102,8 +102,8 @@ namespace Orm.Model
                     object value = field.GetValue(this);
 
                     //if (value == null || value.ToString() == string.Empty)
-                     //field.SetValue(this, "");
-                    if(value == null||value.ToString()==string.Empty)
+                    //field.SetValue(this, "");
+                    if (value == null || value.ToString() == string.Empty)
                     {
                         field.SetValue(this, null);
                     }

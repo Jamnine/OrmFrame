@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -11,7 +8,7 @@ namespace Orm.Model.Parameter
     [Serializable]
     public class PMDocumentQuery
     {
-        private string _invoNo ="";
+        private string _invoNo = "";
         /// <summary>
         /// 搜索的单据号
         /// </summary>
@@ -31,7 +28,7 @@ namespace Orm.Model.Parameter
             set { _operId = value; }
         }
 
-        private DateTime _startTime=DateTime.Now;
+        private DateTime _startTime = DateTime.Now;
         /// <summary>
         /// 搜索的开始时间
         /// </summary>
@@ -41,7 +38,7 @@ namespace Orm.Model.Parameter
             set { _startTime = value; }
         }
 
-        private DateTime _endTime=DateTime.Now;
+        private DateTime _endTime = DateTime.Now;
         /// <summary>
         /// 搜索的结束时间
         /// </summary>
@@ -51,7 +48,7 @@ namespace Orm.Model.Parameter
             set { _endTime = value; }
         }
 
-        private string _patName ="";
+        private string _patName = "";
         /// <summary>
         /// 搜索的病人姓名
         /// </summary>
@@ -65,7 +62,7 @@ namespace Orm.Model.Parameter
         /// <summary>
         /// 搜索的分院名称
         /// </summary>
-        public int  HospitalID
+        public int HospitalID
         {
             get { return _HospitalID; }
             set { _HospitalID = value; }
@@ -90,7 +87,7 @@ namespace Orm.Model.Parameter
             get { return _doctorId; }
             set { _doctorId = value; }
         }
-        private string _payWay=string.Empty;
+        private string _payWay = string.Empty;
         /// <summary>
         /// 搜索的收款方式
         /// </summary>

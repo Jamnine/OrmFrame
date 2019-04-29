@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Orm.Model.Parameter 
+namespace Orm.Model.Parameter
 {
 
     /// <summary>
     /// 体检结果接受类
     /// </summary>
     [Serializable]
-    
-    public class PMTjItemRecords:BaseModel
+
+    public class PMTjItemRecords : BaseModel
     {
         /// <summary>  
         /// 标准样品id 
@@ -62,7 +59,7 @@ namespace Orm.Model.Parameter
         /// </summary>  
         public string AbnormalTips { get; set; }
 
- 
+
         /// <summary>  
         ///  是否组合 
         /// </summary>  

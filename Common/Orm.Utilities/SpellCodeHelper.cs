@@ -299,7 +299,7 @@ namespace Orm.Utilities
             }
             return return_py.ToLower();
         }
-        
+
         /// <summary>
         /// 把汉字转换成拼音(全拼)
         /// </summary>

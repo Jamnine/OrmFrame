@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Orm.Model.EnumDefine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Orm.Model.EnumDefine;
 
 namespace Orm.Model.Parameter
 {
@@ -68,23 +65,23 @@ namespace Orm.Model.Parameter
         /// </summary>
         [Description("默认值为false")]
         public bool IsSuccess { set; get; }
-        
+
         /// <summary>
         /// 显示状态
         /// </summary>
         [Description("使用枚举MsgStates")]
         public int State { set; get; }
-       
+
         /// <summary>
         /// 消息提示
         /// </summary>
         public string Message { set; get; }
-       
+
         /// <summary>
         /// 消息显示
         /// </summary>
         public string ShowMsg { set; get; }
-       
+
         /// <summary>
         /// 字符串集合
         /// </summary>
@@ -191,7 +188,7 @@ namespace Orm.Model.Parameter
     /// 返回消息
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class ReturnValue<T> : ReturnValue where T:new()
+    public class ReturnValue<T> : ReturnValue where T : new()
     {
         /// <summary>
         /// 是否成功

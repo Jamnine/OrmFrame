@@ -1,5 +1,4 @@
 ﻿using Orm.Framework.Services;
-using Orm.Model.Parameter;
 
 namespace Orm.Config
 {
@@ -11,7 +10,7 @@ namespace Orm.Config
         #region 保留旧域接口
         private static IEmitService _EmitService;
         private static IDBClientBase _DBClientBase;
-        
+
         /// <summary>
         /// 服务单例，客户端的数据库操作
         /// </summary>
@@ -49,6 +48,6 @@ namespace Orm.Config
         private static IEmitService _EmitServiceInLocal;
         private static IDBClientBase _DBClientBaseInLocal;
         #endregion
-        
+
     }
 }

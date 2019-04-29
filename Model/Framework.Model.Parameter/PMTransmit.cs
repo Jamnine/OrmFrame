@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {  /// <summary>
    /// 用于一键诊疗web端的返回病人挂号信息
    /// </summary>
     [Serializable]
-   public class PMTransmit
+    public class PMTransmit
     {
         private string _patID;
         private string _cardNo = string.Empty;
@@ -17,13 +14,14 @@ namespace Orm.Model.Parameter
         /// <summary>
         /// 病人ID
         /// </summary>
-        public string PatID {
+        public string PatID
+        {
             get { return _patID; }
             set { _patID = value; }
-        } 
+        }
         /// <summary>
-          /// 门诊挂号ID
-          /// </summary>
+        /// 门诊挂号ID
+        /// </summary>
         public string OuHosinfoID
         {
             get { return _ouHosinfoID; }
@@ -48,7 +46,7 @@ namespace Orm.Model.Parameter
         /// <summary>
         /// 单位为分钟;需提前多长时间可以取消预约
         /// </summary>
-        public int HowLongCancelRegister {  get;  set; }
-        
+        public int HowLongCancelRegister { get; set; }
+
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -29,23 +26,23 @@ namespace Orm.Model.Parameter
         {
             get { return _name; }
             set { _name = value; }
-        } 
+        }
         /// <summary>
-       /// 性别
-       /// </summary>
+        /// 性别
+        /// </summary>
         public string Sex
         {
             get { return _sex; }
             set { _sex = value; }
-        }   
+        }
         /// <summary>
-       /// 年龄（int型）
-       /// </summary>
+        /// 年龄（int型）
+        /// </summary>
         public int Age
         {
             get { return _age; }
             set { _age = value; }
-        }  
+        }
         /// <summary>
         /// 生日
         /// </summary>
@@ -61,7 +58,7 @@ namespace Orm.Model.Parameter
         {
             get { return _mobile; }
             set { _mobile = value; }
-        }   
+        }
         /// <summary>
         /// 身份证号码
         /// </summary>

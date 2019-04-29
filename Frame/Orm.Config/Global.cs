@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Orm.Model;
+﻿using Orm.Model;
 using Orm.Model.Custom;
 using Orm.Model.EnumDefine;
+using System;
+using System.Collections.Generic;
 
 namespace Orm.Config
 {

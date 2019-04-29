@@ -8,7 +8,7 @@ namespace Orm.Model.Parameter
     /// </summary>
     [Serializable]
     public class LockInfoReturnResult
-    {      
+    {
         public LockInfoReturnResult()
         {
             Message = string.Empty;

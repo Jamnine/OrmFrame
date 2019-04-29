@@ -8,13 +8,12 @@ using System.Management;
 using System.Reflection;
 using System.Text;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace Orm.Utilities
 {
     public static class Common
-    {  
+    {
         /// <summary>
         /// 图片转二进制
         /// </summary>
@@ -231,9 +230,9 @@ namespace Orm.Utilities
                 return asdffd;
             }
             else
-            { 
+            {
                 return null;
-            } 
+            }
         }
 
         /// <summary>
@@ -563,7 +562,7 @@ namespace Orm.Utilities
                             return false;
                     }
                     else
-                    { 
+                    {
                         if (intCode < 46 || intCode > 57)
                             return false;
                     }
@@ -622,11 +621,11 @@ namespace Orm.Utilities
             if (!IsNumeric(val)) return false;
             decimal dVal = Convert.ToDecimal(System.Math.Round(Convert.ToDouble(val), 6));
             if (Math.Abs(dVal - Math.Ceiling(dVal)) < Convert.ToDecimal(0.009999) || Math.Abs(dVal - Math.Floor(dVal)) < Convert.ToDecimal(0.009999))
-            { 
+            {
                 return true;
             }
             else
-            { 
+            {
                 return false;
             }
         }
@@ -645,22 +644,22 @@ namespace Orm.Utilities
             else if (idCard.Length == 18)
             {
                 if (Convert.ToInt32(idCard.Substring(6, 4)) != birthday.Year || Convert.ToInt32(idCard.Substring(10, 2)) != birthday.Month || Convert.ToInt32(idCard.Substring(12, 2)) != birthday.Day)
-                { 
+                {
                     return false;
                 }
                 else
-                { 
+                {
                     return true;
                 }
             }
             else
             {
                 if (Convert.ToInt32("19" + idCard.Substring(6, 2)) != birthday.Year || Convert.ToInt32(idCard.Substring(8, 2)) != birthday.Month || Convert.ToInt32(idCard.Substring(10, 2)) != birthday.Day)
-                { 
+                {
                     return false;
                 }
                 else
-                { 
+                {
                     return true;
                 }
             }
@@ -690,22 +689,22 @@ namespace Orm.Utilities
             else if (age == 0)
             {
                 if (months > 0)
-                { 
+                {
                     result = months + "个月" + days + "天";
                 }
                 else
-                {  
+                {
                     result = days + "天";
                 }
             }
             else
             {
                 if (months > 0)
-                { 
+                {
                     result = age + "岁" + months + "个月";
                 }
                 else
-                { 
+                {
                     result = age + "岁";
                 }
             }
@@ -811,7 +810,7 @@ namespace Orm.Utilities
         {
             long i = 1;
             foreach (byte b in Guid.NewGuid().ToByteArray())
-            { 
+            {
                 i *= ((int)b + 1);
             }
             return string.Format("{0:x}", i - DateTime.Now.Ticks);
@@ -847,14 +846,14 @@ namespace Orm.Utilities
                     {
                         isconn = false;
                         errorCount++;
-                    } 
+                    }
                 }
             }
             catch
             {
                 isconn = false;
                 errorCount = urls.Length;
-            } 
+            }
             return isconn;
         }
 

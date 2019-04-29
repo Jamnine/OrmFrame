@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orm.MvvmFrame.Auxiliary
 {
@@ -15,16 +12,16 @@ namespace Orm.MvvmFrame.Auxiliary
         public AsyncListLoader()
         {
             allListLoader = new Func<List<T>>(LoadAllList);
-            listLoader = new Func<string,object[], List<T>>(LoadList);
+            listLoader = new Func<string, object[], List<T>>(LoadList);
         }
 
         Func<List<T>> allListLoader;
-        Func<string,object[], List<T>> listLoader;
+        Func<string, object[], List<T>> listLoader;
         Action loader;
         ////Func<string,object[],List<T>> listLoader;
         //List<T> _allList;
         List<T> _list;
-        
+
 
         /// <summary>
         /// 异步获取所有数据
@@ -32,7 +29,7 @@ namespace Orm.MvvmFrame.Auxiliary
         /// <param name="callback">回调函数</param>
         public void GetAllList(Action<List<T>> callback)
         {
-            if (callback != null && allListLoader!=null)
+            if (callback != null && allListLoader != null)
             {
                 CallBack = callback;
                 allListLoader.BeginInvoke(AllListCallBack, allListLoader);
@@ -44,12 +41,12 @@ namespace Orm.MvvmFrame.Auxiliary
         /// </summary>
         /// <param name="where">条件</param>
         /// <param name="callback">回调函数</param>
-        public void GetList( Action<List<T>> callback,string where,params object[] args)
+        public void GetList(Action<List<T>> callback, string where, params object[] args)
         {
             if (callback != null && listLoader != null)
             {
                 CallBack = callback;
-                listLoader.BeginInvoke(where,args,ListCallBack, listLoader);
+                listLoader.BeginInvoke(where, args, ListCallBack, listLoader);
             }
         }
 
@@ -58,7 +55,7 @@ namespace Orm.MvvmFrame.Auxiliary
         /// </summary>
         /// <param name="callback">获得数据后返回</param>
         /// <param name="doWork">传入的获得数据的方法</param>
-        public void GetListByCustom(Action<List<T>> callback,Action doWork)
+        public void GetListByCustom(Action<List<T>> callback, Action doWork)
         {
 
             if (doWork != null && callback != null)
@@ -70,12 +67,12 @@ namespace Orm.MvvmFrame.Auxiliary
         }
 
 
-        private List<T> LoadAllList() 
+        private List<T> LoadAllList()
         {
             return Orm.Config.Service.DBClientService.GetAllList<T>();
         }
 
-        private List<T> LoadList(string where,object[] args)
+        private List<T> LoadList(string where, object[] args)
         {
             return Orm.Config.Service.DBClientService.GetList<T>(where, args);
         }
@@ -85,7 +82,7 @@ namespace Orm.MvvmFrame.Auxiliary
             if (ar.IsCompleted)
             {
                 try
-                { 
+                {
                     _list = loaderBack.EndInvoke(ar);
                     CallBack(_list);
                 }

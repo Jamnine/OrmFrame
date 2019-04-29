@@ -82,7 +82,7 @@ namespace Orm.Utilities
             OpenFileDialog openFileDialog = OpenFile(filter, dialogTitle);
             if (openFileDialog.ShowDialog() == true)
             {
-                string fileName = openFileDialog.FileName; 
+                string fileName = openFileDialog.FileName;
                 if (Path.GetExtension(fileName) == ".txt")
                 {
                     throw new Exception("导入文件类型不正确，请导入TXT文件！");

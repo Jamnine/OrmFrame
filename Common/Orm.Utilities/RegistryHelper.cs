@@ -44,7 +44,7 @@ namespace Orm.Utilities
             foreach (string aimKey in subkeyNames)
             {
                 if (aimKey == name)
-                { 
+                {
                     myKey.DeleteSubKeyTree(name);
                 }
             }

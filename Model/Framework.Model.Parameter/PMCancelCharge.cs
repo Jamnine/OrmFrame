@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Orm.Model.InterFace;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Orm.Model.InterFace;
 
 namespace Orm.Model.Parameter
 {

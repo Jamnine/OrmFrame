@@ -1,11 +1,5 @@
 ﻿using Orm.MvvmFrame.Auxiliary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Orm.Config;
 
 namespace OrmFrameClientViewModel
 {
@@ -30,7 +24,7 @@ namespace OrmFrameClientViewModel
         }
 
         private string _test;
-        
+
         public string Test { get { return _test; } set { this.SetProperty(ref _test, value); } }
 
         public ICommand TestCommand { get; private set; }

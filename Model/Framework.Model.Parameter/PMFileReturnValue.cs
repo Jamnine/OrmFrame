@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -12,7 +9,7 @@ namespace Orm.Model.Parameter
     [Serializable]
     public class PMFileReturnValue
     {
-        public PMFileReturnValue() 
+        public PMFileReturnValue()
         {
             FileList = new List<FileInfoEx>();
             ErrorMessage = new List<KeyValuePair<int, string>>();
@@ -34,7 +31,7 @@ namespace Orm.Model.Parameter
     {
         public FileInfoEx()
         {
- 
+
         }
         /// <summary>
         /// 是否可删除

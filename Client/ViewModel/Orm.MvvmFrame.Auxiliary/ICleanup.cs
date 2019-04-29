@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Orm.MvvmFrame.Auxiliary
+﻿namespace Orm.MvvmFrame.Auxiliary
 {
     /// <summary>
     /// 清理接口

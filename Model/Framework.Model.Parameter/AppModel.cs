@@ -9,7 +9,7 @@ namespace Orm.Model.Parameter
     [Serializable]
     public class ReturnResult
     {
-      
+
         public ReturnResult() { }
 
         /// <summary>

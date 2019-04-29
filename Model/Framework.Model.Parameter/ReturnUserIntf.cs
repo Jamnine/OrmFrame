@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orm.Model.Parameter
 {
@@ -10,7 +6,7 @@ namespace Orm.Model.Parameter
     /// <summary>
     /// 返回用户接口
     /// </summary>
-     [Serializable]
+    [Serializable]
     public class ReturnUserIntf
     {
         private int _errorCode = -1;
@@ -19,7 +15,7 @@ namespace Orm.Model.Parameter
         /// </summary> 
         public string ErrorMsg { get; set; }
 
-         /// <summary>
+        /// <summary>
         /// 0正常 非0错误
         /// </summary>
         public int ErrorCode

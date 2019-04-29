@@ -17,23 +17,23 @@
         {
             string desc = string.Empty;
             if (!string.IsNullOrEmpty(IllDesc))
-            { 
+            {
                 desc = desc + "西医诊断" + ":";
             }
             if (!string.IsNullOrEmpty(Chindiag))
-            { 
+            {
                 desc = desc + "中医诊断" + ":";
             }
             if (LsDiagType == 1)
-            { 
+            {
                 desc = desc + "初诊";
             }
             if (LsDiagType == 2)
-            { 
+            {
                 desc = desc + "疑诊";
             }
             else if (LsDiagType == 3)
-            { 
+            {
                 desc = desc + "疑诊";
             }
             return desc;

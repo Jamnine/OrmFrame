@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Orm.Model;
-using Orm.Model.Custom;
 
 namespace Orm.Model.Parameter
 {
@@ -63,6 +59,6 @@ namespace Orm.Model.Parameter
             set { _memberDtl = value; }
         }
 
-        
+
     }
 }

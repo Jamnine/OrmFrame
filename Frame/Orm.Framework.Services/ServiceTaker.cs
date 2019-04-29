@@ -68,7 +68,7 @@ namespace Orm.Framework.Services
         /// <returns></returns>
         public static T GetRemoteService<T>(string MapKey = "") where T : class
         {
-            if (AppSettings.Debug )
+            if (AppSettings.Debug)
             {
                 return GetService<T>(MapKey);
             }

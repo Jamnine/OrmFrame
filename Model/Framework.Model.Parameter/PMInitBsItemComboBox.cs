@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orm.Model.Parameter
 {
     /// <summary>
     /// 初始化项目维护页面中的下拉控件值
     /// </summary>
-    [Serializable]    
+    [Serializable]
     public class PMInitBsItemComboBox
     {
         /// <summary>
@@ -21,7 +18,7 @@ namespace Orm.Model.Parameter
         /// 收费类别
         /// </summary>
         public List<BsMzFeety> BsMzFeetyList { get; set; }
-      
+
         /// <summary>
         /// 一级分组
         /// </summary>

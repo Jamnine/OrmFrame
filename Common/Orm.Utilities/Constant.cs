@@ -1,27 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace Orm.Utilities
+﻿namespace Orm.Utilities
 {
-	/// <summary>
-	/// 常量、静态类、静态数组
-	/// const int 类别_用途_值含义 = 数值
-	/// </summary>
-	public static class Constant
+    /// <summary>
+    /// 常量、静态类、静态数组
+    /// const int 类别_用途_值含义 = 数值
+    /// </summary>
+    public static class Constant
     {
-		public const int HL_AREAId_ONE = 1; 
-		public const int HL_MINUS_ONE = -1;
+        public const int HL_AREAId_ONE = 1;
+        public const int HL_MINUS_ONE = -1;
 
-		public const int MR_TEETH_MAX = 50;
-		public const int MR_NUMBER_ONE = 1;
+        public const int MR_TEETH_MAX = 50;
+        public const int MR_NUMBER_ONE = 1;
 
         public const int RSFOS_INT_NUMBER_ZERO = 0;
         public const int RSFOS_INT_NUMBER_ONE = 1;
-        public const string  RSFOS_NULL_STRINGWHITESPACE = " ";
+        public const string RSFOS_NULL_STRINGWHITESPACE = " ";
         public const string RSFOS_NUMBER_CODE = "666";
 
         public const int TPS_TEETH_MAX = 50;
@@ -77,11 +70,11 @@ namespace Orm.Utilities
         /// </summary>
         public const int DOC_ICON_TYPE = 0;
         public const int DOC_SCHEDULING_DELETE = 1;
-		public const int DOC_WEEKDAY_MOMDAY = 1;
-		public const int DOC_WEEKDAY_TUESDAY = 2;
-		public const int DOC_WEEKDAY_WEDNESDAY = 3;
-		public const int DOC_WEEKDAY_THURSDAY = 4;
-		public const int DOC_WEEKDAY_FRIDAY = 5;
+        public const int DOC_WEEKDAY_MOMDAY = 1;
+        public const int DOC_WEEKDAY_TUESDAY = 2;
+        public const int DOC_WEEKDAY_WEDNESDAY = 3;
+        public const int DOC_WEEKDAY_THURSDAY = 4;
+        public const int DOC_WEEKDAY_FRIDAY = 5;
         public const int DOC_WEEKDAY_SATURDAY = 6;
         public const int DOC_WEEKDAY_SUNDAY = 0;
 
@@ -104,52 +97,52 @@ namespace Orm.Utilities
 		/// </summary>
 		public const int EMR_EmrXmlValue_Null = 0;
 
-		/// <summary>
-		/// OuAdvice
-		/// </summary>
-		public const int OUADVICE_DOSAGE_G = 0;
-		public const int OUADVICE_REGFEE_COST = 0;
-		public const int OUADVICE_HOWMANY_AMOUNT = 0;
-		public const int OUADVICE_HOWMANY_TOTALITY = 0;
-		public const int OUADVICE_HOWMANY_AMOUNTPAY = 0;
-		public const int OUADVICE_HOWMANY_AMOUNTDISCOUNT = 0;
-		public const int OUADVICE_HOWMANY_DOSAGE = 0;
-		public const string OUADVICE_BSMZFEETY_CANCHANGEAMOUNT = "3";
-		public const int OUADVICE_GROUPNUM_ID = 0;
-		public const int OUADVICE_PARAMETER_MOVEDAYHIST = 0;
-		public const int OUADVICE_DIAGFEEITEMID_ID = 0;
-		public const int OUADVICE_REGFEEITEMID_ID = 0;
-		public const int OUADVICE_OURECIPE_TOTAL = 0;
-		public const int OUADVICE_A_AMOUNT = 2;
-		public const int OUADVICE_AMOUNT_DIGITS = 2;
+        /// <summary>
+        /// OuAdvice
+        /// </summary>
+        public const int OUADVICE_DOSAGE_G = 0;
+        public const int OUADVICE_REGFEE_COST = 0;
+        public const int OUADVICE_HOWMANY_AMOUNT = 0;
+        public const int OUADVICE_HOWMANY_TOTALITY = 0;
+        public const int OUADVICE_HOWMANY_AMOUNTPAY = 0;
+        public const int OUADVICE_HOWMANY_AMOUNTDISCOUNT = 0;
+        public const int OUADVICE_HOWMANY_DOSAGE = 0;
+        public const string OUADVICE_BSMZFEETY_CANCHANGEAMOUNT = "3";
+        public const int OUADVICE_GROUPNUM_ID = 0;
+        public const int OUADVICE_PARAMETER_MOVEDAYHIST = 0;
+        public const int OUADVICE_DIAGFEEITEMID_ID = 0;
+        public const int OUADVICE_REGFEEITEMID_ID = 0;
+        public const int OUADVICE_OURECIPE_TOTAL = 0;
+        public const int OUADVICE_A_AMOUNT = 2;
+        public const int OUADVICE_AMOUNT_DIGITS = 2;
 
-		/// <summary>
-		/// OuAdviceDrug
-		/// </summary>
-		public const int OUADVICEDRUG_OURECIPETEMPS_TOTAL = 0;
-		public const string OUADVICEDRUG_RECIPEID_ID = "0";
-		public const int OUADVICEDRUG_TYPE_ID = 0;
-		public const int OUADVICEDRUG_HOSPIITALID_ID = 0;
-		public const int OUADVICEDRUG_HOSPITALID2_ID = 0;
-		public const string OUADVICEDRUG_CANAEL_BOOL = "0";
-		public const int OUADVICEDRUG_REPORTTYPE_TYPE = 0;
-		public const int OUADVICEDRUG_HOSPITALID_ID = 42;
-		public const int OUADVICEDRUG_PRICEDIAG_ID = 42;
-		public const string OUADVICEDRUG_GETCURELISTINFOFORNEEDPRINT_XDRPID = "0";
-		public const string OUADVICEDRUG_LISCODE_ID = "0";
-		public const int OUADVICEDRUG_GETOUDRUGLSSUEPATIENT_AMOUNT = 0;
-		public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_REQBACKNUM = 0;
-		public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_HASBACKNUM = 0;
-		public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_HASSENDNUM = 0;
-	    public const int OUADVICEDRUG_HOSPITALID_GETPROPERTY = 2;
+        /// <summary>
+        /// OuAdviceDrug
+        /// </summary>
+        public const int OUADVICEDRUG_OURECIPETEMPS_TOTAL = 0;
+        public const string OUADVICEDRUG_RECIPEID_ID = "0";
+        public const int OUADVICEDRUG_TYPE_ID = 0;
+        public const int OUADVICEDRUG_HOSPIITALID_ID = 0;
+        public const int OUADVICEDRUG_HOSPITALID2_ID = 0;
+        public const string OUADVICEDRUG_CANAEL_BOOL = "0";
+        public const int OUADVICEDRUG_REPORTTYPE_TYPE = 0;
+        public const int OUADVICEDRUG_HOSPITALID_ID = 42;
+        public const int OUADVICEDRUG_PRICEDIAG_ID = 42;
+        public const string OUADVICEDRUG_GETCURELISTINFOFORNEEDPRINT_XDRPID = "0";
+        public const string OUADVICEDRUG_LISCODE_ID = "0";
+        public const int OUADVICEDRUG_GETOUDRUGLSSUEPATIENT_AMOUNT = 0;
+        public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_REQBACKNUM = 0;
+        public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_HASBACKNUM = 0;
+        public const int OUADVICEDRUG_GETOUDRUGLSSUEDTLMETHOD_HASSENDNUM = 0;
+        public const int OUADVICEDRUG_HOSPITALID_GETPROPERTY = 2;
 
-		/// <summary>
-		/// BsDocRegTypeService
-		/// </summary>
-		public const int BDRTS_HASDIDGNUM_0 = 0;
-		public const int BDRTS_WAITDIAGNUM_0 = 0;
+        /// <summary>
+        /// BsDocRegTypeService
+        /// </summary>
+        public const int BDRTS_HASDIDGNUM_0 = 0;
+        public const int BDRTS_WAITDIAGNUM_0 = 0;
 
-		/// <summary>
+        /// <summary>
         /// Message
         /// </summary>
         public const int M_TIMINGMESSAGE_SENDING = 1;
@@ -166,28 +159,28 @@ namespace Orm.Utilities
         public const int BED_LEAVE_INHOSPITAL = 7;
         public const string BED_OIDBED_INHOSPITAL = "10";
         public const string BED_NEWBED_INHOSPITAL = "10";
-		public const string BED_PATIENTDISCHARGE_LOGCALSS = "8";
-		public const string BED_TRANSFERTODEPARTMENT_LOGCALSS = "3";
+        public const string BED_PATIENTDISCHARGE_LOGCALSS = "8";
+        public const string BED_TRANSFERTODEPARTMENT_LOGCALSS = "3";
 
         /// <summary>
 		/// InAdviceDrug
 		/// </summary>
 		public const int INADVICEDRUG_A_AMOUNT = 2;
-		public const int INADVICEDRUG_DIGIT_NUM = 2;
-		public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_LSPERFORM = 2;
-		public const int INADVICEDRUG_DOUBLE_PRICEIN = 0;
-		public const int INADVICEDRUG_INFORMZYOUTDTL_RETAILPRICE = 0;
-		public const int INADVICEDRUG_INFO_LSPERFROM = 2;
-		public const int INADVICEDRUG_DIGITS_NUM = 2;
-		public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_LSMARKTYPE = 11;
-		public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_REGOPERTIME = 11;
-		public const int INADVICEDRUG_INFORMZYOUTDTL_STOCKPRICE = 0;
-		public const int INADVICEDRUG_INFO_REQBACK = 0;
-		public const int INADVICEDRUG_GETDIAGMEETING_ISMARKTYPE = 3;
-		public const int INADVICEDRUG_REQANDBACKTOTALITY_TOTAL = 0;
-		public const int INADVICEDRUG_BACKUPS_TOTAL = 0;
-		public const int INADVICEDRUG_HOSPITALID_ID = 0;
-		public const int INADVICEDRUG_DOSAGE_G = 0;
+        public const int INADVICEDRUG_DIGIT_NUM = 2;
+        public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_LSPERFORM = 2;
+        public const int INADVICEDRUG_DOUBLE_PRICEIN = 0;
+        public const int INADVICEDRUG_INFORMZYOUTDTL_RETAILPRICE = 0;
+        public const int INADVICEDRUG_INFO_LSPERFROM = 2;
+        public const int INADVICEDRUG_DIGITS_NUM = 2;
+        public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_LSMARKTYPE = 11;
+        public const int INADVICEDRUG_EXECLNSERTACCOUNTLTEM_REGOPERTIME = 11;
+        public const int INADVICEDRUG_INFORMZYOUTDTL_STOCKPRICE = 0;
+        public const int INADVICEDRUG_INFO_REQBACK = 0;
+        public const int INADVICEDRUG_GETDIAGMEETING_ISMARKTYPE = 3;
+        public const int INADVICEDRUG_REQANDBACKTOTALITY_TOTAL = 0;
+        public const int INADVICEDRUG_BACKUPS_TOTAL = 0;
+        public const int INADVICEDRUG_HOSPITALID_ID = 0;
+        public const int INADVICEDRUG_DOSAGE_G = 0;
 
         /// <summary>
         /// BsPatient
@@ -206,8 +199,8 @@ namespace Orm.Utilities
         /// CRM
         /// </summary>
         public const int CRM_VIP_EXCHANGEMINUSINTEGRAL = 4;
-		public const int CRM_ASSESSMENT_REVIEWASSESSMENT = 3;
-		public const int CRM_ASSESSMENT_TWOASSESSMENT = 1;
+        public const int CRM_ASSESSMENT_REVIEWASSESSMENT = 3;
+        public const int CRM_ASSESSMENT_TWOASSESSMENT = 1;
         public const int CRM_APPLICATIONSTATUS_PENDINGDISPOSAL = 1;
         public const int CRM_ASSESSMENT_ALZHEIMERDISEASE = 2;
         public const int CRM_TYPERECORD_APPLICATIONRECORD = 1;
@@ -222,7 +215,7 @@ namespace Orm.Utilities
         public const string IR_TALLY_ZERO = "0";
         public const string IR_TALLY_ONE = "1";
         public const string IR_TALLY_TOW = "2";
-		public const int IR_PATIENTINFORMATON_AGE = 0;
+        public const int IR_PATIENTINFORMATON_AGE = 0;
         public const int IR_MAINWINDOW_CALLDEBUGGING = 2;
 
         /// <summary>
@@ -248,14 +241,14 @@ namespace Orm.Utilities
         public const int R_RAPFT_WHOLE = 2;
         public const string R_REFERRAL_PATTYPEID = "663C86AF18EE6986E050AA0A313010F4";
 
-		/// <summary>
-		/// LisService
-		/// </summary>
-		public const string LS_ITEMGROUP_PARTENID = "111";
+        /// <summary>
+        /// LisService
+        /// </summary>
+        public const string LS_ITEMGROUP_PARTENID = "111";
         public const int LS_ITEM_HOSPITALID = 16;
         public const string LS_ITEM_COMPANYGROUPID = "31";
         public const string LS_ITEM_SPCE = "1";
-        
+
         /// <summary>
         /// QC
         /// </summary>
@@ -265,11 +258,11 @@ namespace Orm.Utilities
         public const int QC_STATUS_OUTTIME = 2;
         public const string QC_EMRSCOREONE_75 = "75";
         public const string QC_EMRSCOREONE_90 = "90";
-        public const string QC_EMRSCORETWO_74 = "74"; 
+        public const string QC_EMRSCORETWO_74 = "74";
         public const string QC_EMRSCORETWO_90 = "90";
         public const string QC_EMRSCORETWO_100 = "100";
         public const string QC_EMRSCORE_DORALL = "100";
-        
+
         /// <summary>
         /// BsItem
         /// </summary>
@@ -280,13 +273,13 @@ namespace Orm.Utilities
         /// </summary>
         public const int P_PRESCRIPTION_DIGIST = 2;
 
-		/// <summary>
-		/// Invoice
-		/// </summary>
-		public const int VOICE_INVOICEAMOUNT_INSURANCE = 0;
-		public const int VOICE_INVOICEAMOUNT_AMOUNTPAY = 0;
+        /// <summary>
+        /// Invoice
+        /// </summary>
+        public const int VOICE_INVOICEAMOUNT_INSURANCE = 0;
+        public const int VOICE_INVOICEAMOUNT_AMOUNTPAY = 0;
         public const int VOICE_DIGIT_TESTAMENTARYSUM = 2;
-		public const int VOICE_CANCEL_LSCANCELTYPE = 0;
+        public const int VOICE_CANCEL_LSCANCELTYPE = 0;
 
         /// <summary>
         /// OuCharge
@@ -313,19 +306,19 @@ namespace Orm.Utilities
         public const string OU_REGISTER_PUBLICEXPENSE = "0";
         public const string OU_REGISTER_MEDICALINUSRANCE = "1";
         public const string OU_REGISTER_ATTHEIROWNEXPENSE = "2";
-        
+
 
         /// <summary>
         /// InBalance
         /// </summary>
         public const int IB_CHECKOUT_INFORMATION_VALUE = 4;
-		public const int IB_ANOUTOFMEDICALADVICE_TWO = 2;
-		public const int IB_SETUPCOST_LIMITFEE = 0;
+        public const int IB_ANOUTOFMEDICALADVICE_TWO = 2;
+        public const int IB_SETUPCOST_LIMITFEE = 0;
         public const int IB_INVOICETYPE_LIMITFEE = 0;
-		public const string IB_INVOID_NOTHING = "-1";
-		public const int IB_DRUGRESTRICTION_DISCIN = 0;
-		public const int IB_AMOUNTSUM_PERCENTILE = 0;
-		public const int IB_AMOUNTDRUG_PERCENTILE = 0;
+        public const string IB_INVOID_NOTHING = "-1";
+        public const int IB_DRUGRESTRICTION_DISCIN = 0;
+        public const int IB_AMOUNTSUM_PERCENTILE = 0;
+        public const int IB_AMOUNTDRUG_PERCENTILE = 0;
         public const string BAL_DOCTORID_5654 = "5654";
         public const string BAL_EXECLOCID_2313 = "2313";
         public const string BAL_EXECOPERID_9 = "9";
@@ -338,10 +331,10 @@ namespace Orm.Utilities
         public const string BAL_REGOPERID_9 = "9";
         public const string BAL_UNITID_4137 = "4137";
 
-		/// <summary>
-		/// Common
-		/// </summary>
-		public const int C_SENDING_SECOND = 60;
+        /// <summary>
+        /// Common
+        /// </summary>
+        public const int C_SENDING_SECOND = 60;
         public const string C_ITEMID_NULL = "825865";
 
         /// <summary>
@@ -353,21 +346,21 @@ namespace Orm.Utilities
         /// House
         /// </summary>
 		public const int H_DISPENSING_VALUE = 0;
-		public const int H_INVENTORYMANAGEMENT_TYPE = 121;
-		public const int H_DECLMIA_BUYINGAMOUNT = 2;
+        public const int H_INVENTORYMANAGEMENT_TYPE = 121;
+        public const int H_DECLMIA_BUYINGAMOUNT = 2;
         public const int H_DECLMIA_RETAILAMOUNT = 2;
         public const int H_DECLMIA_TOTALSUM = 2;
         public const int H_DECLMIA_TOTALPROFITANDLOSS = 2;
-		public const string H_BIDDID_MIN = "1";
-		public const string H_GETGOODS_FEEMZID = "0";
-		public const int H_AMENDMENTBILL_HOUSERRoomId = 1;
-		public const int H_STARTINDEX_BILLTYPECODE = 0;
-		public const int H_STARTINDEX_DOCUMENTNO = 3;
-		public const int H_LENGHT_ONE = 1;
-		public const int H_LENGHT_FOUR = 4;
-		public const int H_LENGHT_SEVEN = 7;
-		public const int H_INTMINLENTH_MINiMUM = 2;
-		public const int H_AVTTYPE_LIBRARYTYPE = 99;
+        public const string H_BIDDID_MIN = "1";
+        public const string H_GETGOODS_FEEMZID = "0";
+        public const int H_AMENDMENTBILL_HOUSERRoomId = 1;
+        public const int H_STARTINDEX_BILLTYPECODE = 0;
+        public const int H_STARTINDEX_DOCUMENTNO = 3;
+        public const int H_LENGHT_ONE = 1;
+        public const int H_LENGHT_FOUR = 4;
+        public const int H_LENGHT_SEVEN = 7;
+        public const int H_INTMINLENTH_MINiMUM = 2;
+        public const int H_AVTTYPE_LIBRARYTYPE = 99;
         public const int H_DIGIST_TWO = 2;
         public const int H_DRUGCOST_DIGIST = 4;
         public const int H_INTMINLENTH_FIVE = 5;
@@ -376,9 +369,9 @@ namespace Orm.Utilities
         /// Common
         /// </summary>
 		public const int COM_ACTIVE_QUERYDIAGNOSIS = 1;
-		public const int COM_COUNT_COUNTASSESSMENT = 0;
-		public const int COM_COUNT_COUNTBSDIS = 0;
-		public const int COM_HOSPITALID_ID = 31;
+        public const int COM_COUNT_COUNTASSESSMENT = 0;
+        public const int COM_COUNT_COUNTBSDIS = 0;
+        public const int COM_HOSPITALID_ID = 31;
         public const string COM_CLINICALEVIDENCE_OPERID = "663C86A0855E6986E050AA0A313010F4";
 
         /// <summary>
@@ -390,7 +383,7 @@ namespace Orm.Utilities
         public const int C_CHECKRECIPE_STARTINDEX = 0;
         public const int C_CHECKRECIPE_LENGHT = 16;
         public const int C_CODE_LENGHT = 1;
-		public const int C_FILESTREAM_OFFSET = 0;
+        public const int C_FILESTREAM_OFFSET = 0;
         public const int C_IMAGEDOCUMENT_LSINOUTME = 0;
         public const string C_INFORMATIONIMAGE_CANCELOPERId = "0";
         public const int C_INFORMATIONIMAGE_EXPR = 0;
@@ -400,33 +393,33 @@ namespace Orm.Utilities
         public const int C_AGETO_UPPERLIMIT = 0;
         public const int C_GETFILESTREAM_OFFSET = 0;
 
-		/// <summary>
+        /// <summary>
         /// HealthReprt
         /// </summary>
-		public const int HEALTHREPRT_EIPATFROM_ACTIVE = 1;
-		public const int HEALTHREPRT_PATIENTMENUBYPATLD_TYPE = 2;
-		public const int HEALTHREPRT_ELPATRECORD_TYPE = 7;
-		public const int HEALTHREPRT_LSOPENTYPE_TYPE = 3;
+        public const int HEALTHREPRT_EIPATFROM_ACTIVE = 1;
+        public const int HEALTHREPRT_PATIENTMENUBYPATLD_TYPE = 2;
+        public const int HEALTHREPRT_ELPATRECORD_TYPE = 7;
+        public const int HEALTHREPRT_LSOPENTYPE_TYPE = 3;
 
         /// <summary>
         /// InEmr
         /// </summary>
 		public const int INE_FRACTION_INEMRID = 0;
-		public const int INE_MEDACILRECORDINFORMATION_FOLLOWSTATUS = 1;
-		public const int INE_GROUPNUM_GROUPNUM = 1;
-		public const string INE_DENTALCECORD_GUID = "01";
-		public const string INE_OU_GUID = "0";
-		public const int INE_OU_LISTNUM = 0;
-		public const int INE_OU_DOSAGE_ = 0;
-		public const int INE_OU_TOTALITY = 0;
-		public const int INE_OU_GROUPNUM = 0;
-		public const int INE_OU_LSREPTYPE = 0;
+        public const int INE_MEDACILRECORDINFORMATION_FOLLOWSTATUS = 1;
+        public const int INE_GROUPNUM_GROUPNUM = 1;
+        public const string INE_DENTALCECORD_GUID = "01";
+        public const string INE_OU_GUID = "0";
+        public const int INE_OU_LISTNUM = 0;
+        public const int INE_OU_DOSAGE_ = 0;
+        public const int INE_OU_TOTALITY = 0;
+        public const int INE_OU_GROUPNUM = 0;
+        public const int INE_OU_LSREPTYPE = 0;
 
         /// <summary>
         /// Result
         /// </summary>
 		public const int R_SUPPLIER_COMYTYPE = 1;
-		public const string R_PROJECT_CODE = "3";
+        public const string R_PROJECT_CODE = "3";
         public const int R_EXCEEDINGMARK_HIGH = 1;
         public const int R_EXCEEDINGMARK_LOW = 2;
 
@@ -443,79 +436,79 @@ namespace Orm.Utilities
 		/// </summary>
 		public const int ADV_TIMES_FREQ = 0;
         public const int ADV_FREQUECYTIME_TIME = 0;
-		public const int ADV_GROUPNUM_NUM = 0;
+        public const int ADV_GROUPNUM_NUM = 0;
         public const int ADV_TOTALITY_TOTAL = 0;
-		public const int ADV_INEXECUTA_LSMARKTYPE = 0;
-		public const int ADV_DIGIT_NUM = 2;
+        public const int ADV_INEXECUTA_LSMARKTYPE = 0;
+        public const int ADV_DIGIT_NUM = 2;
         public const int ADV_SKIN_SUEAREA = 2;
         public const int ADV_TOMORROWNUM_FREQ = 0;
         public const int ADV_ITEM_LONG = 1;
-		public const string IR_PATIENTTALLYGROUP_ISGF = "1";
-		public const string IR_PATIENTTALLYGROUP_ISYB = "2";
-		public const string IR_PATIENTTALLYGROUP_ISZF = "0";
+        public const string IR_PATIENTTALLYGROUP_ISGF = "1";
+        public const string IR_PATIENTTALLYGROUP_ISYB = "2";
+        public const string IR_PATIENTTALLYGROUP_ISZF = "0";
         public const int ADV_ISEND_LONG = 0;
         public const int ADV_ROOM_TYPE = 0;
         public const int ADV_INOUT_OUTPUT = 2;
         public const string ADV_ISNODRUG_LONG = "1";
-		public const string ADV_SEX_O = "其他";
+        public const string ADV_SEX_O = "其他";
         public const string ADV_LOCATIONARRAYSTRING_SEAT = "0";
-		public const string ADV_KEY_LSMARKTYPE = "LsMarkType";
+        public const string ADV_KEY_LSMARKTYPE = "LsMarkType";
         public const string ADV_CODE_STRING = "01";
-		public const string ADV_TODATETIME_TIME = "1900-01-01";
+        public const string ADV_TODATETIME_TIME = "1900-01-01";
         public const int ADV_ITEMLD_PRICETOTAL = 0;
         public const int ADV_STYLE_TYPE = 0;
         public const int ADV_PRICE_TOTAL = 0;
         public const int ADV_SELECTCOUNT_TOTAL = 0;
         public const int ADV_TIMES_DIGIT = 1;
         public const int ADV_HOSPITALID_ID = 0;
-		public const int ADV_TEMPGROUP_TOTAL = 0;
-		public const int ADV_FIRSTDAY_TOTAL = 0;
-		public const int ADV_LASTDAY_INFOADVICE = 0;
-		public const int ADV_INOF_FREQUENCY = 0;
-		public const int ADV_INOFADVICE_TOTALITYALL = 0;
-		public const int ADV_SOURCEMEMO_LENGTH = 0;
-		public const int ADV_SPLITAR_LENGTH = 0;
-		public const int ADV_DOSAGE_G = 0;
-		public const string ROLE_NAME_INNURSE = "住院护士";
-		public const int ADV_STARTINDEX_MEMOATTACH = 1;
-		public const int ADV_GETSTR_ICOMMONSYSTEM = 1;
-		public const int ADV_STARTINDEX_TEMP = 1;
-		public const string ADV_ISRPFORBID_INFO = "1";
-		public const int ADV_MEMOATTACH_LENGTH = 1;
-		public const int ADV_GETSTR_LENGTH = 1;
-		public const int ADV_INFOADVICE_ISEND = 1;
-		public const int ADV_INFOADVICE_ADVICETIME = 1;
-		public const int ADV_INFOADVICE_INADVICELONG = 1;
-		public const int ADV_DELETADVICEAUTHDTL_LSMARKTYPE = 1;
-		public const int ADV_DOUBLE_RATIO = 0;
-		public const string ADV_VALUE_ONE = "1";
-		public const string ADV_VALUE_TWO = "2";
-		public const string ADV_SEX_OTHER = "0";
-		public const int ADV_INFOADVICEAUTHDTL_COUNTIA = 1;
-		public const int ADV_LSMARKTYPE_INEXECUTE = 1;
-		public const int ADV_TOTALITY_INFOINADVICELONG = 1;
-		public const int ADV_ADDONECUSTFEENEW_TIMES = 1;
-		public const int ADV_FIRSTDAY_INVEST = 0;
-		public const int ADV_LASTDAY_INVEST = 0;
-		public const int ADV_TRIM_LENGTH = 0;
-		public const int ADV_REBATE_PRICE = 0;
-		public const int ADV_DRUG_TOTALITY = 0;
-		public const int ADV_CONTAINS_COUNTIA = 0;
-		public const int ADV_GETNUMERIC_LENGTH = 0;
-		public const int ADV_COMMONSYSTEM_STARTINDEX = 1;
+        public const int ADV_TEMPGROUP_TOTAL = 0;
+        public const int ADV_FIRSTDAY_TOTAL = 0;
+        public const int ADV_LASTDAY_INFOADVICE = 0;
+        public const int ADV_INOF_FREQUENCY = 0;
+        public const int ADV_INOFADVICE_TOTALITYALL = 0;
+        public const int ADV_SOURCEMEMO_LENGTH = 0;
+        public const int ADV_SPLITAR_LENGTH = 0;
+        public const int ADV_DOSAGE_G = 0;
+        public const string ROLE_NAME_INNURSE = "住院护士";
+        public const int ADV_STARTINDEX_MEMOATTACH = 1;
+        public const int ADV_GETSTR_ICOMMONSYSTEM = 1;
+        public const int ADV_STARTINDEX_TEMP = 1;
+        public const string ADV_ISRPFORBID_INFO = "1";
+        public const int ADV_MEMOATTACH_LENGTH = 1;
+        public const int ADV_GETSTR_LENGTH = 1;
+        public const int ADV_INFOADVICE_ISEND = 1;
+        public const int ADV_INFOADVICE_ADVICETIME = 1;
+        public const int ADV_INFOADVICE_INADVICELONG = 1;
+        public const int ADV_DELETADVICEAUTHDTL_LSMARKTYPE = 1;
+        public const int ADV_DOUBLE_RATIO = 0;
+        public const string ADV_VALUE_ONE = "1";
+        public const string ADV_VALUE_TWO = "2";
+        public const string ADV_SEX_OTHER = "0";
+        public const int ADV_INFOADVICEAUTHDTL_COUNTIA = 1;
+        public const int ADV_LSMARKTYPE_INEXECUTE = 1;
+        public const int ADV_TOTALITY_INFOINADVICELONG = 1;
+        public const int ADV_ADDONECUSTFEENEW_TIMES = 1;
+        public const int ADV_FIRSTDAY_INVEST = 0;
+        public const int ADV_LASTDAY_INVEST = 0;
+        public const int ADV_TRIM_LENGTH = 0;
+        public const int ADV_REBATE_PRICE = 0;
+        public const int ADV_DRUG_TOTALITY = 0;
+        public const int ADV_CONTAINS_COUNTIA = 0;
+        public const int ADV_GETNUMERIC_LENGTH = 0;
+        public const int ADV_COMMONSYSTEM_STARTINDEX = 1;
 
         /// <summary>
 		/// InExecute
 		/// </summary>
 		public const int INEXECUTE_LASTDAY_INFOINADVICELONG = 0;
         public const int INEXECUTE_DOUBLETIMES_TIMES = 1;
-		public const int INEXECUTE_AGE_NUM = 0;
-		public const int INEXECUTE_INEXECUTE_ISMARKTYPE = 1;
-		public const int INEXECUTE_GETDATA_ADVICETYPE = 1;
-		public const string INEXECUTE_BEDID_ID = "1";
-		public const int INEXECUTE_DIGIT_NUM = 2;
-		public const int INEXECUTE_GETDATAADVICE_TYPE = 2;
-		public const int INEXECUTE_LENGTH_EXECUTETIME = 0;
+        public const int INEXECUTE_AGE_NUM = 0;
+        public const int INEXECUTE_INEXECUTE_ISMARKTYPE = 1;
+        public const int INEXECUTE_GETDATA_ADVICETYPE = 1;
+        public const string INEXECUTE_BEDID_ID = "1";
+        public const int INEXECUTE_DIGIT_NUM = 2;
+        public const int INEXECUTE_GETDATAADVICE_TYPE = 2;
+        public const int INEXECUTE_LENGTH_EXECUTETIME = 0;
         public const string INEXECUTE_PRINTLABEL_EXECUTETIME = "1";
 
 
@@ -626,7 +619,7 @@ namespace Orm.Utilities
         /// </summary>
         public static string[] Alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
 
-		public const string OR_TIMEBEGIN_STRINGWHITESPACE = " ";
+        public const string OR_TIMEBEGIN_STRINGWHITESPACE = " ";
 
         /// <summary>
         /// 一年中每月的天数，其中二月的天数不是固定需要计算
@@ -700,7 +693,7 @@ namespace Orm.Utilities
             CACHE_INCHINRICIPEDTL_KEY_TABLE
         };
 
-		#endregion
+        #endregion
 
     }
 }

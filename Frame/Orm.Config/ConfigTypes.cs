@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Orm.Config
+﻿namespace Orm.Config
 {
     public class ConfigTypes
     {
@@ -97,6 +91,6 @@ namespace Orm.Config
         public const string CurrInvoInfo = "GLOBAL.CurrInvoInfo";
 
         public const string DEV_CUSTOMTER_ID = "bfd4a3f4c9c44cc5";                 //开发版的GUID
-        public const string CUSTOMER_SERVICE_PHONE="QQ群：398214771 电话：4008-320-322";
+        public const string CUSTOMER_SERVICE_PHONE = "QQ群：398214771 电话：4008-320-322";
     }
 }

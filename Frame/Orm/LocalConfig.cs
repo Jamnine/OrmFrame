@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Orm.Framework.Services;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
-using Orm.Framework.Services;
 namespace Orm
 {
     public class LocalConfig

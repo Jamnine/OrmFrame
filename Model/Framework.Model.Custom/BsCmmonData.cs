@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Custom
 {
@@ -63,15 +60,15 @@ namespace Orm.Model.Custom
         /// <summary>
         /// 是否是正确手机号码
         /// </summary>
-        public bool IsRightPhone 
-        { 
-            get 
+        public bool IsRightPhone
+        {
+            get
             {
                 if (TimingMessage.Mobile == string.Empty || TimingMessage.Mobile == null)
                     return false;
                 else
                     return TimingMessage.Mobile.Length == 11 && TimingMessage.Mobile.Substring(0, 1) == "1";
-            } 
+            }
         }
         /// <summary>
         /// 定时信息集合

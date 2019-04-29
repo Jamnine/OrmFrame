@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Orm.Framework.Services;
+using Orm.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Orm.Config;
-using Orm.Framework.Services;
-using Orm.Model;
 
 namespace Orm.Config
 {
@@ -14,11 +13,11 @@ namespace Orm.Config
     /// </summary>
     public static class UtilsLocCache
     {
-         /// <summary>
+        /// <summary>
         /// 同步锁
         /// </summary>
         private static object locker;
-           /// <summary>
+        /// <summary>
         /// 本地缓冲
         /// </summary>
         private static Dictionary<string, object> cache;
@@ -45,8 +44,8 @@ namespace Orm.Config
         {
             cache = new Dictionary<string, object>();
             updateDic = new Dictionary<string, bool>();
-          //  service = Orm.Config.Service.DBClientService;
-           // cacheService = Orm.Config.Service.RemoteCache;
+            //  service = Orm.Config.Service.DBClientService;
+            // cacheService = Orm.Config.Service.RemoteCache;
             locker = new object();
         }
 
@@ -92,7 +91,7 @@ namespace Orm.Config
             //{ }
         }
 
-        private static void AddEntity<T>( string key, Dictionary<string, object> dict) where T : class, new()
+        private static void AddEntity<T>(string key, Dictionary<string, object> dict) where T : class, new()
         {
             if (dict.ContainsKey(key))
             {
@@ -127,11 +126,11 @@ namespace Orm.Config
             #endregion
         }
 
-        
+
         /// <summary>
         /// 手动设置本地缓存，设置时key值请保持与服务器key一致
         /// </summary>
-        public static void InitCache<T>(string key) where T : class,new()
+        public static void InitCache<T>(string key) where T : class, new()
         {
             // 初始化时先根据key查 cache服务器
             //object data = cacheService.GetCacheList<T>(key);
@@ -148,7 +147,7 @@ namespace Orm.Config
             //}
         }
 
-        public static void RefreshCache<T>(List<T> list) where T : class,new()
+        public static void RefreshCache<T>(List<T> list) where T : class, new()
         {
             var key = typeof(T).Name;
             if (cache.ContainsKey(key))
@@ -189,7 +188,7 @@ namespace Orm.Config
             if (cache.ContainsKey(key))
             {
 
-                 list = cache[key] as List<T>;
+                list = cache[key] as List<T>;
                 if (list != null && list.Count > 0)
                 {
                     var whereList = list.Where(where.Compile());
@@ -264,13 +263,13 @@ namespace Orm.Config
             }
         }
 
-       /// <summary>
+        /// <summary>
         /// 根据条件获取数据集合
-       /// </summary>
-       /// <typeparam name="T"></typeparam>
-       /// <param name="where"></param>
-       /// <param name="queryDb">当需要查数据库传入false</param>
-       /// <returns></returns>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="where"></param>
+        /// <param name="queryDb">当需要查数据库传入false</param>
+        /// <returns></returns>
         public static List<T> GetCache<T>(Expression<Func<T, bool>> where, bool queryDb = true) where T : BaseModel, new()
         {
             string key = typeof(T).Name;
@@ -300,9 +299,9 @@ namespace Orm.Config
         /// </summary>
         /// <param name="key"></param>
         /// <param name="keyValue"></param>
-        public static void AddCache(string key ,object keyValue)  
+        public static void AddCache(string key, object keyValue)
         {
-           // cacheService.GetCacheList<>
+            // cacheService.GetCacheList<>
             cache.Add(key, keyValue);
         }
 
@@ -313,12 +312,12 @@ namespace Orm.Config
         /// <param name="key"></param>
         /// <param name="queryDb">判断是否需要查数据库</param>
         /// <returns></returns>
-        public static List<T> GetCacheAll<T>(string key,bool queryDb=true) where T : class,new()
+        public static List<T> GetCacheAll<T>(string key, bool queryDb = true) where T : class, new()
         {
             //在缓存服务没有加载完成的情况下调用。
             if (!cache.ContainsKey(key))
             {
-                AddEntity<T>( key, cache);
+                AddEntity<T>(key, cache);
             }
             if (cache.ContainsKey(key))
             {
@@ -326,7 +325,7 @@ namespace Orm.Config
                 if (list != null && list.Count() > 0)
                 {
                     var whereList = list;
-                    if (whereList != null && whereList.Count() > 0 )
+                    if (whereList != null && whereList.Count() > 0)
                     {
                         return whereList.ToList();
                     }
@@ -342,7 +341,7 @@ namespace Orm.Config
                                 //list.AddRange(data);
                                 //return data.ToList();
                                 return new List<T>();
-                            }                           
+                            }
                         }
                         else
                         {
@@ -366,7 +365,7 @@ namespace Orm.Config
                     //return data.Where(where).ToList();
                     return new List<T>();
                 }
-                
+
             }
         }
 
@@ -377,13 +376,13 @@ namespace Orm.Config
         /// <param name="key"></param>
         /// <param name="queryDb">判断是否需要查数据库</param>
         /// <returns></returns>
-        public static List<T> GetCacheAll<T>( bool queryDb = true) where T : class,new()
+        public static List<T> GetCacheAll<T>(bool queryDb = true) where T : class, new()
         {
             string key = typeof(T).Name;
             //在缓存服务没有加载完成的情况下调用。
             if (!cache.ContainsKey(key))
             {
-                AddEntity<T>( key, cache);
+                AddEntity<T>(key, cache);
             }
             //获取缓存中的数据
             if (cache.ContainsKey(key))
@@ -461,19 +460,19 @@ namespace Orm.Config
         /// <param name="model">传入的实体类</param>
         public static void RenewCacheEntity<T>(T model) where T : BaseModel, new()
         {
-            string key = typeof(T).Name; 
+            string key = typeof(T).Name;
             if (cache.ContainsKey(key))
             {
                 if (cache[key] != null)
                 {
                     List<T> list = cache[key] as List<T>;
                     if (list.Find(t => t.GUID == model.GUID) != null && !string.IsNullOrWhiteSpace(model.GUID))
-                         list.Remove("GUID", model.GUID.ToString()); //移除旧的数据
+                        list.Remove("GUID", model.GUID.ToString()); //移除旧的数据
                     list.Insert(0, model);//增加新的数据
                     cache[key] = list;
- 
+
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -517,9 +516,9 @@ namespace Orm.Config
                 if (!updateDic.ContainsKey(key))
                     updateDic.Add(key, false);
             }
-            else if(UpdateDic.ContainsKey(key))
+            else if (UpdateDic.ContainsKey(key))
             {
-                if(UpdateDic[key])
+                if (UpdateDic[key])
                 {
                     Cache.Remove(key);//先去掉
                     AddEntity<T>(key, cache);//再添加 等于更新数据
@@ -604,7 +603,7 @@ namespace Orm.Config
         {
             if (Cache.ContainsKey(key))
             {
-                if(UpdateDic.ContainsKey(key))
+                if (UpdateDic.ContainsKey(key))
                 {
                     updateDic[key] = true;
                 }
@@ -613,7 +612,7 @@ namespace Orm.Config
                     updateDic.Add(key, true);
                 }
             }
-            
+
         }
 
         #endregion

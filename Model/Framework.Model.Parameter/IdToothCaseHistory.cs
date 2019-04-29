@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -9,7 +6,7 @@ namespace Orm.Model.Parameter
     /// 牙齿病历
     /// </summary>
     [Serializable]
-   public  class IdToothCaseHistory : BaseModel
+    public class IdToothCaseHistory : BaseModel
     {
 
         /// <summary>

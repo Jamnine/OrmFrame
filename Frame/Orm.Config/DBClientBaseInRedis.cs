@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Orm.Framework.Services;
+﻿using Orm.Framework.Services;
 using Orm.Log4Library;
 using Orm.Model;
 using Orm.Redis;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace Orm.Config
 {
@@ -56,7 +53,7 @@ namespace Orm.Config
                     if (pattern != "")
                     {//pattern如果为空，将从数据库中查询
                         List<T> list = RedisReadExHelper.SetSearch<T>(modelTypeStr, 0, pattern, 10000);
-                        return  list;
+                        return list;
                     }
                 }
                 return Service.DBClientService.GetList<T>(where, arr);
@@ -64,7 +61,7 @@ namespace Orm.Config
             catch (Exception ex)
             {//如果出现异常，将从数据库中查询
                 LogHelper.ErrorLog(ex.ToString());
-                return   Service.DBClientService.GetList<T>(where, arr);
+                return Service.DBClientService.GetList<T>(where, arr);
             }
         }
 
@@ -91,9 +88,9 @@ namespace Orm.Config
             catch (Exception ex)
             {
                 LogHelper.ErrorLog(ex.ToString());
-                return   new List<T>();
+                return new List<T>();
             }
-          
+
         }
 
         /// <summary>
@@ -117,7 +114,7 @@ namespace Orm.Config
                         List<T> list = RedisReadExHelper.SetSearch<T>(modelTypeStr, 0, pattern, 10000);
                         return list.Count == 0 ? Service.DBClientService.Get<T>(where, arr) : list[0];
                     }
-                }  
+                }
                 return Service.DBClientService.Get<T>(where, arr);
             }
             catch (Exception ex)
@@ -129,7 +126,7 @@ namespace Orm.Config
 
         public static T GetModelByGuid<T>(string guid) where T : BaseModel, new()
         {
-            
+
             try
             {
                 string modelTypeStr = typeof(T).Name;
@@ -158,20 +155,20 @@ namespace Orm.Config
         /// <returns></returns>
         public static List<T> GetListByLambda<T>(string where, bool queryDb, params object[] arr) where T : BaseModel, new()
         {
-            List<T> lstReturn = null;          
+            List<T> lstReturn = null;
 
-            List<T> list = new List<T>(); 
-                if (queryDb)
+            List<T> list = new List<T>();
+            if (queryDb)
+            {
+                lock (locker)
                 {
-                    lock (locker)
-                    {
-                        lstReturn = Orm.Config.Service.DBClientService.GetList<T>(where, arr);
-                    }
+                    lstReturn = Orm.Config.Service.DBClientService.GetList<T>(where, arr);
                 }
-                else
-                {
-                    lstReturn = new List<T>();
-                }           
+            }
+            else
+            {
+                lstReturn = new List<T>();
+            }
             if (lstReturn != null)
                 lstReturn = ReflectionHelper.OrderBy<T>(lstReturn, "Name");
             return lstReturn;

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Orm.Framework.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Orm.Framework.Services;
 namespace Orm
 {
     public class PersistManeger

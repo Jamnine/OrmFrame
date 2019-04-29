@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Orm.Model.Custom;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Orm.Model.Custom;
 
 namespace Orm.Model.Parameter
 {

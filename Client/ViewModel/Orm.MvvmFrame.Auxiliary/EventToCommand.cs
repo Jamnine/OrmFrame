@@ -116,7 +116,7 @@ namespace Orm.MvvmFrame.Auxiliary
         {
             get
             {
-                return (ICommand) GetValue(CommandProperty);
+                return (ICommand)GetValue(CommandProperty);
             }
 
             set
@@ -174,7 +174,7 @@ namespace Orm.MvvmFrame.Auxiliary
         {
             get
             {
-                return (bool) GetValue(MustToggleIsEnabledProperty);
+                return (bool)GetValue(MustToggleIsEnabledProperty);
             }
 
             set
@@ -350,10 +350,10 @@ namespace Orm.MvvmFrame.Auxiliary
 
             if (e.OldValue != null)
             {
-                ((ICommand) e.OldValue).CanExecuteChanged -= element.OnCommandCanExecuteChanged;
+                ((ICommand)e.OldValue).CanExecuteChanged -= element.OnCommandCanExecuteChanged;
             }
 
-            var command = (ICommand) e.NewValue;
+            var command = (ICommand)e.NewValue;
 
             if (command != null)
             {

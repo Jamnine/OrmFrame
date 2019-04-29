@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Orm.Model;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Orm.Model;
 
 namespace Orm.Config
 {    /// <summary>
@@ -253,7 +253,7 @@ namespace Orm.Config
         /// <summary>
         /// 前台质询字段共用
         /// </summary>
-        public static string FrontDeskConsultation= "平台咨询";
+        public static string FrontDeskConsultation = "平台咨询";
 
         /// <summary>
         /// 门诊就诊

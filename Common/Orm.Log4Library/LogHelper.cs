@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFileExtension = "config", Watch = true)]
@@ -19,7 +16,7 @@ namespace Orm.Log4Library
         {
             log4net.ILog log = log4net.LogManager.GetLogger("logerror");
             //Task.Run(() => log.Error(msg));   //异步 需要.net framework 4.5以上
-            Task.Factory.StartNew(() =>log.Error(msg));//  这种异步也可以 支持.net framework 4
+            Task.Factory.StartNew(() => log.Error(msg));//  这种异步也可以 支持.net framework 4
             log.Error(msg);
 
         }

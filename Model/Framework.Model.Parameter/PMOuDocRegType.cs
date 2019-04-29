@@ -6,7 +6,7 @@ namespace Orm.Model.Parameter
     /// 预约医生排班
     /// </summary>
     [Serializable]
-    public  class PMOuDocRegType
+    public class PMOuDocRegType
     {
         /// <summary>
         ///  门诊ID
@@ -62,6 +62,6 @@ namespace Orm.Model.Parameter
         /// 班次ID 
         /// </summary>
         public string TimeSpanID { get; set; }
-         
+
     }
 }

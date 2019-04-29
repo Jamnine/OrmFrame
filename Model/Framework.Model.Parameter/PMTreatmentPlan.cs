@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Orm.Model.Custom;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Orm.Model.Custom;
 
 namespace Orm.Model.Parameter
 {
@@ -17,7 +15,7 @@ namespace Orm.Model.Parameter
         /// <summary>
         /// 病历信息
         /// </summary>
-        public OuClinicFirst ademr  = new OuClinicFirst();
+        public OuClinicFirst ademr = new OuClinicFirst();
         /// <summary>
         /// 主表
         /// </summary>

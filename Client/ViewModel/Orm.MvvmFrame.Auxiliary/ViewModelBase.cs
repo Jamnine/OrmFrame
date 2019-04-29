@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Orm.Model.Custom;
+using Orm.Model.EnumDefine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
-using Orm.Config;
-using Orm.Model.Custom;
-using Orm.Model.EnumDefine;
 
 namespace Orm.MvvmFrame.Auxiliary
 {
@@ -199,7 +198,7 @@ namespace Orm.MvvmFrame.Auxiliary
 
             this.CancelCommand = new ViewModelCommand((object parameter) => { this.Cancel(); SetControlStatus(ToolbarStatus.View); });
 
-            this.SaveCommand = new ViewModelCommand((object parameter) => 
+            this.SaveCommand = new ViewModelCommand((object parameter) =>
             {
                 if (!CheckValidate()) return;
                 if (this.Save())

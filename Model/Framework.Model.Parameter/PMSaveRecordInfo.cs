@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -11,7 +9,7 @@ namespace Orm.Model.Parameter
     [Serializable]
     public class PMSaveRecordInfo
     {
-          /// <summary>
+        /// <summary>
         /// 随访信息
         /// </summary>
         public FollowPatient FollowPlan { get; set; }
@@ -23,7 +21,7 @@ namespace Orm.Model.Parameter
         /// 预约、复诊信息
         /// </summary>
         public OuHosInfo OrderOuHosInfo { get; set; }
-      
+
         /// <summary>
         /// 要删除的集合
         /// </summary>

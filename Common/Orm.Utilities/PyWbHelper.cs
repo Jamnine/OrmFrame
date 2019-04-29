@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Xml;
 
 namespace Orm.Utilities
@@ -34,11 +31,11 @@ namespace Orm.Utilities
         /// <summary>
         /// 构造函数，初始化XMLREADER
         /// </summary>
-         static PyWbHelper()
+        static PyWbHelper()
         {
             try
             {
-                if (reader==null)
+                if (reader == null)
                 {
                     reader = new XmlTextReader(new System.IO.StringReader(WbPyDictionary()));
                     strXmlData = getXmlData();
@@ -170,7 +167,7 @@ namespace Orm.Utilities
         /// <returns></returns>
         public static string SixBitPYCode(string strName)
         {
-            if(string.IsNullOrEmpty(strName))
+            if (string.IsNullOrEmpty(strName))
             {
                 return string.Empty;
             }

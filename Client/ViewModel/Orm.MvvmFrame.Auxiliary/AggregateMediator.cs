@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Orm.MvvmFrame.Auxiliary
 {
@@ -109,12 +108,13 @@ namespace Orm.MvvmFrame.Auxiliary
         /// </summary>
         /// <returns></returns>
         private bool EstimateType(Type type)
-        { 
-            bool flag=false;
+        {
+            bool flag = false;
             if (type == typeof(ViewModelBase))
             {
                 flag = true;
-            }else if (type.BaseType != null)
+            }
+            else if (type.BaseType != null)
             {
                 flag = EstimateType(type.BaseType);
             }

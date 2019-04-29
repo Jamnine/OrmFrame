@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Orm.Model.Parameter
 {
@@ -40,7 +37,7 @@ namespace Orm.Model.Parameter
         public bool IsFolder
         {
             get { return _isFolder; }
-            set { _isFolder=value; }
+            set { _isFolder = value; }
         }
 
         /// <summary>

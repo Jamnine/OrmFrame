@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orm.Utilities
 {
@@ -295,7 +291,7 @@ namespace Orm.Utilities
             if (Birthday.Year % 100 == 0)
             {
                 if (Birthday.Year % 400 == 0)
-                { 
+                {
                     return true;
                 }
                 else
@@ -310,7 +306,7 @@ namespace Orm.Utilities
                     return true;
                 }
                 else return false;
-            } 
+            }
         }
 
         private int CalculateDays()

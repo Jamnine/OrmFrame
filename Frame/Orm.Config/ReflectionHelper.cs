@@ -2,9 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orm.Config
 {
@@ -106,7 +103,7 @@ namespace Orm.Config
         /// <param name="classType">类的类型</param>
         /// <param name="propertyName">要判断的属性名称</param>
         /// <returns></returns>
-        public static bool ContainProperty(Type classType,string propertyName)
+        public static bool ContainProperty(Type classType, string propertyName)
         {
             if (classType.GetProperty(propertyName) != null)
                 return true;
@@ -208,7 +205,7 @@ namespace Orm.Config
             return OrderBy<T>(lst, "OrderBy");
         }
 
-        public static List<T> OrderBy<T>(List<T> lst,string orderByProp) where T : Model.BaseModel, new()
+        public static List<T> OrderBy<T>(List<T> lst, string orderByProp) where T : Model.BaseModel, new()
         {
             if (string.IsNullOrWhiteSpace(orderByProp))
                 return lst;

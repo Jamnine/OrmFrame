@@ -1,11 +1,11 @@
 ﻿using ELinq;
 using Oracle.DataAccess.Client;
+using Orm.Framework.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
-using Orm.Framework.Services;
 namespace Orm
 {
     internal class CommPersist : IDataPersist

@@ -367,11 +367,11 @@ namespace Orm.Utilities
                 {
                     // close handle(s)    
                     if (pExistingTokenHandle != IntPtr.Zero)
-                    { 
+                    {
                         CloseHandle(pExistingTokenHandle);
                     }
                     if (pDuplicateTokenHandle != IntPtr.Zero)
-                    { 
+                    {
                         CloseHandle(pDuplicateTokenHandle);
                     }
                 }
@@ -445,7 +445,7 @@ namespace Orm.Utilities
                 if (File.Exists(server_path))
                 {
                     if (!Directory.Exists(local_path))
-                    { 
+                    {
                         Directory.CreateDirectory(local_path);
                     }
                     FileInfo serverInfo = new FileInfo(server_path);

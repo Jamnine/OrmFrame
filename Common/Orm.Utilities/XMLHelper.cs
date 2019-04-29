@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace Orm.Utilities
@@ -179,7 +177,7 @@ namespace Orm.Utilities
                         Dictionary<string, object> doy = lststr[i] as Dictionary<string, object>;
                         foreach (var item2 in doy)
                         {
-                            key = item2.Key.Contains("v_")? item2.Key : string.Format("v_{0}", item2.Key);
+                            key = item2.Key.Contains("v_") ? item2.Key : string.Format("v_{0}", item2.Key);
                             value = item2.Value.ToString();
                             keyValuePairs.Add(key, value);
                         }
@@ -205,7 +203,7 @@ namespace Orm.Utilities
             }
             return value;
         }
-        
+
         public static string DataTableToJsonWithJsonNet<T>(T table)
         {
             string JsonString = string.Empty;

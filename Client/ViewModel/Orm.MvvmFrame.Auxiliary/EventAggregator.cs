@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace Orm.MvvmFrame.Auxiliary
 {
@@ -329,7 +328,7 @@ namespace Orm.MvvmFrame.Auxiliary
                     var action = l.Action as Func<TSent, TBack>;
                     if (action != null)
                     {
-                        if (obj!=null)
+                        if (obj != null)
                             if (obj.ToString().Equals(data.ToString())) return;
                         var re = action(data);
                         obj = data;

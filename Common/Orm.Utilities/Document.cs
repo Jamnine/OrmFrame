@@ -1,7 +1,7 @@
 using System;
-using System.Text;
-using System.IO;
 using System.Collections;
+using System.IO;
+using System.Text;
 
 namespace Orm.Utilities
 {
@@ -69,7 +69,7 @@ namespace Orm.Utilities
         /// <param name="fileName">文件名</param>
         /// <param name="append">是否追加</param>
         public void Create(string fileName, bool append)
-        { 
+        {
             StreamWriter file = new StreamWriter(fileName, append);
             file.Write(this.Content);
             file.Close();
@@ -109,11 +109,11 @@ namespace Orm.Utilities
                 stream.Close();
             }
             catch (Exception ex)
-            { 
+            {
                 throw (ex);
             }
             finally
-            {  
+            {
                 writer.Flush();
                 writer.Close();
 
@@ -151,9 +151,9 @@ namespace Orm.Utilities
                 throw (ex);
             }
             finally
-            { 
+            {
                 writer.Flush();
-                writer.Close(); 
+                writer.Close();
             }
             return "OK";
         }
@@ -209,7 +209,7 @@ namespace Orm.Utilities
         /// </summary>
         /// <param name="fileName"></param>
         public void CreateHTML(string fileName)
-        { 
+        {
             this.Create(fileName, "gb2312");
         }
 
@@ -303,7 +303,7 @@ namespace Orm.Utilities
             System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex(rex, System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
             System.Text.RegularExpressions.Match m = r.Match(content);
             for (m = r.Match(content); m.Success; m = m.NextMatch())
-            { 
+            {
                 list.Add(m.Groups[1].Value);
             }
             return list;
@@ -396,7 +396,7 @@ namespace Orm.Utilities
             foreach (DirectoryInfo di in dir.GetDirectories())
             {
                 //GetAllFiles(di);
-            } 
+            }
         }
 
         /// <summary>
@@ -502,16 +502,16 @@ namespace Orm.Utilities
                 foreach (string d in Directory.GetFileSystemEntries(dir))
                 {
                     if (File.Exists(d))
-                    { 
+                    {
                         File.Delete(d); //直接删除其中的文件 
                     }
                     else
-                    { 
+                    {
                         DeleteFolder(d); //递归删除子文件夹 
                     }
                 }
                 Directory.Delete(dir); //删除已空文件夹 
             }
-        } 
+        }
     }
 }

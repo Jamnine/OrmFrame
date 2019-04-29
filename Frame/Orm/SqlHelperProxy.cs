@@ -1,11 +1,8 @@
 ﻿using ELinq;
-using Microsoft.CSharp.RuntimeBinder;
+using Orm.Framework.Services;
 using System;
 using System.Collections;
 using System.Data;
-using System.Data.Common;
-using System.Runtime.CompilerServices;
-using Orm.Framework.Services;
 
 namespace Orm
 {
@@ -32,7 +29,7 @@ namespace Orm
             {
                 return dbHelper.ExecuteNonQuery(sql, namedParameters);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 
 namespace Orm.MvvmFrame.Auxiliary
 {
@@ -53,8 +50,8 @@ namespace Orm.MvvmFrame.Auxiliary
 
         public void Execute(Object parameter)
         {
-           
-                this.ViewModelAction(parameter);
+
+            this.ViewModelAction(parameter);
         }
 
         public event EventHandler CanExecuteChanged

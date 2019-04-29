@@ -29,7 +29,7 @@ namespace WebBridgeContract
         /// 返回结果。
         /// </summary>
         public ApiResultDC Result { get; set; }
-       
+
 
         /// <summary>
         /// 泛型方法的类型实参
