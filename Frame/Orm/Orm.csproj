@@ -31,15 +31,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ELinq">
-      <HintPath>..\Framework\ELinq.dll</HintPath>
+    <Reference Include="ELinq, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\ELinq.dll</HintPath>
     </Reference>
-    <Reference Include="NLite">
-      <HintPath>..\Framework\NLite.dll</HintPath>
+    <Reference Include="NLite, Version=0.9.5.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\NLite.dll</HintPath>
     </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Framework\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\Framework\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm.Framework.Services, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\IIS\Orm.Framework.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm.MapContext, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\IIS\Orm.MapContext.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm.Model.Custom, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Framework\IIS\Orm.Model.Custom.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,20 +73,6 @@
     <Compile Include="PersistManeger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelperProxy.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Model\Framework.MapContext\Orm.MapContext.csproj">
-      <Project>{c4a1ba2a-f2ec-49c9-a73b-a7e40e196a4a}</Project>
-      <Name>Orm.MapContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
-      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
-      <Name>Orm.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Orm.Framework.Services\Orm.Framework.Services.csproj">
-      <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
-      <Name>Orm.Framework.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
