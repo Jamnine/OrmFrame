@@ -10,8 +10,6 @@ using Orm.Redis;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using Newtonsoft.Json;
-using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
 using System.Text;
 using System.Threading;
 using Orm.Log4Library;
