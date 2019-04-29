@@ -70,10 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\XYHis.BusinessRedis\XYHis.BusinessRedis.csproj">
-      <Project>{9b2dba84-235d-4e87-84c7-7f4d2a5f16da}</Project>
-      <Name>XYHis.BusinessRedis</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
@@ -85,18 +81,6 @@
     <ProjectReference Include="..\..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
       <Project>{E279036F-A84E-42FA-B900-281DB8922C0E}</Project>
       <Name>Orm.Model.Parameter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XYHis.Framework\WebApiResponder\WebApiResponder.csproj">
-      <Project>{CFE9A7D3-AD44-4A15-9E7B-E5E80DCA1C39}</Project>
-      <Name>WebApiResponder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XYHis.Framework\XYHis.EmitService\XYHis.EmitService.csproj">
-      <Project>{fd68ea52-b1e0-4e58-a391-e3a9c85cd284}</Project>
-      <Name>XYHis.EmitService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XYHis.Framework\XYHis.Framework.Common\XYHis.Framework.Common.csproj">
-      <Project>{d3216a54-4590-4455-944d-8a6309af38f7}</Project>
-      <Name>XYHis.Framework.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
       <Project>{1C4C834A-6D91-4C8D-8BC2-20CAE29BE253}</Project>

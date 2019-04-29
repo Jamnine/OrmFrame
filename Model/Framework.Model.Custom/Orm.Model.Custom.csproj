@@ -35,9 +35,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESBasic">
-      <HintPath>..\..\Framework\RefDLL\ESBasic.dll</HintPath>
-    </Reference>
     <Reference Include="NLite">
       <HintPath>..\..\Framework\NLite.dll</HintPath>
     </Reference>

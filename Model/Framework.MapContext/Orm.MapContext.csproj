@@ -63,9 +63,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Framework\NLite.dll</HintPath>
     </Reference>
-    <Reference Include="Orm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\Orm.dll</HintPath>
+      <HintPath>..\..\Framework\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -802,6 +802,10 @@
     <Compile Include="BillNoEntityMapping.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Frame\Orm\Orm.csproj">
+      <Project>{5ecbc1d5-aba9-4cac-8712-1abe11000b90}</Project>
+      <Name>Orm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
@@ -810,11 +814,6 @@
       <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
       <Name>Orm.Model.Custom</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\Oracle.DataAccess.dll" />
-    <Content Include="bin\Debug\XYHis.MapContext.dll" />
-    <Content Include="bin\Debug\XYHis.MapContext.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

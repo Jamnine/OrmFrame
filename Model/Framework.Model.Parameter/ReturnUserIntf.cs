@@ -27,15 +27,5 @@ namespace Orm.Model.Parameter
             get { return _errorCode; }
             set { _errorCode = value; }
         }
-
-        private ZhongXin.API.Models.UserInfo _userInfo;
-         /// <summary>
-         /// 用户信息
-         /// </summary>
-        public ZhongXin.API.Models.UserInfo UserInfo 
-        {
-            get { return _userInfo; }
-            set { _userInfo = value; }
-        } 
     }
 }
