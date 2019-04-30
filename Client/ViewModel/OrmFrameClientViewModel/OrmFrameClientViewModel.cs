@@ -1,5 +1,6 @@
 ﻿using Orm.MvvmFrame.Auxiliary;
 using System.Windows.Input;
+using Orm.Config;
 
 namespace OrmFrameClientViewModel
 {
@@ -21,6 +22,7 @@ namespace OrmFrameClientViewModel
         private void TestCommandExecute(object parameter)
         {
             var bsHospital = Orm.Config.Service.DBClientService.GetAllList<Orm.Model.BsHospital>();
+            var ss =Service.TestDemoServices.GetLocHouseRoomName();
         }
 
         private string _test;

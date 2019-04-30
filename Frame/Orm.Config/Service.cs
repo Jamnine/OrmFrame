@@ -1,4 +1,5 @@
 ﻿using Orm.Framework.Services;
+using Orm.IServices.ITestSercive;
 
 namespace Orm.Config
 {
@@ -44,10 +45,19 @@ namespace Orm.Config
 
         #endregion
 
-        #region 针对基础表的读操作只走本地模式,带InLocal标识
-        private static IEmitService _EmitServiceInLocal;
-        private static IDBClientBase _DBClientBaseInLocal;
-        #endregion
+        private static ITestDemoServices _TestDemoServices;
+
+        public static ITestDemoServices TestDemoServices
+        {
+            get
+            {
+                if (_TestDemoServices == null)
+                {
+                    _TestDemoServices = ServiceTaker.GetRemoteService<ITestDemoServices>();
+                }
+                return _TestDemoServices;
+            }
+        }
 
     }
 }
