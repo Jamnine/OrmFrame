@@ -7,8 +7,8 @@
     <ProjectGuid>{99F0A1FF-DC45-4E21-B9FF-9E7C7F63C2AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Orm.IServices.HisFrameService</RootNamespace>
-    <AssemblyName>Orm.IServices.HisFrameService</AssemblyName>
+    <RootNamespace>Orm.IServices.ITestSercive</RootNamespace>
+    <AssemblyName>Orm.IServices.ITestSercive</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITestDemoServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

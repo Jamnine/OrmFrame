@@ -7,8 +7,8 @@
     <ProjectGuid>{972AC2CF-C638-432F-88F9-5C2912220DF5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Orm.Services.HisFrameService</RootNamespace>
-    <AssemblyName>Orm.Services.HisFrameService</AssemblyName>
+    <RootNamespace>Orm.Services.TestSercive</RootNamespace>
+    <AssemblyName>Orm.Services.TestSercive</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -68,8 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDemoServices.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+      <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
+      <Name>Orm.Framework.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
@@ -85,6 +90,10 @@
     <ProjectReference Include="..\..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
       <Project>{1C4C834A-6D91-4C8D-8BC2-20CAE29BE253}</Project>
       <Name>Orm.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+      <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
+      <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

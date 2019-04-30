@@ -7,8 +7,8 @@
     <ProjectGuid>{3660D816-B2A2-421C-860F-5A8533461DAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Proxy_Orm.IServices.HisFrameService</RootNamespace>
-    <AssemblyName>Proxy_Orm.IServices.HisFrameService</AssemblyName>
+    <RootNamespace>Proxy_Orm.IServices.ITestSercive</RootNamespace>
+    <AssemblyName>Proxy_Orm.IServices.ITestSercive</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyFor_ITestDemoServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
@@ -57,9 +58,13 @@
       <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
       <Name>Orm.Model.Parameter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\IService\Orm.IServices.HisFrameService\Orm.IServices.HisFrameService.csproj">
+    <ProjectReference Include="..\..\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
-      <Name>Orm.IServices.HisFrameService</Name>
+      <Name>Orm.IServices.ITestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
+      <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>
+      <Name>Orm.Services.TestSercive</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebBridgeContract\WebBridgeContract.csproj">
       <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
