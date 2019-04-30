@@ -170,7 +170,10 @@ namespace Orm.Config
                 lstReturn = new List<T>();
             }
             if (lstReturn != null)
+            {
                 lstReturn = ReflectionHelper.OrderBy<T>(lstReturn, "Name");
+            }
+
             return lstReturn;
         }
 
@@ -191,7 +194,9 @@ namespace Orm.Config
             string pattern = "";
             string where_lower = where.ToLower();
             if (where_lower.Contains("or") || where_lower.Contains("||") || where_lower.Contains("&&"))
+            {
                 return "";
+            }
 
             #region 暂时不用
             /*
@@ -246,14 +251,21 @@ namespace Orm.Config
                 int k = where.IndexOf("=");
                 string key = where.Substring(0, k).Trim();
                 if (key.EndsWith("!"))
+                {
                     key = key.Substring(0, key.Length - 1);
+                }
+
                 PropertyInfo propertyInfo = typeof(T).GetProperty(key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
                 if (propertyInfo != null)
                 {
                     if (propertyInfo.PropertyType.Name == "String")
+                    {
                         pattern = "\"" + key + "\":\"" + arr[0].ToString() + "\"";
+                    }
                     else
+                    {
                         pattern = "\"" + key + "\":" + arr[0].ToString() + "";
+                    }
                 }
             }
             else
@@ -263,10 +275,13 @@ namespace Orm.Config
                 {
                     PropertyInfo propertyInfo = typeof(T).GetProperty(strArray[0], BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
                     if (propertyInfo.PropertyType.Name == "String")
+                    {
                         pattern = "\"" + strArray[0] + "\":\"" + strArray[1].ToString() + "\"";
+                    }
                     else
+                    {
                         pattern = "\"" + strArray[0] + "\":" + strArray[1].ToString() + "";
-
+                    }
                 }
             }
             //}
@@ -298,11 +313,16 @@ namespace Orm.Config
                     else
                     {//不包含的查询条件用*代替,表示可以是任何内容 eg:5037,*,true(可匹配查询条件为HospitalID,Name,【外键】,IsActive的情况)
                         if (!values.Contains("*,"))
+                        {
                             values += "*,";
+                        }
                     }
                 }
                 if (values.EndsWith(","))
+                {
                     values = values.Substring(0, values.Length - 1);
+                }
+
                 pattern = "\"" + keys + "\":\"" + values + "\"";
             }
             else
@@ -312,14 +332,21 @@ namespace Orm.Config
                     int k = where.IndexOf("=");
                     string key = where.Substring(0, k).Trim();
                     if (key.EndsWith("!")) //有些条件是以fild!=@0形式出现的
+                    {
                         key = key.Substring(0, key.Length - 1);
+                    }
+
                     PropertyInfo propertyInfo = typeof(T).GetProperty(key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
                     if (propertyInfo != null)
                     {
                         if (propertyInfo.PropertyType.Name == "String")
+                        {
                             pattern = "\"" + key + "\":\"" + arr[0].ToString() + "\"";
+                        }
                         else
+                        {
                             pattern = "\"" + key + "\":" + arr[0].ToString() + "";
+                        }
                     }
                 }
             }
@@ -333,7 +360,9 @@ namespace Orm.Config
             foreach (string expType in _expTypes)
             {
                 if (where.Contains(expType))
+                {
                     return "";
+                }
             }
             where = where.Substring(3, where.Length - 3);
             /*
@@ -372,7 +401,9 @@ namespace Orm.Config
                 if (!isAllContain)
                 {
                     if (where.Contains("IsActive") && where.Length < 14)
+                    {
                         isAllContain = true;//只有IsActive一个查询条件的情况
+                    }
                 }
                 //下面将结合where和redisSearchConditionKeys构建pattern
                 GenerateExpPattern<T>(where, fileArr, valueArr, ref pattern, redisSearchConditionKeys, keys, ref values, isAllContain);
@@ -382,16 +413,22 @@ namespace Orm.Config
                 if (valueArr.Length == 1)
                 {
                     if (where.Contains("IsActive")) //eg:"t => t.IsActive AndAlso t.ClassName = \"四(2)班\""
+                    {
                         return "";
+                    }
                     //下面处理形如："t => t.IsActive AndAlso t.ClassName = \"四(2)班\""
                     string key = fileArr[0];
                     PropertyInfo propertyInfo = typeof(T).GetProperty(key, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
                     if (propertyInfo != null)
                     {
                         if (propertyInfo.PropertyType.Name == "String")
+                        {
                             pattern = "\"" + key + "\":\"" + valueArr[0].ToString() + "\"";
+                        }
                         else
+                        {
                             pattern = "\"" + key + "\":" + valueArr[0].ToString() + "";
+                        }
                     }
                 }
             }
@@ -424,11 +461,16 @@ namespace Orm.Config
                     else
                     {//不包含的查询条件用*代替,表示可以是任何内容 eg:5037,*,true(可匹配查询条件为HospitalID,Name,【外键】,IsActive的情况)
                         if (!values.Contains("*,"))
+                        {
                             values += "*,";
+                        }
                     }
                 }
                 if (values.EndsWith(","))
+                {
                     values = values.Substring(0, values.Length - 1);
+                }
+
                 pattern = "\"" + keys + "\":\"" + values + "\"";
             }
             else
@@ -446,9 +488,13 @@ namespace Orm.Config
                     if (propertyInfo != null)
                     {
                         if (propertyInfo.PropertyType.Name == "String")
+                        {
                             pattern = "\"" + key + "\":\"" + valueArr[0].ToString() + "\"";
+                        }
                         else
+                        {
                             pattern = "\"" + key + "\":" + valueArr[0].ToString() + "";
+                        }
                     }
                 }
             }

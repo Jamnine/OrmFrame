@@ -41,7 +41,7 @@ namespace Orm.Config
                 thread.Name = clientSocket.RemoteEndPoint.ToString();
                 thread.Start();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return;
             }
@@ -71,7 +71,7 @@ namespace Orm.Config
                             }
                         }
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         killSelf();
                     }
@@ -117,7 +117,7 @@ namespace Orm.Config
                 byte[] sendbytes = System.Text.Encoding.UTF8.GetBytes(message);
                 int successSendBtyes = clientSocket.Send(sendbytes, sendbytes.Length, SocketFlags.None);
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }
