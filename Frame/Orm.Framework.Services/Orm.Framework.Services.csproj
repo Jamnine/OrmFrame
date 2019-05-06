@@ -45,7 +45,7 @@
       <HintPath>..\..\Framework\ELinq.dll</HintPath>
     </Reference>
     <Reference Include="JsonSerializerProxy">
-      <HintPath>..\..\..\Framework\JsonSerializerProxy.dll</HintPath>
+      <HintPath>..\..\Framework\JsonSerializerProxy.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\..\客户端\His2\bin\Debug\Newtonsoft.Json.dll</HintPath>
@@ -185,9 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

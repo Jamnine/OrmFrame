@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JsonSerializerProxy">
+    <Reference Include="JsonSerializerProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Framework\JsonSerializerProxy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -116,6 +117,10 @@
     <ProjectReference Include="..\..\..\Service\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_XYHis.Framework.Services\Proxy_XYHis.Framework.Services.csproj">
+      <Project>{d97a939e-84aa-4bae-8aeb-533778a26954}</Project>
+      <Name>Proxy_XYHis.Framework.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeContract\WebBridgeContract.csproj">
       <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>

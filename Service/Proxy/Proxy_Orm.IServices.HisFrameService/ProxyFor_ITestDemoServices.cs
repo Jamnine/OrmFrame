@@ -12,7 +12,7 @@ namespace Proxy_Orm.IServices.ITestSercive
         {
             List<Object> ParamList = new List<Object>();
             string[] TypeArgs = null;
-            return (List<BsHospital>)TheReQuseter.RequseteWeb(ApiTypeMap.MapConfigKey, "XYHis.IServices.HisFrameService.IBsBpIllListService", "GetAll", ParamList, TypeArgs, GetOneUrl());
+            return (List<BsHospital>)TheReQuseter.RequseteWeb(ApiTypeMap.MapConfigKey, "Orm.IServices.ITestSercive.ITestDemoServices", "GetLocHouseRoomName", ParamList, TypeArgs, GetOneUrl());
         }
 
         public BsHospital GetLocHouseRoomName(string id)
@@ -22,7 +22,7 @@ namespace Proxy_Orm.IServices.ITestSercive
                 id
             };
             string[] TypeArgs = null;
-            return (BsHospital)TheReQuseter.RequseteWeb(ApiTypeMap.MapConfigKey, "XYHis.IServices.HisFrameService.IDoctorSchedulerService", "SaveNursesSchedule", ParamList, TypeArgs, GetOneUrl());
+            return (BsHospital)TheReQuseter.RequseteWeb(ApiTypeMap.MapConfigKey, "Orm.IServices.ITestSercive.ITestDemoServices", "GetLocHouseRoomName", ParamList, TypeArgs, GetOneUrl());
         }
     }
 }
