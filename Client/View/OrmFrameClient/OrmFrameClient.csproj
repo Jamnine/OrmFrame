@@ -113,6 +113,14 @@
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
+      <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
+      <Name>Proxy_Orm.IServices.TestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeContract\WebBridgeContract.csproj">
+      <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
+      <Name>WebBridgeContract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
       <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
       <Name>WebBridgeEndpoint</Name>

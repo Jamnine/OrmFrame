@@ -10,7 +10,7 @@
         /// <summary>
         /// 代理类的类名前缀。
         /// </summary>
-        public const string ProxyClassPrefix = "ProxyFor_";
+        public const string ProxyClassPrefix = "Proxy_";
 
         /// <summary>
         /// 事件名模板。

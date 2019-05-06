@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Orm.Log4Library;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Serialization;
-using Orm.Log4Library;
 
 namespace Orm.Framework.Services
 {
@@ -33,7 +33,10 @@ namespace Orm.Framework.Services
                 lock (mapLoker)
                 {
                     if (_mapList == null)
+                    {
                         _mapList = new List<TypeMap>();
+                    }
+
                     return _mapList;
                 }
             }
@@ -139,13 +142,13 @@ namespace Orm.Framework.Services
 
                 return reInstance;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 LogHelper.ErrorLog(ex);
                 throw ex;
             }
         }
-         
+
         /// <summary>
         /// 将类型映射注释到上下文。
         /// </summary>
@@ -153,9 +156,12 @@ namespace Orm.Framework.Services
         {
             lock (mapLoker)
             {
-                if (MapList != null && MapList.Count > 0) return;
+                if (MapList != null && MapList.Count > 0)
+                {
+                    return;
+                }
             }
-            RegisterTypeMapFromConfigFile(); 
+            RegisterTypeMapFromConfigFile();
         }
 
         /// <summary>
@@ -166,12 +172,12 @@ namespace Orm.Framework.Services
             lock (mapLoker)
             {
                 if (MapList != null && MapList.Count > 0)
-                { 
+                {
                     return;
                 }
             }
             if (!Directory.Exists(AppSettings.ConfigPath))
-            { 
+            {
                 return;
             }
 
@@ -188,7 +194,10 @@ namespace Orm.Framework.Services
                     var vv = ser.Deserialize(fileStream);
                     list = vv as List<TypeMap>;
                     if (list == null)
+                    {
                         continue;
+                    }
+
                     foreach (var aMap in list)
                     {
 
@@ -200,7 +209,7 @@ namespace Orm.Framework.Services
                     }
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -213,7 +222,7 @@ namespace Orm.Framework.Services
         private static void RegisterTypeMapFromConfigDB(List<TypeMap> maps)
         {
             if (Register != null)
-            { 
+            {
                 Register.RegisterTypeMapFromConfigDB(maps);
             }
         }
@@ -238,13 +247,18 @@ namespace Orm.Framework.Services
             lock (mapLoker)
             {
                 if (MapList == null)
+                {
                     return false;
+                }
             }
             lock (mapLoker)
             {
                 var map = MapList.Where(ww => ww != null && ww.InterfaceName == InterfaceName);
                 if (map == null)
+                {
                     return false;
+                }
+
                 return map.Count() > 0;
             }
         }
@@ -301,7 +315,7 @@ namespace Orm.Framework.Services
 
                 return reObj;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
