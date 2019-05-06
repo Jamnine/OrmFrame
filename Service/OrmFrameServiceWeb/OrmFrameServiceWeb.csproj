@@ -187,6 +187,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -270,6 +271,10 @@
     <ProjectReference Include="..\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
+      <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>
+      <Name>Orm.Services.TestSercive</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
