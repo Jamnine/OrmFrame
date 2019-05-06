@@ -1,6 +1,8 @@
-﻿using Orm.MvvmFrame.Auxiliary;
+﻿using Orm.Config;
+using Orm.Model;
+using Orm.MvvmFrame.Auxiliary;
+using System.Collections.Generic;
 using System.Windows.Input;
-using Orm.Config;
 
 namespace OrmFrameClientViewModel
 {
@@ -21,8 +23,12 @@ namespace OrmFrameClientViewModel
 
         private void TestCommandExecute(object parameter)
         {
-            var bsHospital = Orm.Config.Service.DBClientService.GetAllList<Orm.Model.BsHospital>();
-            var ss =Service.TestDemoServices.GetLocHouseRoomName();
+            //本地模式
+            //List<BsHospital> debugBsHospital = Orm.Config.Service.DBClientService.GetAllList<BsHospital>();
+            //本地模式服务端
+            //List<BsHospital> debugServiceBsHospital = Service.TestDemoServices.GetLocHouseRoomName();
+            //代理服务端
+            List<BsHospital> proxyServiceBsHospital = Service.TestDemoServices.GetLocHouseRoomName();
         }
 
         private string _test;

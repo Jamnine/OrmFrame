@@ -117,6 +117,10 @@
       <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
       <Name>WebBridgeEndpoint</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
+      <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>
+      <Name>Orm.Services.TestSercive</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ViewModel\OrmFrameClientViewModel\OrmFrameClientViewModel.csproj">
       <Project>{e82862f1-8e1b-482a-9020-920e3fd3555c}</Project>
       <Name>OrmFrameClientViewModel</Name>
