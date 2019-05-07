@@ -68,12 +68,21 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -166,7 +175,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestDemoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,6 +244,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Client\View\Orm.Client.Common\Orm.Client.Common.csproj">
+      <Project>{6e59e743-2f07-4b5f-809b-03a41853327b}</Project>
+      <Name>Orm.Client.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
       <Project>{39ca059c-ffc5-4d34-97d1-1b3f42085152}</Project>
       <Name>Orm.Log4Library</Name>
@@ -243,6 +259,10 @@
     <ProjectReference Include="..\..\Frame\Orm.Config\Orm.Config.csproj">
       <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
       <Name>Orm.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Common\Orm.Framework.Common.csproj">
+      <Project>{d3216a54-4590-4455-944d-8a6309af38f7}</Project>
+      <Name>Orm.Framework.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
@@ -260,6 +280,10 @@
       <Project>{c4a1ba2a-f2ec-49c9-a73b-a7e40e196a4a}</Project>
       <Name>Orm.MapContext</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+      <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
+      <Name>Orm.Model.Parameter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
@@ -271,6 +295,10 @@
     <ProjectReference Include="..\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proxy\WebApiResponder\WebApiResponder.csproj">
+      <Project>{b7aa909e-15d4-4b5d-8eb9-2864280b0b61}</Project>
+      <Name>WebApiResponder</Name>
     </ProjectReference>
     <ProjectReference Include="..\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
       <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>

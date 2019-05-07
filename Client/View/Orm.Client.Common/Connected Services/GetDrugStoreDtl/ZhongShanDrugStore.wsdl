@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns0="ZSDrugStroe" targetNamespace="ZSDrugStroe" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>提供给行心，获取中山医药的药品信息</wsdl:documentation>
+  <wsp:Policy wsu:Id="servicePolicy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsam:Addressing wsp:Optional="true" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+          <wsp:Policy>
+            <wsam:AnonymousResponses />
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="ZSDrugStroe">
+      <xs:element name="GetDistributionList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="data" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDistributionListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDistributionListFault">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="payload" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDistributionListRequest">
+    <wsdl:part name="parameters" element="ns0:GetDistributionList" />
+  </wsdl:message>
+  <wsdl:message name="GetDistributionListResponse">
+    <wsdl:part name="parameters" element="ns0:GetDistributionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDistributionListFault">
+    <wsdl:part name="parameters" element="ns0:GetDistributionListFault" />
+  </wsdl:message>
+  <wsdl:portType wsp:PolicyURIs="#servicePolicy" name="ZhongShanDrugStorePortType">
+    <wsdl:operation name="GetDistributionList">
+      <wsdl:documentation>get配送清单</wsdl:documentation>
+      <wsdl:input wsaw:Action="urn:GetDistributionList" message="ns0:GetDistributionListRequest" />
+      <wsdl:output wsaw:Action="ZSDrugStroe/ZhongShanDrugStorePortType/GetDistributionListResponse" message="ns0:GetDistributionListResponse" />
+      <wsdl:fault wsaw:Action="ZSDrugStroe/ZhongShanDrugStorePortType/GetDistributionListFault" name="GetDistributionListFault" message="ns0:GetDistributionListFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZhongShanDrugStoreSoap11Binding" type="ns0:ZhongShanDrugStorePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="GetDistributionList">
+      <soap:operation soapAction="urn:GetDistributionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetDistributionListFault">
+        <soap:fault use="literal" name="GetDistributionListFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZhongShanDrugStoreSoap12Binding" type="ns0:ZhongShanDrugStorePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsdl:operation name="GetDistributionList">
+      <soap12:operation soapAction="urn:GetDistributionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="GetDistributionListFault">
+        <soap12:fault use="literal" name="GetDistributionListFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZhongShanDrugStore">
+    <wsdl:port name="ZhongShanDrugStoreHttpSoap11Endpoint" binding="ns0:ZhongShanDrugStoreSoap11Binding">
+      <soap:address location="http://192.168.1.189:8072/services/ZhongShanDrugStore.ZhongShanDrugStoreHttpSoap11Endpoint" />
+    </wsdl:port>
+    <wsdl:port name="ZhongShanDrugStoreHttpSoap12Endpoint" binding="ns0:ZhongShanDrugStoreSoap12Binding">
+      <soap12:address location="http://192.168.1.189:8072/services/ZhongShanDrugStore.ZhongShanDrugStoreHttpSoap12Endpoint" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

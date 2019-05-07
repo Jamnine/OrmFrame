@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3216A54-4590-4455-944D-8A6309AF38F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Framework.Common</RootNamespace>
+    <AssemblyName>Orm.Framework.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAPI.cs" />
+    <Compile Include="AppHisService\Entity.cs" />
+    <Compile Include="AppHisService\GenericEntity.cs" />
+    <Compile Include="AppHisService\Requester.cs" />
+    <Compile Include="GlobalDictionary.cs" />
+    <Compile Include="Helper\Commons.cs" />
+    <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Helper\DataValidator.cs" />
+    <Compile Include="Helper\QueryStringHelper.cs" />
+    <Compile Include="Helper\RoundHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="IAppHisService\IEntity.cs" />
+    <Compile Include="IAppHisService\IGenericEntity.cs" />
+    <Compile Include="IAppHisService\IMedicalCloud.cs" />
+    <Compile Include="IAppHisService\IRequester.cs" />
+    <Compile Include="ImageServer.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="IServiceFactorySelector.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="Service References\MessageSDKService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShortMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketSection.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WebAPI.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\MessageSDKService\Orm.Framework.Common.MessageSDKService.mo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MessageSDKService\Orm.Framework.Common.MessageSDKService.statusReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MessageSDKService\SDKService.wsdl" />
+    <None Include="Service References\MessageSDKService\SDKService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+      <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
+      <Name>Orm.Model.Parameter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+      <Project>{99F0A1FF-DC45-4E21-B9FF-9E7C7F63C2AC}</Project>
+      <Name>Orm.IServices.ITestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service\Proxy\WebBridgeContract\WebBridgeContract.csproj">
+      <Project>{20026D8D-C1E6-4558-B7C0-956A1C1FDB30}</Project>
+      <Name>WebBridgeContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orm.Framework.Services\Orm.Framework.Services.csproj">
+      <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
+      <Name>Orm.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+      <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
+      <Name>Orm.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageSDKService\configuration91.svcinfo" />
+    <None Include="Service References\MessageSDKService\configuration.svcinfo" />
+    <None Include="Service References\MessageSDKService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MessageSDKService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\IIS\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

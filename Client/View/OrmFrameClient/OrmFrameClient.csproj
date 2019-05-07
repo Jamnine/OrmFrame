@@ -118,9 +118,13 @@
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_XYHis.Framework.Services\Proxy_XYHis.Framework.Services.csproj">
+    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_XYHis.Framework.Services\Proxy_Orm.Framework.Services.csproj">
       <Project>{d97a939e-84aa-4bae-8aeb-533778a26954}</Project>
-      <Name>Proxy_XYHis.Framework.Services</Name>
+      <Name>Proxy_Orm.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\Proxy\WebApiResponder\WebApiResponder.csproj">
+      <Project>{b7aa909e-15d4-4b5d-8eb9-2864280b0b61}</Project>
+      <Name>WebApiResponder</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeContract\WebBridgeContract.csproj">
       <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>

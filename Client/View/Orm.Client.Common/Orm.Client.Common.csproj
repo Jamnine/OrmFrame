@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E59E743-2F07-4B5F-809B-03A41853327B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orm.Client.Common</RootNamespace>
+    <AssemblyName>Orm.Client.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Aspose.Cells.8.3.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\..\Framework\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\Framework\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaiduSDK.cs" />
+    <Compile Include="BaseCloneableObject.cs" />
+    <Compile Include="BaseControlConfig.cs" />
+    <Compile Include="CacheDownloadItems.cs" />
+    <Compile Include="CardPatientSM.cs" />
+    <Compile Include="CaseHisTory.cs" />
+    <Compile Include="CashierHelper.cs" />
+    <Compile Include="CCPRestSDK.cs" />
+    <Compile Include="ChatEngine.cs" />
+    <Compile Include="ClientSocketMessage.cs" />
+    <Compile Include="ClientValidationHelper.cs" />
+    <Compile Include="CommonMethod.cs" />
+    <Compile Include="Compare.cs" />
+    <Compile Include="ConfigFilesManager.cs" />
+    <Compile Include="Configurations.cs" />
+    <Compile Include="Connected Services\GetDrugStoreDtl\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ControlHelper.cs" />
+    <Compile Include="CurrInvoInfo.cs" />
+    <Compile Include="DataGridHelper.cs" />
+    <Compile Include="DocxReader.cs" />
+    <Compile Include="DocxToFlowDocumentConverter.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ExcelImport.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="FileProcessingClass.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="GenericTypeConverter.cs" />
+    <Compile Include="ImagineHelper.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="LocalRegit.cs" />
+    <Compile Include="PhotoDealClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\BasicProxy.cs" />
+    <Compile Include="Property\DictionaryProxy.cs" />
+    <Compile Include="Property\DynaAccessException.cs" />
+    <Compile Include="Property\DynaAccessUtils.cs" />
+    <Compile Include="Property\FieldGetterSetter.cs" />
+    <Compile Include="Property\IDynaAccess.cs" />
+    <Compile Include="Property\IGetterSetter.cs" />
+    <Compile Include="Property\ListProxy.cs" />
+    <Compile Include="Property\PropertyGetterSetter.cs" />
+    <Compile Include="Providers.cs" />
+    <Compile Include="RegEmrOcx.cs" />
+    <Compile Include="ReportValue.cs" />
+    <Compile Include="SendMessageHelper.cs" />
+    <Compile Include="SendOutEmail.cs" />
+    <Compile Include="SetSystemDateTime.cs" />
+    <Compile Include="SynchronousBsitem.cs" />
+    <Compile Include="SystemCommon.cs" />
+    <Compile Include="ToolBar.cs" />
+    <Compile Include="ToothsHelper.cs" />
+    <Compile Include="TreeListView.cs" />
+    <Compile Include="TreeListViewItem.cs" />
+    <Compile Include="UMPIntegrationInterface.cs" />
+    <Compile Include="UploadImage.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WeatherHelper.cs" />
+    <Compile Include="WindowsServiceHelper.cs" />
+    <Compile Include="XClassHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
+      <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
+      <Name>Orm.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+      <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
+      <Name>Orm.Model.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+      <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
+      <Name>Orm.Model.Parameter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+      <Project>{6F06816B-BEDC-4C4D-BDB3-98BE6A2D937A}</Project>
+      <Name>Orm.Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+      <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
+      <Name>Orm.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+      <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
+      <Name>Orm.IServices.ITestSercive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frame\Orm.Config\Orm.Config.csproj">
+      <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
+      <Name>Orm.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\Orm.MvvmFrame.Auxiliary\Orm.MvvmFrame.Auxiliary.csproj">
+      <Project>{2E1A8706-D5A6-4E2E-9D18-E04B8AA9F862}</Project>
+      <Name>Orm.MvvmFrame.Auxiliary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Orm.Toolkit\Orm.Toolkit.csproj">
+      <Project>{D0153A6E-0B11-462B-BD3F-0AAD78CEBB6D}</Project>
+      <Name>Orm.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XYHis.WebInterface\XYHis.WebInterface.csproj">
+      <Project>{E1B2F16D-76A0-4014-972B-BD1D78A348BE}</Project>
+      <Name>XYHis.WebInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\GetDrugStoreDtl\Orm.Client.Common.GetDrugStoreDtl.GetDistributionListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GetDrugStoreDtl\ZhongShanDrugStore.wsdl" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GetDrugStoreDtl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GetDrugStoreDtl\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GetDrugStoreDtl\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GetDrugStoreDtl\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)"  "$(SolutionDir)Framework\Client\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
