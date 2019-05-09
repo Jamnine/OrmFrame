@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A887277-86E7-45C7-A369-6F57A4CB6313}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OracleDataToRedis.Coders</RootNamespace>
+    <AssemblyName>OracleDataToRedis.Coders</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfoCoder.cs" />
+    <Compile Include="CommentsCoder.cs" />
+    <Compile Include="Controls\ControlsCoder.cs" />
+    <Compile Include="Controls\ProjectCoder.cs" />
+    <Compile Include="Domain\BaseEntityCoder.cs" />
+    <Compile Include="Domain\DomainCoder.cs" />
+    <Compile Include="Domain\NbmXmlCoder.cs" />
+    <Compile Include="Domain\ProjectCoder.cs" />
+    <Compile Include="External_bin\ProjectCoder.cs" />
+    <Compile Include="Persistence\EntityDaoCoder.cs" />
+    <Compile Include="Persistence\EntityDaoTransationCoder.cs" />
+    <Compile Include="Persistence\ProjectCoder.cs" />
+    <Compile Include="Persistence\SessionFactoryCoder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceFileCoder.cs" />
+    <Compile Include="Run\Log4netConfigCoder.cs" />
+    <Compile Include="Run\ProjectCoder.cs" />
+    <Compile Include="Run\RunFileCoder.cs" />
+    <Compile Include="Services\BaseServiceCoder.cs" />
+    <Compile Include="Services\ProjectCoder.cs" />
+    <Compile Include="Services\ServiceCoder.cs" />
+    <Compile Include="SolutionCoder.cs" />
+    <Compile Include="UserControls\ProjectCoder.cs" />
+    <Compile Include="UserControls\UcPagingCoder.cs" />
+    <Compile Include="UserControls\UserControlCoder.cs" />
+    <Compile Include="Utility\PagingCoder.cs" />
+    <Compile Include="Utility\ProjectCoder.cs" />
+    <Compile Include="Utility\QueryTypeCoder.cs" />
+    <Compile Include="Utility\UtilityCoder.cs" />
+    <Compile Include="Utility\UtilsCoder.cs" />
+    <Compile Include="WcfClient\AppConfigCoder.cs" />
+    <Compile Include="WcfClient\MainServiceProxyCoder.cs" />
+    <Compile Include="WcfClient\ProjectCoder.cs" />
+    <Compile Include="WcfClient\ReferenceSvcmap.cs" />
+    <Compile Include="WcfClient\WcfClientFactoryCoder.cs" />
+    <Compile Include="WcfModels\BaseMainServiceCoder.cs" />
+    <Compile Include="WcfServices\Log4netConfigCoder.cs" />
+    <Compile Include="WcfModels\MyWcfTranserObjectCoder.cs" />
+    <Compile Include="WcfModels\NHibernateUnProxyHelperCorder.cs" />
+    <Compile Include="WcfModels\ProjectCoder.cs" />
+    <Compile Include="WcfModels\MainServiceFactoryCoder.cs" />
+    <Compile Include="WcfModels\ValidatorCoder.cs" />
+    <Compile Include="WcfServices\HibernateCfgCoder.cs" />
+    <Compile Include="WcfServices\MainServiceCoder.cs" />
+    <Compile Include="WcfServices\ProjectCoder.cs" />
+    <Compile Include="WcfServices\WebConfigCoder.cs" />
+    <Compile Include="WinFroms\DialogEditTypeCoder.cs" />
+    <Compile Include="WinFroms\EditDialogsCoder.cs" />
+    <Compile Include="WinFroms\EditDialogsDesignerCoder.cs" />
+    <Compile Include="WinFroms\ManagerFormCoder.cs" />
+    <Compile Include="WinFroms\ManagerFormDesignerCoder.cs" />
+    <Compile Include="WinFroms\ProjectCoder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NHWCFCoder2.Domain\OracleDataToRedis.Domain.csproj">
+      <Project>{0D40B07A-6CE8-4D33-BDD8-5ACFE35D68B1}</Project>
+      <Name>OracleDataToRedis.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NHWCFCoder2.Utils\OracleDataToRedis.Utils.csproj">
+      <Project>{A1E2FC18-8A3A-4B1C-ABA9-2DF1B0495C42}</Project>
+      <Name>OracleDataToRedis.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
