@@ -35,7 +35,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ELinq">
+      <HintPath>Lib\ELinq.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=1.2.0.26373, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Orm">
+      <HintPath>Lib\Orm.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +68,26 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="XYHis.Framework.Services">
+      <HintPath>Lib\XYHis.Framework.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="XYHis.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\XYHis.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="XYHis.Redis">
+      <HintPath>Lib\XYHis.Redis.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrmRedis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FrmRedis.xaml.cs">
+      <DependentUpon>FrmRedis.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,6 +129,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\close.png" />
+    <Resource Include="bin\Debug\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.Dao.Oracle9\OracleDataToRedis.Dao.Oracle9.csproj">
+      <Project>{3a997f8a-92c9-412a-a443-fee3ee6d9900}</Project>
+      <Name>OracleDataToRedis.Dao.Oracle9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.DataAccess\OracleDataToRedis.DataAccess.csproj">
+      <Project>{eac716be-4a72-484f-b7e9-308da46e3df7}</Project>
+      <Name>OracleDataToRedis.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.Domain\OracleDataToRedis.Domain.csproj">
+      <Project>{0d40b07a-6ce8-4d33-bdd8-5acfe35d68b1}</Project>
+      <Name>OracleDataToRedis.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.Run\OracleDataToRedis.Run.csproj">
+      <Project>{63a9d005-10de-4510-b576-65e2ad33629a}</Project>
+      <Name>OracleDataToRedis.Run</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.Services\OracleDataToRedis.Services.csproj">
+      <Project>{f66caa37-4146-4610-8d36-b12573f9a049}</Project>
+      <Name>OracleDataToRedis.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.StackExchange\OracleDataToRedis.StackExchange.csproj">
+      <Project>{bb88c0aa-5938-4087-9d6c-2008be6aab20}</Project>
+      <Name>OracleDataToRedis.StackExchange</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OracleDataToRedis\NHWCFCoder2.Utils\OracleDataToRedis.Utils.csproj">
+      <Project>{a1e2fc18-8a3a-4b1c-aba9-2df1b0495c42}</Project>
+      <Name>OracleDataToRedis.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

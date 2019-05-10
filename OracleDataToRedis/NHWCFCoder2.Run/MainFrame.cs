@@ -18,7 +18,6 @@ using System.Reflection;
 using Newtonsoft.Json;
 using OracleDataToRedis.StackExchange;
 using System.Collections;
-using XYHis.Model;
 using Microsoft.Web.Administration;
 
 namespace OracleDataToRedis

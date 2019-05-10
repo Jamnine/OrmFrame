@@ -50,6 +50,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="XYHis.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tools\RedisDate_Update\bin\Debug\XYHis.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="XYHis.ServiceStackRedisHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\XYHis.ServiceStackRedisHelper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RedisHelper.cs" />
@@ -58,16 +66,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
-      <Project>{A787A629-941C-43C0-B468-807713780E9C}</Project>
-      <Name>Orm.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\XYHis.ServiceStackRedisHelper\XYHis.ServiceStackRedisHelper.csproj">
-      <Project>{08E48026-2597-4480-B8EB-53F56AA158DC}</Project>
-      <Name>XYHis.ServiceStackRedisHelper</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

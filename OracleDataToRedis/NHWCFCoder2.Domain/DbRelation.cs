@@ -161,5 +161,7 @@ namespace OracleDataToRedis.Domain
             get;
             set;
         }
+
+        public string FK_Relation_Column { get; set; }
     }
 }
