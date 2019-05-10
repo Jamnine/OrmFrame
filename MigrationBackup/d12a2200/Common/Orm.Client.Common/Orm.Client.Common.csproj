@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Aspose.Cells.8.3.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms">
       <HintPath>..\..\..\Framework\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\Framework\NAudio.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\Framework\Newtonsoft.Json.dll</HintPath>
@@ -159,6 +165,10 @@
       <Project>{D0153A6E-0B11-462B-BD3F-0AAD78CEBB6D}</Project>
       <Name>Orm.Toolkit</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XYHis.WebInterface\XYHis.WebInterface.csproj">
+      <Project>{E1B2F16D-76A0-4014-972B-BD1D78A348BE}</Project>
+      <Name>XYHis.WebInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -169,6 +179,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GetDrugStoreDtl\ZhongShanDrugStore.wsdl" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GetDrugStoreDtl\" />
@@ -184,11 +195,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Aspose.Cells">
-      <Version>8.3.0</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

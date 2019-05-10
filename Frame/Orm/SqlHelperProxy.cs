@@ -96,7 +96,10 @@ namespace Orm
             if (dbHelper.OutParameters == null
                 || !dbHelper.OutParameters.ContainsKey(paramName)
                 )
+            {
                 return null;
+            }
+
             return dbHelper.OutParameters[paramName];
         }
 

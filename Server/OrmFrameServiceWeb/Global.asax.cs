@@ -23,7 +23,6 @@ namespace OrmFrameServiceWeb
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-           
         }
         private void InitServer()
         {
@@ -37,7 +36,6 @@ namespace OrmFrameServiceWeb
             {
                 throw ex;
             }
-
         }
     }
 }

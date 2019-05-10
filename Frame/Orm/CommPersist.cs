@@ -94,8 +94,9 @@ namespace Orm
             {
                 conn.Open();
                 if (dt != null && dt.Rows.Count != 0)
-
+                {
                     bulkCopy.WriteToServer(dt);  //将提供的数据源中的所有行复制到目标表中
+                }
             }
             catch (Exception ex)
             {
@@ -105,7 +106,9 @@ namespace Orm
             {
                 conn.Close();
                 if (bulkCopy != null)
+                {
                     bulkCopy.Close();
+                }
             }
         }
 
