@@ -18,6 +18,7 @@ namespace OrmFrameServiceWeb
                 InitServer();
             }
             AreaRegistration.RegisterAllAreas();
+            //添加ApiController 需要注册
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

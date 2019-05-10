@@ -17,13 +17,13 @@ namespace Orm.Redis
     public class RedisWriteExHelper
     {
         public static object lockObj = new object();
-        private static string ExchangeName { get; set; }
-        private static string Routingkey { get; set; }
+        //private static string ExchangeName { get; set; }
+        //private static string Routingkey { get; set; }
         private static string RedisDefaultKey { get; set; }
         static RedisWriteExHelper()
         {
-            ExchangeName = ConfigurationManager.AppSettings["Orm.RabbitMQ.ExchangeName"].ToString();
-            Routingkey = ConfigurationManager.AppSettings["Orm.RabbitMQ.Routingkey"].ToString();
+            //ExchangeName = ConfigurationManager.AppSettings["Orm.RabbitMQ.ExchangeName"].ToString();
+            //Routingkey = ConfigurationManager.AppSettings["Orm.RabbitMQ.Routingkey"].ToString();
             RedisDefaultKey = ConfigurationManager.AppSettings["Redis.DefaultKey"].ToString();
         }
 
@@ -349,12 +349,13 @@ namespace Orm.Redis
                     List<object> list = RedisReadExHelper.SetSearch(key, 0, "\"GUID\":\"" + guid + "\"", 1000000);
                     if (list.Count > 0)
                     {
-                        var result = RedisWriteHelper.SetRemoveAsync(key, list[0].ToString());
-
-                        if (result.Result)
+                        //var result = RedisWriteHelper.SetRemoveAsync(key, value);
+                        b = RedisWriteHelper.SetRemove(key, list[0].ToString());
+                        ///Task<bool>  result = RedisWriteHelper.SetRemoveAsync(key, list[0].ToString());
+                        if (b)
                         {
-                            var isSuccess = RedisWriteHelper.SetAddAsync(key, value);
-                            b = isSuccess.Result;
+                            var isSuccess = RedisWriteHelper.SetAdd(key, value);
+                            b = isSuccess;
                         }
                     }
                     else

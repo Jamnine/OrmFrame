@@ -13,14 +13,14 @@ namespace Orm.Redis
 {
     public class RedisReadExHelper
     {
-        private static string ExchangeName { get; set; }
-        private static string Routingkey { get; set; }
+        //private static string ExchangeName { get; set; }
+        //private static string Routingkey { get; set; }
         static RedisReadExHelper()
         {
-            ExchangeName = ConfigurationManager.AppSettings["Orm.RabbitMQ.ExchangeName"].ToString();
-            Routingkey = ConfigurationManager.AppSettings["Orm.RabbitMQ.Routingkey"].ToString();
+            //ExchangeName = ConfigurationManager.AppSettings["Orm.RabbitMQ.ExchangeName"].ToString();
+            //Routingkey = ConfigurationManager.AppSettings["Orm.RabbitMQ.Routingkey"].ToString();
         }
-
+        
         #region 操作相关
 
         #region 取数
