@@ -263,6 +263,18 @@
       <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
       <Name>Orm.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\WebApiResponder\WebApiResponder.csproj">
+      <Project>{b7aa909e-15d4-4b5d-8eb9-2864280b0b61}</Project>
+      <Name>WebApiResponder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\WebBridgeContract\WebBridgeContract.csproj">
+      <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
+      <Name>WebBridgeContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
+      <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
+      <Name>WebBridgeEndpoint</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Frame\Orm.Config\Orm.Config.csproj">
       <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
       <Name>Orm.Config</Name>
