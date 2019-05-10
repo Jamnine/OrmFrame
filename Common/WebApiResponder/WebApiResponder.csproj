@@ -49,11 +49,11 @@
     <Compile Include="WebApi\ReturnValue.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Orm.Utilities\Orm.Utilities.csproj">
+    <ProjectReference Include="..\Orm.Utilities\Orm.Utilities.csproj">
       <Project>{1c4c834a-6d91-4c8d-8bc2-20cae29be253}</Project>
       <Name>Orm.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
       <Name>Orm.Framework.Services</Name>
     </ProjectReference>

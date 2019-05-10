@@ -114,31 +114,31 @@
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
+    <ProjectReference Include="..\..\..\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\Proxy_XYHis.Framework.Services\Proxy_Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\..\Proxy\Proxy_XYHis.Framework.Services\Proxy_Orm.Framework.Services.csproj">
       <Project>{d97a939e-84aa-4bae-8aeb-533778a26954}</Project>
       <Name>Proxy_Orm.Framework.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\WebApiResponder\WebApiResponder.csproj">
+    <ProjectReference Include="..\..\..\Common\WebApiResponder\WebApiResponder.csproj">
       <Project>{b7aa909e-15d4-4b5d-8eb9-2864280b0b61}</Project>
       <Name>WebApiResponder</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeContract\WebBridgeContract.csproj">
+    <ProjectReference Include="..\..\..\Common\WebBridgeContract\WebBridgeContract.csproj">
       <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
       <Name>WebBridgeContract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Proxy\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
+    <ProjectReference Include="..\..\..\Common\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
       <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
       <Name>WebBridgeEndpoint</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
+    <ProjectReference Include="..\..\..\Server\Sercer-Services\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
       <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>
       <Name>Orm.Services.TestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ViewModel\OrmFrameClientViewModel\OrmFrameClientViewModel.csproj">
+    <ProjectReference Include="..\..\Client-ViewModel\OrmFrameClientViewModel\OrmFrameClientViewModel.csproj">
       <Project>{e82862f1-8e1b-482a-9020-920e3fd3555c}</Project>
       <Name>OrmFrameClientViewModel</Name>
     </ProjectReference>

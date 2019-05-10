@@ -48,29 +48,25 @@
     <Compile Include="ProxyFor_IDBClientBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\Common\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
+      <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
+      <Name>WebBridgeEndpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
       <Name>Orm.Framework.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
       <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
       <Name>Orm.Model.Custom</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
       <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
       <Name>Orm.Model.Parameter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebBridgeContract\WebBridgeContract.csproj">
-      <Project>{20026d8d-c1e6-4558-b7c0-956a1c1fdb30}</Project>
-      <Name>WebBridgeContract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebBridgeEndpoint\WebBridgeEndpoint.csproj">
-      <Project>{70df7403-48d3-4d6d-b2aa-4306020bb28d}</Project>
-      <Name>WebBridgeEndpoint</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -61,11 +61,11 @@
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+    <ProjectReference Include="..\..\..\Server\Sercer-IServices\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99F0A1FF-DC45-4E21-B9FF-9E7C7F63C2AC}</Project>
       <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Orm.MvvmFrame.Auxiliary\Orm.MvvmFrame.Auxiliary.csproj">
+    <ProjectReference Include="..\..\..\Common\Orm.MvvmFrame.Auxiliary\Orm.MvvmFrame.Auxiliary.csproj">
       <Project>{2e1a8706-d5a6-4e2e-9d18-e04b8aa9f862}</Project>
       <Name>Orm.MvvmFrame.Auxiliary</Name>
     </ProjectReference>

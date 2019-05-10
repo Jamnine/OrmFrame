@@ -52,7 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
       <Name>Orm.Framework.Services</Name>
     </ProjectReference>

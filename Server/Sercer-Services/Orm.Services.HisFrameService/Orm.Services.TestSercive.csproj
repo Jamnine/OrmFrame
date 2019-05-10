@@ -91,7 +91,7 @@
       <Project>{1C4C834A-6D91-4C8D-8BC2-20CAE29BE253}</Project>
       <Name>Orm.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+    <ProjectReference Include="..\..\Sercer-IServices\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
       <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>

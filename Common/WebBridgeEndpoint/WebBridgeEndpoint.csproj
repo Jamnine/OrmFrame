@@ -62,15 +62,15 @@
     <Compile Include="WebRequseter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Frame\Orm.Config\Orm.Config.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Config\Orm.Config.csproj">
       <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
       <Name>Orm.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
       <Name>Orm.Framework.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>

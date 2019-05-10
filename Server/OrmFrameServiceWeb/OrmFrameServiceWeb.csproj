@@ -251,8 +251,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Client\View\Orm.Client.Common\Orm.Client.Common.csproj">
-      <Project>{6e59e743-2f07-4b5f-809b-03a41853327b}</Project>
+    <ProjectReference Include="..\..\Common\Orm.Client.Common\Orm.Client.Common.csproj">
+      <Project>{6E59E743-2F07-4B5F-809B-03A41853327B}</Project>
       <Name>Orm.Client.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Orm.Log4Library\Orm.Log4Library.csproj">
@@ -295,19 +295,15 @@
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+    <ProjectReference Include="..\Sercer-IServices\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
       <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
+    <ProjectReference Include="..\..\Proxy\Proxy_Orm.IServices.HisFrameService\Proxy_Orm.IServices.TestSercive.csproj">
       <Project>{3660d816-b2a2-421c-860f-5a8533461daa}</Project>
       <Name>Proxy_Orm.IServices.TestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Proxy\WebApiResponder\WebApiResponder.csproj">
-      <Project>{b7aa909e-15d4-4b5d-8eb9-2864280b0b61}</Project>
-      <Name>WebApiResponder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Service\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
+    <ProjectReference Include="..\Sercer-Services\Orm.Services.HisFrameService\Orm.Services.TestSercive.csproj">
       <Project>{972ac2cf-c638-432f-88f9-5c2912220df5}</Project>
       <Name>Orm.Services.TestSercive</Name>
     </ProjectReference>

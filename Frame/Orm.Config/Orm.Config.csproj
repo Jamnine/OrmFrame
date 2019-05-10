@@ -43,6 +43,9 @@
     <Reference Include="NLite">
       <HintPath>..\..\Framework\NLite.dll</HintPath>
     </Reference>
+    <Reference Include="Orm.Client.Common">
+      <HintPath>..\..\Framework\Client\Orm.Client.Common.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -90,7 +93,7 @@
       <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
       <Name>Orm.Model.Parameter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+    <ProjectReference Include="..\..\Server\Sercer-IServices\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
       <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>

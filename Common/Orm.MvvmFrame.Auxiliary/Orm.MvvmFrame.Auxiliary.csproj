@@ -100,31 +100,31 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Model\Framework.Model\Orm.Model.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model\Orm.Model.csproj">
       <Project>{a787a629-941c-43c0-b468-807713780e9c}</Project>
       <Name>Orm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model.Custom\Orm.Model.Custom.csproj">
       <Project>{a4d9d3e1-e15d-4cba-9680-2ac31bca6dd9}</Project>
       <Name>Orm.Model.Custom</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
+    <ProjectReference Include="..\..\Model\Framework.Model.Parameter\Orm.Model.Parameter.csproj">
       <Project>{e279036f-a84e-42fa-b900-281db8922c0e}</Project>
       <Name>Orm.Model.Parameter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Framework.Services\Orm.Framework.Services.csproj">
       <Project>{6f06816b-bedc-4c4d-bdb3-98be6a2d937a}</Project>
       <Name>Orm.Framework.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Service\IService\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
+    <ProjectReference Include="..\..\Server\Sercer-IServices\Orm.IServices.HisFrameService\Orm.IServices.ITestSercive.csproj">
       <Project>{99f0a1ff-dc45-4e21-b9ff-9e7c7f63c2ac}</Project>
       <Name>Orm.IServices.ITestSercive</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frame\Orm.Config\Orm.Config.csproj">
+    <ProjectReference Include="..\..\Frame\Orm.Config\Orm.Config.csproj">
       <Project>{921e75ce-5639-4350-8213-89be0479c3aa}</Project>
       <Name>Orm.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Orm.Toolkit\Orm.Toolkit.csproj">
+    <ProjectReference Include="..\Orm.Toolkit\Orm.Toolkit.csproj">
       <Project>{d0153a6e-0b11-462b-bd3f-0aad78cebb6d}</Project>
       <Name>Orm.Toolkit</Name>
     </ProjectReference>
